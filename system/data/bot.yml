@@ -1,5 +1,5 @@
 # DO NOT CHANGE
-version: 1
+version: 2
 # Most commands, when executed, have a small colored line
 # next to the response. The color depends whether the command
 # is completed, errored or in progress (pending)
@@ -19,7 +19,7 @@ defaultLocale: pt-BR
 # Allowed values: Simple, Normal, None
 consoleOutputType: Normal
 # Do you want any messages sent by users in Bot's DM to be forwarded to the owner(s)?
-forwardMessages: false
+forwardMessages: true
 # Do you want the message to be forwarded only to the first owner specified in the list of owners (in creds.yml),
 # or all owners? (this might cause the bot to lag if there's a lot of owners specified)
 forwardToAllOwners: false
@@ -35,6 +35,15 @@ dmHelpText: |-
 
   Caso tenha alguma dúvida sobre mim ou não esta conseguindo me usar pode chamar o meu desenvolvedor ele é uma raposa 🦊 assim como eu, o nome dele é Braixen ele fica lá no servidor dele convite logo abaixo. ⬇️
   https://discord.io/BraixenHouse
+# Only users who send a DM to the bot containing one of the specified words will get a DmHelpText response.
+# Case insensitive.
+# Leave empty to reply with DmHelpText to every DM.
+dmHelpTextKeywords:
+  - help
+  - commands
+  - cmds
+  - module
+  - can you do
 # This is the response for the .h command
 helpText: |-
   Olá vejo que você usou o meu comando de ajuda então eu vou te ajudar...

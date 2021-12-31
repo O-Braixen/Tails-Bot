@@ -32,6 +32,12 @@ greetdmtest:
 - greetdmtest
 byetest:
 - byetest
+boost:
+- boost
+boostmsg:
+- boostmsg
+boostdel:
+- boostdel
 logserver:
 - logserver
 logignore:
@@ -526,6 +532,9 @@ streamadd:
 streamremove:
 - streamremove
 - strm
+streamsclear:
+  - streamsclear
+  - stclear
 streamlist:
 - streamlist
 - stl
@@ -711,6 +720,9 @@ removeperm:
 showemojis:
 - showemojis
 - se
+emojiadd:
+- emojiadd
+- ea
 deckshuffle:
 - deckshuffle
 - dsh
@@ -1123,8 +1135,6 @@ clubbans:
 clubleaderboard:
 - clublb
 - clubs
-nsfwclearcache:
-- nsfwcc
 clubadmin:
 - clubadmin
 autoboobs:
@@ -1134,6 +1144,9 @@ autobutts:
 eightball:
 - eightball
 - 8ball
+ytuploadnotif:
+- ytuploadnotif
+- yun
 feed:
 - feed
 - feedadd
@@ -1181,14 +1194,14 @@ timely:
 - timely
 timelyreset:
 - timelyreset
-novel:
-- novel
 crypto:
 - crypto
 - c
 rolelevelreq:
 - rolelevelreq
 - rlr
+massban:
+  - massban
 masskill:
 - masskill
 pathofexile:
@@ -1246,3 +1259,17 @@ crsimport:
 crsexport:
   - crsexport
   - exexport
+imageonlychannel:
+  - imageonlychannel
+  - imageonly
+  - imagesonly
+coordreload:
+  - coordreload
+quotesexport:
+  - quotesexport
+  - qexport
+quotesimport:
+  - quotesimport
+  - qimport
+showembed:
+  - showembed

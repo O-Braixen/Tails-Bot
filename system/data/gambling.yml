@@ -1,11 +1,11 @@
 # DO NOT CHANGE
-version: 1
+version: 4
 # Currency settings
 currency:
 # What is the emoji/character which represents the currency
-  sign: "🪙"
+  sign: "🦊"
   # What is the name of the currency
-  name: Tails Coin
+  name: Fox Coin
 # Minimum amount users can bet (>=0)
 minBet: 5
 # Maximum amount users can bet
@@ -107,7 +107,12 @@ waifu:
 # Default 0.95 (meaning 95%)
 # Example: If a waifu is worth 1000, and she receives a gift worth 100, her new value will be 1095)
     giftEffect: 0.95
+    # What percentage of the value of the gift will a waifu lose when she's gifted a gift marked as 'negative'.
+# Default 0.5 (meaning 50%)
+# Example: If a waifu is worth 1000, and she receives a negative gift worth 100, her new value will be 950)
+    negativeGiftEffect: 0.50
   # List of items available for gifting.
+# If negative is true, gift will instead reduce waifu value.
   items:
     - itemEmoji: "🥔"
       price: 5
@@ -217,6 +222,25 @@ waifu:
     - itemEmoji: "🌕"
       price: 50000
       name: Moon
+    - itemEmoji: "🥀"
+      price: 100
+      name: WiltedRose
+      negative: true
+    - itemEmoji: ✂️
+      price: 1000
+      name: Haircut
+      negative: true
+    - itemEmoji: "🧻"
+      price: 10000
+      name: ToiletPaper
+      negative: true
 # Amount of currency selfhosters will get PER pledged dollar CENT.
 # 1 = 100 currency per $. Used almost exclusively on public nadeko.
 patreonCurrencyPerCent: 1
+# Currency reward per vote.
+# This will work only if you've set up VotesApi and correct credentials for topgg and/or discords voting
+voteReward: 100
+# Slot config
+slots:
+# Hex value of the color which the numbers on the slot image will have.
+  currencyFontColor: ff0000

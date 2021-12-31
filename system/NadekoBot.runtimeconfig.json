@@ -1,8 +1,11 @@
 {
   "runtimeOptions": {
-    "tfm": "netcoreapp2.1",
-    "configProperties": {
-      "System.Reflection.Metadata.MetadataUpdater.IsSupported": false
-    }
+    "tfm": "net5.0",
+    "includedFrameworks": [
+      {
+        "name": "Microsoft.NETCore.App",
+        "version": "5.0.12"
+      }
+    ]
   }
 }

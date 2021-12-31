@@ -31,7 +31,12 @@ greet:
   args:
     - ""
 greetmsg:
-  desc: "Sets a new join announcement message which will be shown in the server's channel. Type `%user.mention%` if you want to mention the new member. Using it with no message will show the current greet message. You can use embed json from <https://eb.nadeko.bot/> instead of a regular text, if you want the message to be embedded."
+  desc: |-
+    Sets a new join announcement message which will be shown in the server's channel.
+    Type `%user.mention%` if you want to mention the new member.   
+    Full list of placeholders can be found here <https://nadekobot.readthedocs.io/en/latest/placeholders/>
+    Using it with no message will show the current greet message.  
+    You can use embed json from <https://eb.nadeko.bot/> instead of a regular text, if you want the message to be embedded.
   args:
     - "Welcome, %user.mention%."
 bye:
@@ -39,7 +44,12 @@ bye:
   args:
     - ""
 byemsg:
-  desc: "Sets a new leave announcement message. Type `%user.mention%` if you want to show the name the user who left. Type `%id%` to show id. Using this command with no message will show the current bye message. You can use embed json from <https://eb.nadeko.bot/> instead of a regular text, if you want the message to be embedded."
+  desc: |- 
+    Sets a new leave announcement message. 
+    Type `%user.mention%` if you want to show the name the user who left. 
+    Full list of placeholders can be found here <https://nadekobot.readthedocs.io/en/latest/placeholders/>  
+    Using this command with no message will show the current bye message. 
+    You can use embed json from <https://eb.nadeko.bot/> instead of a regular text, if you want the message to be embedded.
   args:
     - "%user.mention% has left."
 byedel:
@@ -66,15 +76,35 @@ byetest:
   args:
     - ""
     - "@SomeoneElse"
+boost:
+  desc: "Toggles anouncements on the current channel when someone boosts the server."
+  args:
+    - ""
+boostmsg:
+  desc: |-
+    Sets a new boost announcement message. 
+    Type `%user.mention%` if you want to show the name the user who left. 
+    Full list of placeholders can be found here <https://nadekobot.readthedocs.io/en/latest/placeholders/>
+    Using this command with no message will show the current boost message. 
+    You can use embed json from <https://eb.nadeko.bot/> instead of a regular text, if you want the message to be embedded.
+  args:
+    - "%user.mention% has boosted the server!!!"
+boostdel:
+  desc: "Sets the time it takes (in seconds) for boost messages to be auto-deleted. Set it to `0` to disable automatic deletion."
+  args:
+    - "0"
+    - "30"
 logserver:
   desc: "Enables or Disables ALL log events. If enabled, all log events will log to this channel."
   args:
     - "enable"
     - "disable"
 logignore:
-  desc: "Toggles whether the `{0}logserver` command ignores this channel. Useful if you have hidden admin channel and public log channel."
+  desc: "Toggles whether the `{0}logserver` command ignores the specified channel or user. Provide no arguments to see the list of currently ignored users and channels"
   args:
     - ""
+    - "@SomeUser"
+    - "#some-channel"
 repeatlist:
   desc: "Shows currently repeating messages and their indexes."
   args:
@@ -376,13 +406,15 @@ remind:
     - "me 1d5h Do something"
     - "#general 1m Start now!"
 reminddelete:
-  desc: "Deletes a reminder on the specified index."
+  desc: "Deletes a reminder on the specified index. You can specify 'server' option if you're an Administrator, and you want to delete a reminder on this server created by someone else. "
   args:
     - "3"
+    - "server 2"
 remindlist:
-  desc: "Lists all reminders you created. Paginated."
+  desc: "Lists all reminders you created. You can specify 'server' option if you're an Administrator to list all reminders created on this server. Paginated."
   args:
     - "1"
+    - "server 2"
 serverinfo:
   desc: "Shows info about the server the bot is on. If no server is supplied, it defaults to current one."
   args:
@@ -579,7 +611,7 @@ quoteid:
   args:
     - "123456"
 quotedelete:
-  desc: "Deletes a quote with the specified ID. You have to be either server Administrator or the creator of the quote to delete it."
+  desc: "Deletes a quote with the specified ID. You have to either have the Manage Messages permission or be the creator of the quote to delete it."
   args:
     - "123456"
 draw:
@@ -872,6 +904,10 @@ streamadd:
   desc: "Notifies this channel when the stream on the specified URL goes online or offline. Offline notifications will only show if you enable `{0}streamoff`. Maximum 10 per server."
   args:
     - "twitch.tv/someguy"
+streamsclear:
+  desc: "Removes all followed streams on this server."
+  args:
+    - ""
 streamremove:
   desc: "Stops following the stream on the specified index. (use `{0}stl` to see indexes)"
   args:
@@ -1035,10 +1071,6 @@ revimg:
   desc: "Returns a Google reverse image search for an image from a link."
   args:
     - "Image link"
-safebooru:
-  desc: "Shows a random image from safebooru with a given tag. Tag is optional but preferred. (multiple tags are appended with +)"
-  args:
-    - "yuri+kissing"
 wiki:
   desc: "Gives you back a wikipedia link"
   args:
@@ -1053,33 +1085,55 @@ avatar:
   args:
     - "@Someone"
 hentai:
-  desc: "Shows a hentai image from a random website (gelbooru, danbooru, konachan or yandere) with a given tag. Tag is optional but preferred. Only 1 tag allowed."
+  desc: "Shows a hentai image from a random website (gelbooru, danbooru, konachan or yandere) with a given tag. Tag(s) are optional but preferred. Maximum is usually 2 tags. Only 1 tag allowed."
   args:
     - "yuri"
+nhentai:
+  desc: "Shows basic information about a hentai with the specified id, or a valid nhentai search query."
+  args:
+    - "273426"
+    - "cute girl"
+autohentai:
+  desc: "Posts a hentai every X seconds with a random tag from the provided tags. Use `|` to separate tag groups. Random group will be chosen every time the image is sent. Max 2 tags per group. 20 seconds minimum. Provide no parameters to disable."
+  args:
+    - "30 yuri kissing|tail long_hair"
+    - ""
+hentaibomb:
+  desc: "Shows a total 5 images (from gelbooru, danbooru, konachan and yandere). Tag(s) are optional but preferred. Maximum is usually 2 tags."
+  args:
+    - "yuri"
+yandere:
+  desc: "Shows a random image from yandere with a given tag. Tag(s) are optional but preferred. Maximum is usually 2 tags."
+  args:
+    - "yuri kissing"
 danbooru:
-  desc: "Shows a random hentai image from danbooru with a given tag. Tag is optional but preferred. (multiple tags are appended with +)"
+  desc: "Shows a random hentai image from danbooru with a given tag. Tag(s) are optional but preferred. Maximum is usually 2 tags."
   args:
-    - "yuri+kissing"
+    - "yuri kissing"
 derpibooru:
-  desc: "Shows a random image from derpibooru with a given tag. Tag is optional but preferred."
+  desc: "Shows a random image from derpibooru with a given tag. Tag(s) are optional but preferred. Maximum is usually 2 tags."
   args:
-    - "yuri+kissing"
+    - "yuri kissing"
 gelbooru:
-  desc: "Shows a random hentai image from gelbooru with a given tag. Tag is optional but preferred. (multiple tags are appended with +)"
+  desc: "Shows a random hentai image from gelbooru with a given tag. Tag(s) are optional but preferred. Maximum is usually 2 tags."
   args:
-    - "yuri+kissing"
+    - "yuri kissing"
 sankaku:
-  desc: "Shows a random hentai image from chan.sankakucomplex.com with a given tag. Tag is optional but preferred. (multiple tags are appended with +)"
+  desc: "Shows a random hentai image from chan.sankakucomplex.com with a given tag. Tag(s) are optional but preferred. Maximum is usually 2 tags."
   args:
-    - "yuri+kiss"
+    - "yuri kiss"
 rule34:
-  desc: "Shows a random image from rule34.xx with a given tag. Tag is optional but preferred. (multiple tags are appended with +)"
+  desc: "Shows a random image from rule34.xx with a given tag. Tag(s) are optional but preferred. Maximum is usually 2 tags."
   args:
-    - "yuri+kissing"
+    - "yuri kissing"
 e621:
-  desc: "Shows a random hentai image from e621.net with a given tag. Tag is optional but preferred. (multiple tags are appended with +)"
+  desc: "Shows a random hentai image from e621.net with a given tag. Tag(s) are optional but preferred. Maximum is usually 2 tags."
   args:
-    - "yuri+kissing"
+    - "yuri kissing"
+safebooru:
+  desc: "Shows a random image from safebooru with a given tag. Tag(s) are optional but preferred. Maximum is usually 2 tags."
+  args:
+    - "yuri kissing"
 boobs:
   desc: "Real adult content."
   args:
@@ -1143,6 +1197,17 @@ showemojis:
   desc: "Shows a name and a link to every SPECIAL emoji in the message."
   args:
     - "A message full of SPECIAL emojis"
+emojiadd:
+  desc: |-
+    Adds the specified emoji to this server.
+    You can specify a name before the emoji to add it under a different name.
+    You can specify a name followed by an image link to add a new emoji from an image.
+    You can omit imageUrl and instead upload the image as an attachment. 
+    Image size has to be below 256KB.
+  args:
+    - ":someonesCustomEmoji:"
+    - "MyEmojiName :someonesCustomEmoji:"
+    - "owoNice https://cdn.discordapp.com/emojis/587930873811173386.png?size=128"
 deckshuffle:
   desc: "Reshuffles all cards back into the deck."
   args:
@@ -1152,7 +1217,7 @@ forwardmessages:
   args:
     - ""
 forwardtoall:
-  desc: "Toggles whether messages will be forwarded to all bot owners or only to the first one specified in the credentials.json file"
+  desc: "Toggles whether messages will be forwarded to all bot owners or only to the first one specified in the creds.yml file"
   args:
     - ""
 resetperms:
@@ -1195,7 +1260,7 @@ voicemute:
     - "1h30m @Someone"
     - "1h @Someone silence"
 konachan:
-  desc: "Shows a random hentai image from konachan with a given tag. Tag is optional but preferred."
+  desc: "Shows a random hentai image from konachan with a given tag. Tag(s) are optional but preferred. Maximum is usually 2 tags."
   args:
     - "yuri"
 muterole:
@@ -1241,7 +1306,7 @@ poll:
 autotranslang:
   desc: "Sets your source and target language to be used with `{0}at`. Specify no parameters to remove previously set value."
   args:
-    - "en>fr"
+    - "en fr"
 autotranslate:
   desc: "Starts automatic translation of all messages by users who set their `{0}atl` in this channel. You can set \"del\" parameter to automatically delete all translated user messages."
   args:
@@ -1265,10 +1330,6 @@ listservers:
   desc: "Lists servers the bot is on with some basic info. 15 per page."
   args:
     - "3"
-hentaibomb:
-  desc: "Shows a total 5 images (from gelbooru, danbooru, konachan and yandere). Tag is optional but preferred."
-  args:
-    - "yuri"
 cleverbot:
   desc: "Toggles cleverbot session. When enabled, the bot will reply to messages starting with bot mention in the server. Custom reactions starting with %bot.mention% won't work if cleverbot is enabled."
   args:
@@ -1282,20 +1343,16 @@ wikia:
   args:
     - "mtg Vigilance"
     - "mlp Dashy"
-yandere:
-  desc: "Shows a random image from yandere with a given tag. Tag is optional but preferred. (multiple tags are appended with +)"
-  args:
-    - "tag1+tag2"
 magicthegathering:
   desc: "Searches for a Magic The Gathering card."
   args:
     - "about face"
 hangmanlist:
-  desc: "Shows a list of hangman term types."
+  desc: "Shows a list of hangman question categories."
   args:
     - ""
 hangman:
-  desc: "Starts a game of hangman in the channel. Use `{0}hangmanlist` to see a list of available term types. Defaults to 'all'."
+  desc: "Starts a game of hangman in the channel. You can optionally select a category `{0}hangmanlist` to see a list of available categories."
   args:
     - ""
     - "movies"
@@ -1333,11 +1390,6 @@ setmaxplaytime:
 activity:
   desc: "Checks for spammers."
   args:
-    - ""
-autohentai:
-  desc: "Posts a hentai every X seconds with a random tag from the provided tags. Use `|` to separate tag groups. Random group will be chosen every time the image is sent. Use `+` for multiple tags (max 2 per group). 20 seconds minimum. Provide no parameters to disable."
-  args:
-    - "30 yuri+kissing|tail+long_hair"
     - ""
 setstatus:
   desc: "Sets the bot's status. (Online/Idle/Dnd/Invisible)"
@@ -1403,7 +1455,10 @@ waifutransfer:
   args:
     - "@ExWaifu @NewOwner"
 waifugift:
-  desc: "Gift an item to someone. This will increase their waifu value by 50% of the gifted item's value if they are not your waifu, or 95% if they are. Provide no parameters to see a list of items that you can gift."
+  desc: -|
+    Gift an item to someone. This will increase their waifu value by a percentage of the gift's value.
+    Negative gifts will not show up in waifuinfo.
+    Provide no parameters to see a list of items that you can gift.
   args:
     - ""
     - "Rose @Himesama"
@@ -1448,7 +1503,9 @@ stringsreload:
   args:
     - ""
 shardstats:
-  desc: "Stats for shards. Paginated with 25 shards per page."
+  desc: |-
+    Stats for shards. Paginated with 25 shards per page.
+    Format: `[status] | # [shard_id] | [last_heartbeat] | [server_count]`
   args:
     - ""
     - "2"
@@ -1521,6 +1578,14 @@ crsexport:
   desc: "Exports custom reactions from the current server (or global custom reactions in DMs) into a .yml file"
   args:
     - ""
+quotesimport:
+  desc: "Upload the file or send the raw .yml data with this command to import all quotes from the specified string or file into the current server."
+  args:
+    - "<upload .yml file>"
+quotesexport:
+  desc: "Exports quotes from the current server into a .yml file"
+  args:
+    - ""
 aliaslist:
   desc: "Shows the list of currently set aliases. Paginated."
   args:
@@ -1541,9 +1606,12 @@ warnlogall:
     - ""
     - "2"
 warn:
-  desc: "Warns a user."
+  desc: |-
+    Warns a user with an optional reason.
+    You can specify a warning weight integer before the user. For example, 3 would mean that this warning counts as 3 warnings.
   args:
     - "@Someone Very rude person"
+    - "3 @Someone Very rude person"
 scadd:
   desc: "Adds a command to the list of commands which will be executed automatically in the current channel, in the order they were added in, by the bot when it startups up."
   args:
@@ -1860,10 +1928,6 @@ clublb:
   desc: "Shows club rankings on the specified page."
   args:
     - "2"
-nsfwcc:
-  desc: "Clears nsfw cache."
-  args:
-    - ""
 clubadmin:
   desc: "Assigns (or unassigns) staff role to the member of the club. Admins can ban, kick and accept applications."
   args:
@@ -1882,6 +1946,12 @@ eightball:
   desc: "Ask the 8ball a yes/no question."
   args:
     - "Is b1nzy a nice guy?"
+ytuploadnotif:
+  desc: |-
+    Subscribe to a youtube channel's upload rss feed.
+    Shortcut for `.feed https://www.youtube.com/feeds/videos.xml?channel_id=%3Cyoutube_channel_id`
+  args:
+    - "https://www.youtube.com/channel/UCSJ4gkVC6NrvII8umztf0Ow"
 feed:
   desc: "Subscribes to a feed. Bot will post an update up to once every 10 seconds. You can have up to 10 feeds on one server. All feeds must have unique URLs. Set a channel as a second optional parameter to specify where to send the updates."
   args:
@@ -1971,10 +2041,6 @@ timelyreset:
   desc: "Resets all user timeouts on `{0}timely` command."
   args:
     - ""
-novel:
-  desc: "Searches for a novel on `http://novelupdates.com/`. You have to provide an exact name."
-  args:
-    - "the nine cauldrons"
 crypto:
   desc: "Shows basic stats about a cryptocurrency from coinmarketcap.com. You can use either a name or an abbreviation of the currency."
   args:
@@ -1984,6 +2050,10 @@ rolelevelreq:
   desc: "Set a level requirement on a self-assignable role."
   args:
     - "5 SomeRole"
+massban:
+  desc: "Bans multiple users at once. Specify a space separated list of IDs of users who you wish to ban."
+  args:
+    - "123123123 3333333333 444444444"
 masskill:
   desc: "Specify a new-line separated list of `userid reason`. You can use Username#discrim instead of UserId. Specified users will be banned from the current server, blacklisted from the bot, and have all of their flowers taken away."
   args:
@@ -2006,10 +2076,12 @@ rollduel:
     - "50 @Someone"
     - "@Challenger"
 reactionroles:
-  desc: "Specify role names and server emojis with which they're represented, the bot will then add those emojis to the previous message in the channel, and users will be able to get the roles by clicking on the emoji. You can set 'excl' as the first parameter to make them exclusive. You can have up to 5 of these enabled on one server at a time."
+  desc: "Specify role names and server emojis with which they're represented, the bot will then add those emojis to the previous message in the channel, and users will be able to get the roles by clicking on the emoji. You can set 'excl' as the parameter before the reactions and roles to make them exclusive. You can have up to 10 of these enabled on one server at a time. Optionally you can specify target message if you don't want it to be the previous one."
   args:
     - "Gamer :SomeServerEmoji: Streamer :Other: Watcher :Other2:"
     - "excl Horde :Horde: Alliance :Alliance:"
+    - "886382471732662332 excl Horde :Horde: Alliance :Alliance:"
+    - "886382471732662332 Gamer :SomeServerEmoji: Streamer :Other: Watcher :Other2:"
 reactionroleslist:
   desc: "Lists all ReactionRole messages on this channel and their indexes."
   args:
@@ -2071,8 +2143,18 @@ purgeuser:
   desc: "Purge user from the database completely. This includes currency, xp, clubs that user owns, waifu info"
   args:
     - "@Oblivion"
-nhentai:
-  desc: "Shows basic information about a hentai with the specified id, or a valid nhentai search query."    
+imageonlychannel:
+  desc: |- 
+    Toggles whether the channel only allows images.
+    Users who send more than a few non-image messages will be banned from using the channel. 
   args:
-    - "273426"
-    - "cute girl"
+    - ""
+coordreload:
+  desc: "Reloads coordinator config"
+  args:
+    - "" 
+showembed:
+  desc: "Prints the json equivalent of the embed of the message specified by its Id."
+  args:
+    - "820022733172121600"
+    - "#some-channel 820022733172121600"

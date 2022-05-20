@@ -1,11 +1,13 @@
 # DO NOT CHANGE
-version: 2
+version: 5
 # Bot token. Do not share with anyone ever -> https://discordapp.com/developers/applications/
-token: Nzc0MDE5MDQ3NTAzMjk4NjMw.X6RraQ.bFLD6Ekr2oIfjUO1RDaQ4ptfb5o
+token: OTU1OTgzMTEwOTM0MjU3NzI1.Yjpmpg.GJFM9SlF66P23rGOlUBFwdeG0ak
 # List of Ids of the users who have bot owner permissions
 # **DO NOT ADD PEOPLE YOU DON'T TRUST**
 ownerIds:
   - 197071176810364928
+# Keep this on 'true' unless you're sure your bot shouldn't use privileged intents or you're waiting to be accepted
+usePrivilegedIntents: true
 # The number of shards that the bot will running on.
 # Leave at 1 if you don't know what you're doing.
 totalShards: 1
@@ -20,14 +22,14 @@ votes:
 # Example: https://votes.my.cool.bot.com
   topggServiceUrl: 
   # Authorization header value sent to the TopGG service url with each request
-# This should be equivalent to the TopggKey in your NadekoBot.Votes api appsettings.json file
+  # This should be equivalent to the TopggKey in your NadekoBot.Votes api appsettings.json file
   topggKey: 
   # discords.com votes service url
-# This is the url of your instance of the NadekoBot.Votes api
-# Example: https://votes.my.cool.bot.com
+  # This is the url of your instance of the NadekoBot.Votes api
+  # Example: https://votes.my.cool.bot.com
   discordsServiceUrl: ''
   # Authorization header value sent to the Discords service url with each request
-# This should be equivalent to the DiscordsKey in your NadekoBot.Votes api appsettings.json file
+  # This should be equivalent to the DiscordsKey in your NadekoBot.Votes api appsettings.json file
   discordsKey: ''
 # Patreon auto reward system settings.
 # go to https://www.patreon.com/portal -> my clients -> create client
@@ -46,9 +48,14 @@ cleverbotApiKey: ''
 redisOptions: 
 # Database options. Don't change if you don't know what you're doing. Leave null for default values
 db:
-# Database type. Only sqlite supported atm
+# Database type. "sqlite", "mysql" and "postgresql" are supported.
+# Default is "sqlite"
   type: sqlite
-  # Connection string. Will default to "Data Source=data/NadekoBot.db"
+  # Database connection string.
+  # You MUST change this if you're not using "sqlite" type.
+  # Default is "Data Source=data/NadekoBot.db"
+  # Example for mysql: "Server=localhost;Port=3306;Uid=root;Pwd=my_super_secret_mysql_password;Database=nadeko"
+  # Example for postgresql: "Server=localhost;Port=5432;User Id=postgres;Password=my_super_secret_postgres_password;Database=nadeko;"
   connectionString: Data Source=data/NadekoBot.db
 # Address and port of the coordinator endpoint. Leave empty for default.
 # Change only if you've changed the coordinator address or port.
@@ -65,18 +72,25 @@ timezoneDbApiKey:
 # Used for cryptocurrency related commands.
 coinmarketcapApiKey: 
 # Api key used for Osu related commands. Obtain this key at https://osu.ppy.sh/p/api
-osuApiKey: ''
+osuApiKey: 4c8c8fdffdsfdsfsdfsfa33f3f3140a7d93320d6
+# Optional Trovo client id.
+# You should use this if Trovo stream notifications stopped working or you're getting ratelimit errors.
+trovoClientId: 
+# Obtain by creating an application at https://dev.twitch.tv/console/apps
+twitchClientId: 37nbaflw5dbyggtm23gjuzbh4p7dtc
+# Obtain by creating an application at https://dev.twitch.tv/console/apps
+twitchClientSecret: fyontfx4wsk8f076ekfvj7z56rk6go
 # Command and args which will be used to restart the bot.
 # Only used if bot is executed directly (NOT through the coordinator)
-# placeholders: 
-#     {0} -> shard id 
-#     {1} -> total shards
+# placeholders:
+# {0} -> shard id
+# {1} -> total shards
 # Linux default
-#     cmd: dotnet
-#     args: "NadekoBot.dll -- {0}"
+# cmd: dotnet
+# args: "NadekoBot.dll -- {0}"
 # Windows default
-#     cmd: NadekoBot.exe
-#     args: {0}
+# cmd: NadekoBot.exe
+# args: {0}
 restartCommand:
-  cmd: 
-  args: 
+  cmd: NadekoBot.exe
+  args: '{0}'

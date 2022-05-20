@@ -2,9 +2,9 @@
 version: 3
 coins:
   heads:
-    - https://cdn.nadeko.bot/coins/heads3.png
+    - https://i.imgur.com/wSF7cxU.png
   tails:
-    - https://cdn.nadeko.bot/coins/tails3.png
+    - https://i.imgur.com/e24qkus.png
 currency:
   - https://cdn.nadeko.bot/other/currency/0.png
   - https://cdn.nadeko.bot/other/currency/1.png

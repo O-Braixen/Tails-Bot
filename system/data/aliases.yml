@@ -92,35 +92,6 @@ iam:
 iamnot:
 - iamnot
 - iamn
-addcustreact:
-- addcustreact
-- acr
-- expradd
-- exadd
-- exa
-listcustreact:
-- listcustreact
-- lcr
-- exprli
-- exl
-listcustreactg:
-- listcustreactg
-- lcrg
-- exprlg
-- exlg
-showcustreact:
-- showcustreact
-- scr
-- exs
-delcustreact:
-- delcustreact
-- dcr
-- exprdel
-- exd
-- exd
-crclear:
-- crclear
-- exclear
 fwclear:
 - fwclear
 aliasesclear:
@@ -500,16 +471,20 @@ join:
 trackremove:
 - songremove
 - srm
-movesong:
+- trackremove
+- trm
+trackmove:
+- trackmove
+- tm
 - movesong
 - ms
-reptcursong:
-- reptcursong
-- rcs
 queuerepeat:
 - queuerepeat
 - qrp
 - rpl
+queueautoplay:
+- queueautoplay
+- qap
 save:
 - save
 streamrole:
@@ -543,6 +518,9 @@ streamoffline:
 - streamoffline
 - sto
 - stoff
+streamonlinedelete:
+- streamonlinedelete
+- stondel
 streammessage:
 - streammsg
 - stm
@@ -705,6 +683,8 @@ cash:
 - cur
 currencytransactions:
 - curtrs
+currencytransaction:
+  - curtr
 listperms:
 - listperms
 - lp
@@ -909,25 +889,6 @@ languageslist:
 - langli
 rategirl:
 - rategirl
-crreact:
-- crreact
-- crr
-crad:
-- crad
-- exad
-crat:
-- crat
-- exat
-crdm:
-- crdm
-- exdm
-crca:
-- crca
-- exca
-crsreload:
-- crsreload
-- expreload
-- exrel
 aliaslist:
 - aliaslist
 - cmdmaplist
@@ -989,9 +950,6 @@ warnpunishlist:
 warnpunish:
 - warnpunish
 - warnp
-claimpatreonrewards:
-- clparew
-- claparew
 ping:
 - ping
 time:
@@ -1034,7 +992,7 @@ globalpermlist:
 - listglobalperms
 resetglobalperms:
 - resetglobalperms
-prefixcommand:
+prefix:
 - prefix
 defprefix:
 - defprefix
@@ -1050,9 +1008,6 @@ streamroleblacklist:
 streamrolewhitelist:
 - streamrolewhitelist
 - srwl
-botconfigedit:
-- botconfigedit
-- bce
 config:
 - config
 - conf
@@ -1122,8 +1077,6 @@ clubban:
 - clubban
 clubunban:
 - clubunban
-clublevelreq:
-- clublevelreq
 clubdescription:
 - clubdesc
 clubicon:
@@ -1157,10 +1110,6 @@ feedremove:
 feedlist:
 - feedlist
 - feeds
-editcustreact:
-- editcustreact
-- ecr
-- exe
 say:
 - say
 sqlexec:
@@ -1215,15 +1164,21 @@ pathofexilecurrency:
 - poec
 rollduel:
 - rollduel
-reactionroles:
-- reactionroles
-- rero
+reactionroleadd:
+- reactionroleadd
+- reroa
 reactionroleslist:
 - reactionroleslist
 - reroli
 reactionrolesremove:
 - reactionrolesremove
 - rerorm
+reactionrolesdeleteall:
+- rerodeleteall
+- rerodela
+reactionrolestransfer:
+- rerotransfer
+- rerot
 blackjack:
 - blackjack
 - bj
@@ -1253,12 +1208,6 @@ economy:
 - economy
 purgeuser:
 - purgeuser 
-crsimport:
-  - crsimport
-  - eximport
-crsexport:
-  - crsexport
-  - exexport
 imageonlychannel:
   - imageonlychannel
   - imageonly
@@ -1273,3 +1222,85 @@ quotesimport:
   - qimport
 showembed:
   - showembed
+# NadekoExpressions
+exprreact:
+  - exreact
+  - exr
+exprad:
+  - exprad
+  - exad
+exprat:
+  - exprat
+  - exat
+exprdm:
+  - exprdm
+  - exdm
+exprca:
+  - exprca
+  - exca
+exprsreload:
+  - expreload
+  - exrel
+expradd:
+  - expradd
+  - exadd
+  - exa
+  - acr
+exprlist:
+  - exprlist
+  - exl
+  - exprli
+  - exlist
+  - exli
+  - lcr
+exprshow:
+  - exprshow
+  - exs
+  - exshow
+  - scr
+exprdelete:
+  - exprdel
+  - exd
+  - exdel
+  - dcr
+exprclear:
+  - exprclear
+  - exc
+  - exclear
+expredit:
+  - expredit
+  - exe
+  - exedit
+  - ecr
+exprsimport:
+  - eximport
+exprsexport:
+  - exexport
+deleteemptyservers:
+  - deleteemptyservers
+stock:
+  - stock
+medusaload:
+  - medusaload
+  - meload
+medusaunload:
+  - medusaunload
+  - meunload
+medusalist:
+  - medusalist
+  - melist
+medusainfo:
+  - medusainfo
+  - meinfo
+bankdeposit:
+  - deposit
+  - d
+  - dep
+bankwithdraw:
+  - withdraw
+  - w
+  - with
+bankbalance:
+  - balance
+  - b
+  - bal

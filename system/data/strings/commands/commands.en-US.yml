@@ -1,4 +1,4 @@
-help:
+h:
   desc: "Either shows a help for a single command, or DMs you help link if no parameters are specified."
   args:
     - "{0}cmds"
@@ -44,7 +44,7 @@ bye:
   args:
     - ""
 byemsg:
-  desc: |- 
+  desc: |-
     Sets a new leave announcement message. 
     Type `%user.mention%` if you want to show the name the user who left. 
     Full list of placeholders can be found here <https://nadekobot.readthedocs.io/en/latest/placeholders/>  
@@ -124,7 +124,7 @@ repeat:
     - "1h5m Hello @erryone"
     - "10:00 Daily have a nice day! This will execute once every 24h."
     - "21:00 30m Starting at 21 and every 30 minutes after that i will send this message!"
-repeatredun:
+repeatredundant:
   desc: "Specify repeater's index (use `{0}repli` to find it) to toggle whether that repeater's message should be reposted if the last message in the channel is the same repeater's message. This is useful if you want to remind everyone to be nice in the channel every so often, but don't want to have the bot spam the channel. This is NOT useful if you want to periodically ping someone."
   args:
     - "1"
@@ -192,35 +192,31 @@ iamnot:
   desc: "Removes a specified role from you. Role must be on a list of self-assignable roles."
   args:
     - "Gamer"
-addcustreact:
+expradd:
   desc: "Add a custom reaction with a trigger and a response. Running this command in server requires the Administration permission. Running this command in DM is Bot Owner only and adds a new global custom reaction. Guide here: <http://nadekobot.readthedocs.io/en/latest/custom-reactions/>"
   args:
     - "\"hello\" Hi there %user.mention%"
-listcustreact:
-  desc: |- 
+exprlist:
+  desc: |-
     Lists global or server custom reactions (20 commands per page).
     Running the command in DM will list global custom reactions, while running it in a server will list server custom reactions.
     Shows enabled settings, followed by id, followed by the trigger.
     **Settings:** 
-    • 🗯️ Triggered if trigger matches any word (`{0}h {0}crca`)
-    • ✉️ Response will be DMed (`{0}h {0}crdm`)
-    • ❌ Trigger will be deleted (`{0}h {0}crad`)
+    • 🗯️ Triggered if trigger matches any word (`{0}h {0}exca`)
+    • ✉️ Response will be DMed (`{0}h {0}exdm`)
+    • ❌ Trigger will be deleted (`{0}h {0}exad`)
   args:
     - "1"
     - "all"
-listcustreactg:
-  desc: "Lists global or server custom reactions (20 commands per page) grouped by trigger, and show a number of responses for each. Running the command in DM will list global custom reactions, while running it in server will list that server's custom reactions."
-  args:
-    - "1"
-showcustreact:
+exprshow:
   desc: "Shows a custom reaction's response on a given ID."
   args:
     - "1"
-delcustreact:
+exprdelete:
   desc: "Deletes a custom reaction on a specific index. If ran in DM, it is bot owner only and deletes a global custom reaction. If ran in a server, it requires Administration privileges and removes server custom reaction."
   args:
     - "5"
-crclear:
+exprclear:
   desc: "Deletes all custom reactions on this server."
   args:
     - ""
@@ -847,13 +843,13 @@ join:
   desc: "Makes the bot join your voice channel."
   args:
     - ""
-songremove:
+trackremove:
   desc: "Remove a song by its # in the queue, or 'all' (or provide no parameter) to remove all songs from the queue."
   args:
     - "5"
     - "all"
     - ""
-movesong:
+trackmove:
   desc: "Moves a song from one position to another."
   args:
     - "5 3"
@@ -861,10 +857,6 @@ setmaxqueue:
   desc: "Sets a maximum queue size. Specify no parameters to have no limit."
   args:
     - "50"
-    - ""
-reptcursong:
-  desc: "Obsolete. Use `{0}queuerepeat`"
-  args:
     - ""
 queuerepeat:
   desc: "Sets music player repeat strategy for this server.\n- `n` / `no` - player will stop once it reaches the end of the queue\n- `s` / `song` - player will repeat current song\n- `q` / `queue` or empty - player will repeat entire music queue"
@@ -896,8 +888,8 @@ deleteplaylist:
   desc: "Deletes a saved playlist using its id. Works only if you made it or if you are the bot owner."
   args:
     - "5"
-autoplay:
-  desc: "Toggles autoplay - When the song is finished, automatically queue a related Youtube song. (Works only for Youtube songs and when queue is empty)"
+queueautoplay:
+  desc: "Toggles autoplay - When the song is finished, automatically queue a related Youtube song. (Works only for Youtube songs)"
   args:
     - ""
 streamadd:
@@ -920,11 +912,15 @@ streamoffline:
   desc: "Toggles whether the bot will also notify when added streams go offline."
   args:
     - ""
-streammsg:
+streamonlinedelete:
+  desc: "Toggles whether the bot will delete stream online message when the stream goes offline."
+  args:
+    - ""
+streammessage:
   desc: "Sets the message which will show when the stream on the specified index comes online. You can use %user% and %platform% placeholders."
   args:
     - "1 Hey @erryone %user% is back online on %platform%!1!!"
-streammsgall:
+streammessageall:
   desc: "Sets the message which will show when any of the currently followed streams comes online. This does not apply to the streams which get added afterwards. You can use %user% and %platform% placeholders."
   args:
     - "Hey @erryone %user% is back online!1!!"
@@ -1143,9 +1139,9 @@ butts:
   args:
     - ""
 translate:
-  desc: "Translates from>to text. From the given language to the destination language."
+  desc: "Translates text from the given language to the destination language."
   args:
-    - "en>fr Hello"
+    - "en fr Hello"
 translangs:
   desc: "Lists the valid languages for translation."
   args:
@@ -1171,11 +1167,15 @@ cash:
   args:
     - ""
     - "@Someone"
-curtrs:
+currencytransactions:
   desc: "Shows your currency transactions on the specified page. Bot owner can see other people's transactions too."
   args:
     - "2"
     - "@SomeUser 2"
+currencytransaction:
+  desc: "Shows full details about a currency transaction with the specified ID. You can only check your own transactions."
+  args:
+    - "3yvd"
 listperms:
   desc: "Lists whole permission chain with their indexes. You can specify an optional page number if there are a lot of permissions."
   args:
@@ -1526,7 +1526,7 @@ timezone:
   args:
     - ""
     - "GMT Standard Time"
-langsetdefault:
+languagesetdefault:
   desc: "Sets the bot's default response language. All servers which use a default locale will use this one. Setting to `default` will use the host's current culture. Provide no parameters to see currently set language."
   args:
     - "en-US"
@@ -1544,37 +1544,37 @@ rategirl:
   desc: "Use the universal hot-crazy wife zone matrix to determine the girl's worth. It is everything young men need to know about women. At any moment in time, any woman you have previously located on this chart can vanish from that location and appear anywhere else on the chart."
   args:
     - "@SomeGurl"
-crreact:
+exprreact:
   desc: "Sets or resets reactions (up to 3) which will be added to the response message of the CustomReaction with the specified ID. Provide no emojis to reset."
   args:
     - "59 \U0001F44D \U0001F44E "
     - "59 <a:nFlower:408963839191941120>"
     - "59"
-crad:
+exprad:
   desc: "Toggles whether the message triggering the custom reaction will be automatically deleted."
   args:
     - "59"
-crat:
+exprat:
   desc: "Toggles whether the custom reaction will allow extra input after the trigger. For example, with this feature enabled, custom reaction with trigger 'hi' will also be invoked when a user types 'hi there'. This feature is automatically enabled on custom reactions which have '%target%' in their response."
   args:
     - "59"
-crdm:
+exprdm:
   desc: "Toggles whether the response message of the custom reaction will be sent as a direct message."
   args:
     - "44"
-crca:
+exprca:
   desc: "Toggles whether the custom reaction will trigger if the triggering message contains the keyword (instead of only starting with it)."
   args:
     - "44"
-crsreload:
+exprsreload:
   desc: "Reloads all custom reactions on all shards. Use this if you've made changes to the database while the bot is running, or used `{0}deleteunusedcrnq`"
   args:
     - ""
-crsimport:
+exprsimport:
   desc: "Upload the file or send the raw .yml data with this command to import all custom reactions from the specified string or file into the current server (or as global custom reactions in dm)"
   args:
     - "<upload .yml file>"
-crsexport:
+exprsexport:
   desc: "Exports custom reactions from the current server (or global custom reactions in DMs) into a .yml file"
   args:
     - ""
@@ -1612,31 +1612,31 @@ warn:
   args:
     - "@Someone Very rude person"
     - "3 @Someone Very rude person"
-scadd:
+startupcommandadd:
   desc: "Adds a command to the list of commands which will be executed automatically in the current channel, in the order they were added in, by the bot when it startups up."
   args:
     - "{0}stats"
-acadd:
+autocommandadd:
   desc: "Adds a command to the list of commands which will be executed automatically every X seconds."
   args:
     - "60 {0}prune 1000"
-scrm:
+startupcommandremove:
   desc: "Removes a startup command on the specified index."
   args:
     - "3"
-acrm:
+autocommandremove:
   desc: "Removes an auto command on the specified index."
   args:
     - "3"
-scclear:
+startupcommandsclear:
   desc: "Removes all startup commands."
   args:
     - ""
-sclist:
+startupcommandslist:
   desc: "Lists all startup commands in the order they will be executed in."
   args:
     - ""
-aclist:
+autocommandslist:
   desc: "Lists all auto commands and the intervals in which they execute."
   args:
     - ""
@@ -1650,7 +1650,7 @@ banmessage:
   args:
     - "%ban.user%, you've been banned from %server.name%. Reason: %ban.reason%"
     - "{{ \"description\": \"%ban.user% you have been banned from %server.name% by %ban.mod%\" }}"
-banmsgtest:
+banmessagetest:
   desc: "If ban message is not disabled, bot will send you the message as if you were banned by yourself. Used for testing the ban message."
   args:
     - "No reason"
@@ -1685,10 +1685,6 @@ warnpunish:
     - "5 Ban"
     - "5 Mute 2d12h"
     - "4 AddRole toxic 1h"
-clparew:
-  desc: "Claim patreon rewards. If you're subscribed to bot owner's patreon you can use this command to claim your rewards - assuming bot owner did setup has their patreon key."
-  args:
-    - ""
 ping:
   desc: "Ping the bot to see if there are latency issues."
   args:
@@ -1782,11 +1778,6 @@ streamrolewhitelist:
   args:
     - "add @Someone#1234"
     - "rem @Someone#1234"
-botconfigedit:
-  desc: "Obsolete, use `{0}config` or `{0}config bot` instead"
-  args:
-    - "color.ok 00ff00"
-    - ""
 config:
   desc: |-
     Gets or sets configuration values.
@@ -1804,7 +1795,7 @@ configreload:
   args:
     - "bot"
     - "gambling"
-nsfwtagbl:
+nsfwtagblacklist:
   desc: "Toggles whether the tag is blacklisted or not in nsfw searches. Provide no parameters to see the list of blacklisted tags."
   args:
     - "poop"
@@ -1813,7 +1804,7 @@ experience:
   args:
     - ""
     - "@someguy"
-xptempreload:
+xptemplatereload:
   desc: "Reloads the xp template file. Xp template file allows you to customize the position and color of elements on the `{0}xp` card."
   args:
     - ""
@@ -1831,7 +1822,7 @@ xpnotify:
   args:
     - "global dm"
     - "server channel"
-xplvluprewards:
+xpleveluprewards:
   desc: "Shows currently set level up rewards."
   args:
     - ""
@@ -1841,14 +1832,14 @@ xprewsreset:
     - ""
 xprolereward:
   desc: |-
-   Add or remove a role from the user who reaches the specified level.
-   Provide no action and role name in order to remove the role reward.
+    Add or remove a role from the user who reaches the specified level.
+    Provide no action and role name in order to remove the role reward.
   args:
     - "1 rm Newbie"
     - "3 add Social"
     - "5 add Member"
     - "5"
-xpcurreward:
+xpcurrencyreward:
   desc: "Sets a currency reward on a specified level. Provide no amount in order to remove the reward."
   args:
     - "3 50"
@@ -1856,7 +1847,7 @@ xpleaderboard:
   desc: "Shows current server's xp leaderboard."
   args:
     - ""
-xpgleaderboard:
+xpgloballeaderboard:
   desc: "Shows the global xp leaderboard."
   args:
     - ""
@@ -1872,7 +1863,7 @@ clubtransfer:
   desc: "Transfers the ownership of the club to another member of the club."
   args:
     - "@Someone"
-clubinfo:
+clubinformation:
   desc: "Shows information about the club."
   args:
     - "My Brand New Club#23"
@@ -1904,11 +1895,7 @@ clubunban:
   desc: "Unbans the previously banned user from the club. You must be the club owner."
   args:
     - "user#1337"
-clublevelreq:
-  desc: "Sets the club required level to apply to join the club. You must be club owner. You can't set this number below 5."
-  args:
-    - "7"
-clubdesc:
+clubdescription:
   desc: "Sets the club description. Maximum 150 characters. Club owner only."
   args:
     - "This is the best club please join."
@@ -1924,7 +1911,7 @@ clubbans:
   desc: "Shows the list of users who have banned from your club. Paginated. You must be club owner to use this command."
   args:
     - "2"
-clublb:
+clubleaderboard:
   desc: "Shows club rankings on the specified page."
   args:
     - "2"
@@ -1955,8 +1942,8 @@ ytuploadnotif:
 feed:
   desc: "Subscribes to a feed. Bot will post an update up to once every 10 seconds. You can have up to 10 feeds on one server. All feeds must have unique URLs. Set a channel as a second optional parameter to specify where to send the updates."
   args:
-    - "https://www.rt.com/rss/"
-    - "https://www.rt.com/rss/ #updates"
+    - "https://blog.playstation.com/feed/"
+    - "https://blog.playstation.com/feed/ #updates"
 feedremove:
   desc: "Stops tracking a feed on the given index. Use `{0}feeds` command to see a list of feeds and their indexes."
   args:
@@ -1965,7 +1952,7 @@ feedlist:
   desc: "Shows the list of feeds you've subscribed to on this server."
   args:
     - ""
-editcustreact:
+expredit:
   desc: "Edits the custom reaction's response given its ID."
   args:
     - "123 I'm a magical girl"
@@ -2002,16 +1989,16 @@ deletexp:
   desc: "Deletes everything from UserXpStats, Clubs and sets users' TotalXP to 0."
   args:
     - ""
-dpo:
+discordpermoverride:
   desc: "Overrides required user permissions that the command has with the specified ones. You can only use server-level permissions. This action will make the bot ignore user permission requirements which command has by default. Provide no permissions to reset to default."
   args:
     - "{0}prune ManageMessages BanMembers"
     - "{0}prune"
-dpol:
+discordpermoverridelist:
   desc: "Lists all discord permission overrides on this server."
   args:
     - ""
-dpor:
+discordpermoverridereset:
   desc: "Resets ALL currently set discord permission overrides on this server. This will make all commands have default discord permission requirements."
   args:
     - ""
@@ -2046,6 +2033,12 @@ crypto:
   args:
     - "btc"
     - "bitcoin"
+stock:
+  desc: "Shows basic information about a stock. You can use a symbol or company name"
+  args:
+    - "tsla"
+    - "advanced micro devices"
+    - "amd"
 rolelevelreq:
   desc: "Set a level requirement on a self-assignable role."
   args:
@@ -2075,21 +2068,33 @@ rollduel:
   args:
     - "50 @Someone"
     - "@Challenger"
-reactionroles:
-  desc: "Specify role names and server emojis with which they're represented, the bot will then add those emojis to the previous message in the channel, and users will be able to get the roles by clicking on the emoji. You can set 'excl' as the parameter before the reactions and roles to make them exclusive. You can have up to 10 of these enabled on one server at a time. Optionally you can specify target message if you don't want it to be the previous one."
+reactionroleadd:
+  desc: |-
+    Specify a message id, emote and a role name to have the bot assign the specified role to the user who reacts to the specified message (in this channel) with the specified emoji.
+    You can optionally specify an exclusivity group. Default is group 0 which is non-exclusive. Other groups are exclusive. Exclusive groups will let the user only have one of the roles specified in that group.
+    You can optionally specify a level requirement after a group. Users who don't meet the level requirement will not receive the role.
+    You can have up to 50 reaction roles per server in total.
   args:
-    - "Gamer :SomeServerEmoji: Streamer :Other: Watcher :Other2:"
-    - "excl Horde :Horde: Alliance :Alliance:"
-    - "886382471732662332 excl Horde :Horde: Alliance :Alliance:"
-    - "886382471732662332 Gamer :SomeServerEmoji: Streamer :Other: Watcher :Other2:"
+    - 971276352684691466 😊 gamer
+    - 971276352684691466 😢 emo 1
+    - 971276352684691466 🤔 philosopher 5 20
+    - 971276352684691466 👨 normie 5 20
 reactionroleslist:
-  desc: "Lists all ReactionRole messages on this channel and their indexes."
+  desc: "Lists all ReactionRole messages on this server with their message ids. Clicking/Tapping message ids will send you to that message."
   args:
     - ""
 reactionrolesremove:
-  desc: "Removed a ReactionRole message on the specified index."
+  desc: "Remove all reaction roles from message specified by the id"
   args:
-    - "1"
+    - "971276352684691466"
+reactionrolesdeleteall:
+  desc: "Deletes all reaction roles on the server. This action is irreversible."
+  args:
+    - ""
+reactionrolestransfer:
+  desc: "Transfers reaction roles from one message to another by specifying their ids. If the target message has reaction roles specified already, the reaction roles will be MERGED, not overwritten."
+  args:
+    - "971276352684691466 971427748448964628"
 blackjack:
   desc: "Start or join a blackjack game. You must specify the amount you're betting. Use `{0}hit`, `{0}stand` and `{0}double` commands to play. Game is played with 4 decks. Dealer hits on soft 17 and wins draws."
   args:
@@ -2144,7 +2149,7 @@ purgeuser:
   args:
     - "@Oblivion"
 imageonlychannel:
-  desc: |- 
+  desc: |-
     Toggles whether the channel only allows images.
     Users who send more than a few non-image messages will be banned from using the channel. 
   args:
@@ -2152,9 +2157,55 @@ imageonlychannel:
 coordreload:
   desc: "Reloads coordinator config"
   args:
-    - "" 
+    - ""
 showembed:
   desc: "Prints the json equivalent of the embed of the message specified by its Id."
   args:
     - "820022733172121600"
     - "#some-channel 820022733172121600"
+deleteemptyservers:
+  desc: "Deletes all servers in which the bot is the only member."
+  args:
+    - ""
+medusaload:
+  desc: |- 
+    Loads a medusa with the specified name from the data/medusae/ folder.
+    Provide no name to see the list of loadable medusae.
+    Read about the medusa system [here](https://nadekobot.readthedocs.io/en/latest/medusa/creating-a-medusa/)
+  args:
+    - "mycoolmedusa"
+    - ""
+medusaunload:
+  desc: |-
+    Unloads the previously loaded medusa.
+    Provide no name to see the list of unloadable medusae. 
+    Read about the medusa system [here](https://nadekobot.readthedocs.io/en/latest/medusa/creating-a-medusa/)
+  args:
+    - "mycoolmedusa"
+    - ""
+medusainfo:
+  desc: |-
+    Shows information about the specified medusa such as the author, name, description, list of sneks, number of commands etc.
+    Provide no name to see the basic information about all loaded medusae. 
+    Read about the medusa system [here](https://nadekobot.readthedocs.io/en/latest/medusa/creating-a-medusa/)
+  args:
+    - "mycoolmedusa"
+    - ""
+medusalist: 
+  desc: |-
+    Lists all loaded and unloaded medusae.
+    Read about the medusa system [here](https://nadekobot.readthedocs.io/en/latest/medusa/creating-a-medusa/)
+  args:
+    - ""
+bankdeposit:
+  desc: "Deposits the specified amount of currency into the bank for later use."
+  args:
+    - "50"
+bankwithdraw:
+  desc: "Withdraws the specified amount of currency from the bank if available."
+  args:
+    - "49"
+bankbalance:
+  desc: "Shows your current bank balance available for withdrawal."
+  args:
+    - ""

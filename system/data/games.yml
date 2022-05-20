@@ -13,29 +13,29 @@ trivia:
   minimumWinReq: 1
 # List of responses for the .8ball command. A random one will be selected every time
 eightBallResponses:
-  - Most definitely yes.
-  - For sure.
-  - Totally!
-  - Of course!
-  - As I see it, yes.
-  - My sources say yes.
-  - Yes.
-  - Most likely.
-  - Perhaps...
-  - Maybe...
-  - Hm, not sure.
-  - It is uncertain.
-  - Ask me again later.
-  - Don't count on it.
-  - Probably not.
-  - Very doubtful.
-  - Most likely no.
-  - Nope.
+  - Com certeza sim.
+  - Com certeza.
+  - Totalmente!
+  - Claro!
+  - Pelo que vejo, sim.
+  - Minhas fontes dizem que sim.
+  - Sim.
+  - Provavelmente.
+  - Talvez...
+  - Pode ser...
+  - Hum, não tenho certeza.
+  - É incerto.
+  - Pergunte-me novamente mais tarde.
+  - Não conte com isso.
+  - Provavelmente não.
+  - Muito duvidoso.
+  - Provavelmente não.
+  - Não.
   - No.
-  - My sources say no.
-  - Don't even think about it.
-  - Definitely no.
-  - NO - It may cause disease contraction!
+  - Minhas fontes dizem não.
+  - Nem pense nisso.
+  - Definitivamente não.
+  - NÃO - Isso pode te fazer contrair uma doença!
 # List of animals which will be used for the animal race game (.race)
 raceAnimals:
   - icon: "🐼"

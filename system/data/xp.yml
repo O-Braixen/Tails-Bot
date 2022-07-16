@@ -7,6 +7,6 @@ messageXpCooldown: 1
 # Amount of xp users gain from posting an image
 xpFromImage: 4
 # Average amount of xp earned per minute in VC
-voiceXpPerMinute: 1
+voiceXpPerMinute: 4
 # The maximum amount of minutes the bot will keep track of a user in a voice channel
 voiceMaxMinutes: 720

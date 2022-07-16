@@ -39,32 +39,32 @@ generation:
   # Every message sent has a certain % chance to generate the currency
   # specify the percentage here (1 being 100%, 0 being 0% - for example
   # default is 0.02, which is 2%
-  chance: 0.3
+  chance: 0.1
   # How many seconds have to pass for the next message to have a chance to spawn currency
-  genCooldown: 10
+  genCooldown: 60
   # Minimum amount of currency that can spawn
-  minAmount: 1
+  minAmount: 10
   # Maximum amount of currency that can spawn.
   # Set to the same value as MinAmount to always spawn the same amount
-  maxAmount: 1
+  maxAmount: 60
 # Settings for timely command
 # (letting people claim X amount of currency every Y hours)
 timely:
 # How much currency will the users get every time they run .timely command
 # setting to 0 or less will disable this feature
-  amount: 500
+  amount: 700
   # How often (in hours) can users claim currency with .timely command
   # setting to 0 or less will disable this feature
-  cooldown: 12
+  cooldown: 22
 # How much will each user's owned currency decay over time.
 decay:
 # Percentage of user's current currency which will be deducted every 24h.
 # 0 - 1 (1 is 100%, 0.5 50%, 0 disabled)
-  percent: 0
+  percent: 0.8
   # Maximum amount of user's currency that can decay at each interval. 0 for unlimited.
-  maxDecay: 0
+  maxDecay: 300
   # Only users who have more than this amount will have their currency decay.
-  minThreshold: 99
+  minThreshold: 0
   # How often, in hours, does the decay run. Default is 24 hours
   hourInterval: 24
 # Settings for Wheel Of Fortune command.
@@ -82,7 +82,7 @@ wheelOfFortune:
 # Settings related to waifus
 waifu:
 # Minimum price a waifu can have
-  minPrice: 50
+  minPrice: 1000
   multipliers:
   # Multiplier for waifureset. Default 150.
   # Formula (at the time of writing this):
@@ -251,7 +251,7 @@ waifu:
       negative: true
 # Amount of currency selfhosters will get PER pledged dollar CENT.
 # 1 = 100 currency per $. Used almost exclusively on public nadeko.
-patreonCurrencyPerCent: 1
+patreonCurrencyPerCent: 3
 # Currency reward per vote.
 # This will work only if you've set up VotesApi and correct credentials for topgg and/or discords voting
 voteReward: 100

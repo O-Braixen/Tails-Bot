@@ -1,7 +1,8 @@
 {
+  "Version": 1,
   "output_size": {
-    "X": 450,
-    "Y": 220
+    "X": 800,
+    "Y": 392
   },
   "User": {
     "Name": {
@@ -9,19 +10,19 @@
       "Show": true,
       "FontSize": 50,
       "Pos": {
-        "X": 130,
+        "X": 100,
         "Y": 17
       }
     },
     "Icon": {
       "Show": true,
       "Pos": {
-        "X": 32,
-        "Y": 10
+        "X": 14,
+        "Y": 14
       },
       "Size": {
-        "X": 69,
-        "Y": 70
+        "X": 72,
+        "Y": 71
       }
     },
     "GlobalLevel": {
@@ -29,8 +30,8 @@
       "Show": true,
       "FontSize": 45,
       "Pos": {
-        "X": 47,
-        "Y": 149
+        "X": 44,
+        "Y": 160
       }
     },
     "GuildLevel": {
@@ -38,8 +39,8 @@
       "Show": true,
       "FontSize": 45,
       "Pos": {
-        "X": 47,
-        "Y": 297
+        "X": 44,
+        "Y": 308
       }
     },
     "GlobalRank": {
@@ -60,32 +61,11 @@
         "Y": 326
       }
     },
-    "TimeOnLevel": {
-      "Format": "{0}d{1}h{2}m",
-      "Global": {
-        "Color": "ffffffff",
-        "Show": true,
-        "FontSize": 20,
-        "Pos": {
-          "X": 50,
-          "Y": 204
-        }
-      },
-      "Guild": {
-        "Color": "ffffffff",
-        "Show": true,
-        "FontSize": 20,
-        "Pos": {
-          "X": 50,
-          "Y": 351
-        }
-      }
-    },
     "Xp": {
       "Bar": {
         "Show": true,
         "Global": {
-          "Color": "00000066",
+          "Color": "ffffe599",
           "PointA": {
             "X": 321,
             "Y": 104
@@ -98,7 +78,7 @@
           "Direction": 3
         },
         "Guild": {
-          "Color": "00000066",
+          "Color": "ffffe599",
           "PointA": {
             "X": 282,
             "Y": 248
@@ -116,8 +96,8 @@
         "Show": true,
         "FontSize": 50,
         "Pos": {
-          "X": 430,
-          "Y": 142
+          "X": 528,
+          "Y": 170
         }
       },
       "Guild": {
@@ -125,8 +105,8 @@
         "Show": true,
         "FontSize": 50,
         "Pos": {
-          "X": 400,
-          "Y": 282
+          "X": 490,
+          "Y": 313
         }
       },
       "Awarded": {
@@ -134,8 +114,8 @@
         "Show": true,
         "FontSize": 25,
         "Pos": {
-          "X": 445,
-          "Y": 347
+          "X": 490,
+          "Y": 345
         }
       }
     }
@@ -155,7 +135,7 @@
     "Name": {
       "Color": "ffffffff",
       "Show": true,
-      "FontSize": 35,
+      "FontSize": 25,
       "Pos": {
         "X": 650,
         "Y": 49

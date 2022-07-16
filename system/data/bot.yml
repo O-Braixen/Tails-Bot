@@ -46,7 +46,7 @@ helpText: |-
     "plainText": "Olá vejo que você usou o meu comando de ajuda então eu vou te ajudar...\nHello I see you used my help command so I will help you...",
     "title": "Para me convidar para o seu servidor, clique aqui (To invite me to your server, click here)",
     "url": "https://discordapp.com/oauth2/authorize?client_id=774019047503298630&scope=bot&permissions=66186303",
-    "description": "`%bot.prefix%modules` Lista todos os módulos do bot\n`%bot.prefix%commands NomeDoModulo` Lista todas as funções desse módulo especifico\n`%bot.prefix%h nome do comando` Explica como o comando funciona \n\n`%bot.prefix%modules` List all bot modules\n`%bot.prefix%commands ModuleName` Lists all functions of that specific module\n`%bot.prefix%h CommandName` Explains how the command works\n\nDeveloped by **Kwoth#2452**\nModified by **Braixen#2145**",
+    "description": "`%bot.prefix%modules` Lista todos os módulos do bot\n`%bot.prefix%commands NomeDoModulo` Lista todas as funções desse módulo especifico\n`%bot.prefix%h nome do comando` Explica como o comando funciona \n\n`%bot.prefix%modules` List all bot modules\n`%bot.prefix%commands ModuleName` Lists all functions of that specific module\n`%bot.prefix%h CommandName` Explains how the command works\n\nDeveloped by **Kwoth#2452**\nModified by **Braixen#0654**",
     "color": 16562432,
     "fields": [
       {

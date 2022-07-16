@@ -632,7 +632,7 @@
     "presence_updates": "Atualizações de presença",
     "awarded": "premiou {0} para {1}",
     "deck_reshuffled": "Deck reembaralhado.",
-    "flipped": "Caiu {0}.",
+    "flipped": "inverteu {0}.",
     "flip_invalid": "Número invalido especificado. Você pode virar 1 a {0} moedas.",
     "cards_left": "{0} cartas restantes no baralho.",
     "gifted": "presenteou {0} para {1}",

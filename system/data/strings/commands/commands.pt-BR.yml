@@ -1,28 +1,28 @@
 h:
-  desc: "Either shows a help for a single command, or DMs you help link if no parameters are specified."
+  desc: "Mostra uma ajuda para um único comando ou DMs que você ajuda vinculam se nenhum parâmetro for especificado."
   args:
     - "{0}cmds"
     - ""
 gencmdlist:
-  desc: "Generates the command list and sends it to the chat. Optionally also uploads it to DO spaces (not supported)."
+  desc: "Gera a lista de comandos e envia para o chat. Opcionalmente, também o carrega para espaços DO (não suportado)."
   args:
     - ""
 donate:
-  desc: "Instructions for helping the project financially."
+  desc: "Instruções para ajudar o projeto financeiramente."
   args:
     - ""
 modules:
-  desc: "Lists all bot modules."
+  desc: "Lista todos os módulos de bot."
   args:
     - ""
 commands:
-  desc: "List all of the bot's commands from the specified module. You can either specify the full name or only the first few letters of the module name. Specifying no module will show the list of modules instead."
+  desc: "Liste todos os comandos do bot do módulo especificado. Você pode especificar o nome completo ou apenas as primeiras letras do nome do módulo. Especificar nenhum módulo mostrará a lista de módulos."
   args:
     - "Admin"
     - "Admin --view 1"
     - ""
 greetdel:
-  desc: "Sets the time it takes (in seconds) for greet messages to be auto-deleted. Set it to 0 to disable automatic deletion."
+  desc: "Define o tempo que leva (em segundos) para que as mensagens de saudação sejam excluídas automaticamente. Defina-o como 0 para desativar a exclusão automática."
   args:
     - "0"
     - "30"
@@ -32,329 +32,329 @@ greet:
     - ""
 greetmsg:
   desc: |-
-    Sets a new join announcement message which will be shown in the server's channel.
-    Type `%user.mention%` if you want to mention the new member.   
-    Full list of placeholders can be found here <https://nadekobot.readthedocs.io/en/latest/placeholders/>
-    Using it with no message will show the current greet message.  
-    You can use embed json from <https://eb.nadeko.bot/> instead of a regular text, if you want the message to be embedded.
+    Define uma nova mensagem de anúncio de ingresso que será mostrada no canal do servidor.
+    Digite `%user.mention%` se quiser mencionar o novo membro.
+    A lista completa de espaços reservados pode ser encontrada aqui <https://nadekobot.readthedocs.io/en/latest/placeholders/>
+    Usá-lo sem mensagem mostrará a mensagem de saudação atual.
+    Você pode usar o json incorporado de <https://eb.nadeko.bot/> em vez de um texto normal, se quiser que a mensagem seja incorporada.
   args:
     - "Welcome, %user.mention%."
 bye:
-  desc: "Toggles anouncements on the current channel when someone leaves the server."
+  desc: "Alterna os anúncios no canal atual quando alguém sai do servidor."
   args:
     - ""
 byemsg:
   desc: |-
-    Sets a new leave announcement message. 
-    Type `%user.mention%` if you want to show the name the user who left. 
-    Full list of placeholders can be found here <https://nadekobot.readthedocs.io/en/latest/placeholders/>  
-    Using this command with no message will show the current bye message. 
-    You can use embed json from <https://eb.nadeko.bot/> instead of a regular text, if you want the message to be embedded.
+    Define uma nova mensagem de anúncio de licença.
+    Digite `%user.mention%` se quiser mostrar o nome do usuário que saiu.
+    A lista completa de espaços reservados pode ser encontrada aqui <https://nadekobot.readthedocs.io/en/latest/placeholders/>
+    Usar este comando sem mensagem mostrará a mensagem de bye atual.
+    Você pode usar o json incorporado de <https://eb.nadeko.bot/> em vez de um texto normal, se quiser que a mensagem seja incorporada.
   args:
     - "%user.mention% has left."
 byedel:
-  desc: "Sets the time it takes (in seconds) for bye messages to be auto-deleted. Set it to `0` to disable automatic deletion."
+  desc: "Define o tempo que leva (em segundos) para que as mensagens de bye sejam excluídas automaticamente. Defina como `0` para desabilitar a exclusão automática."
   args:
     - "0"
     - "30"
 greetdm:
-  desc: "Toggles whether the greet messages will be sent in a DM (This is separate from greet - you can have both, any or neither enabled)."
+  desc: "Alterna se as mensagens de saudação serão enviadas em um DM (Isso é separado de saudação - você pode ter ambos, qualquer um ou nenhum habilitado)."
   args:
     - ""
 greettest:
-  desc: "Sends the greet message in the current channel as if you just joined the server. You can optionally specify a different user."
+  desc: "Envia a mensagem de saudação no canal atual como se você tivesse acabado de entrar no servidor. Opcionalmente, você pode especificar um usuário diferente."
   args:
     - ""
     - "@SomeoneElse"
 greetdmtest:
-  desc: "Sends the greet direct message to you as if you just joined the server. You can optionally specify a different user."
+  desc: "Envia a mensagem direta de saudação para você como se você tivesse acabado de entrar no servidor. Opcionalmente, você pode especificar um usuário diferente."
   args:
     - ""
     - "@SomeoneElse"
 byetest:
-  desc: "Sends the bye message in the current channel as if you just left the server. You can optionally specify a different user."
+  desc: "Envia a mensagem de bye no canal atual como se você tivesse acabado de sair do servidor. Opcionalmente, você pode especificar um usuário diferente."
   args:
     - ""
     - "@SomeoneElse"
 boost:
-  desc: "Toggles anouncements on the current channel when someone boosts the server."
+  desc: "Alterna os anúncios no canal atual quando alguém aumenta o servidor."
   args:
     - ""
 boostmsg:
   desc: |-
-    Sets a new boost announcement message. 
-    Type `%user.mention%` if you want to show the name the user who left. 
-    Full list of placeholders can be found here <https://nadekobot.readthedocs.io/en/latest/placeholders/>
-    Using this command with no message will show the current boost message. 
-    You can use embed json from <https://eb.nadeko.bot/> instead of a regular text, if you want the message to be embedded.
+    Define uma nova mensagem de anúncio de reforço.
+    Digite `%user.mention%` se quiser mostrar o nome do usuário que saiu.
+    A lista completa de espaços reservados pode ser encontrada aqui <https://nadekobot.readthedocs.io/en/latest/placeholders/>
+    Usar este comando sem mensagem mostrará a mensagem de reforço atual.
+    Você pode usar o json incorporado de <https://eb.nadeko.bot/> em vez de um texto normal, se quiser que a mensagem seja incorporada.
   args:
     - "%user.mention% has boosted the server!!!"
 boostdel:
-  desc: "Sets the time it takes (in seconds) for boost messages to be auto-deleted. Set it to `0` to disable automatic deletion."
+  desc: "Define o tempo que leva (em segundos) para que as mensagens de reforço sejam excluídas automaticamente. Defina como `0` para desabilitar a exclusão automática."
   args:
     - "0"
     - "30"
 logserver:
-  desc: "Enables or Disables ALL log events. If enabled, all log events will log to this channel."
+  desc: "Habilita ou desabilita TODOS os eventos de log. Se ativado, todos os eventos de log serão registrados neste canal."
   args:
     - "enable"
     - "disable"
 logignore:
-  desc: "Toggles whether the `{0}logserver` command ignores the specified channel or user. Provide no arguments to see the list of currently ignored users and channels"
+  desc: "Alterna se o comando `{0}logserver` ignora o canal ou usuário especificado. Não forneça argumentos para ver a lista de usuários e canais ignorados no momento"
   args:
     - ""
     - "@SomeUser"
     - "#some-channel"
 repeatlist:
-  desc: "Shows currently repeating messages and their indexes."
+  desc: "Mostra as mensagens atualmente repetidas e seus índices."
   args:
     - ""
 repeatremove:
-  desc: "Removes a repeating message on a specified index. Use `{0}repeatlist` to see indexes."
+  desc: "Remove uma mensagem repetida em um índice especificado. Use `{0}repeatlist` para ver índices."
   args:
     - "2"
 repeatinvoke:
-  desc: "Immediately shows the repeat message on a certain index and restarts its timer."
+  desc: "Imediatamente mostra a mensagem de repetição em um determinado índice e reinicia seu temporizador."
   args:
     - "1"
 repeat:
-  desc: "Repeat a message once every specified amount of time in the current channel. You can instead specify time of day for the message to be repeated daily (make sure you've set your server's timezone). If you've specified time of day, you can still override the default daily interval with your own interval. You can have up to 5 repeating messages on the server in total."
+  desc: "Repita uma mensagem uma vez a cada período de tempo especificado no canal atual. Em vez disso, você pode especificar a hora do dia para que a mensagem seja repetida diariamente (certifique-se de definir o fuso horário do seu servidor). Se você especificou a hora do dia, ainda poderá substituir o intervalo diário padrão pelo seu próprio intervalo. Você pode ter até 5 mensagens repetidas no servidor no total."
   args:
     - "Hello there"
     - "1h5m Hello @erryone"
     - "10:00 Daily have a nice day! This will execute once every 24h."
     - "21:00 30m Starting at 21 and every 30 minutes after that i will send this message!"
 repeatredundant:
-  desc: "Specify repeater's index (use `{0}repli` to find it) to toggle whether that repeater's message should be reposted if the last message in the channel is the same repeater's message. This is useful if you want to remind everyone to be nice in the channel every so often, but don't want to have the bot spam the channel. This is NOT useful if you want to periodically ping someone."
+  desc: "Especifique o índice do repetidor (use `{0}repli` para encontrá-lo) para alternar se a mensagem desse repetidor deve ser repostada se a última mensagem no canal for a mesma mensagem do repetidor. Isso é útil se você quiser lembrar a todos para serem legais no canal de vez em quando, mas não quiser que o bot faça spam no canal. Isso NÃO é útil se você quiser fazer ping periodicamente em alguém."
   args:
     - "1"
 rotateplaying:
-  desc: "Toggles rotation of playing status of the dynamic strings you previously specified."
+  desc: "Alterna a rotação do status de reprodução das cordas dinâmicas que você especificou anteriormente."
   args:
     - ""
 addplaying:
-  desc: "Adds a specified string to the list of playing strings to rotate. You have to pick either 'Playing', 'Watching' or 'Listening' as the first parameter."
+  desc: "Adiciona uma string especificada à lista de strings tocadas para girar. Você tem que escolher 'Playing', 'Watching' ou 'Listening' como o primeiro parâmetro."
   args:
-    - "Playing with you"
-    - "Watching you sleep"
+    - "Playing com você"
+    - "Watching você dorme"
 listplaying:
-  desc: "Lists all playing statuses with their corresponding number."
+  desc: "Lista todos os status de reprodução com seu número correspondente."
   args:
     - ""
 removeplaying:
-  desc: "Removes a playing string on a given number."
+  desc: "Remove uma corda tocando em um determinado número."
   args:
     - ""
 vcrolelist:
-  desc: "Shows a list of currently set voice channel roles."
+  desc: "Mostra uma lista de funções de canal de voz atualmente definidas."
   args:
     - ""
 vcrole:
-  desc: "Sets or resets a role which will be given to users who join the voice channel you're in when you run this command. Provide no role name to disable. You must be in a voice channel to run this command."
+  desc: "Define ou redefine uma função que será atribuída aos usuários que ingressarem no canal de voz em que você está ao executar este comando. Não forneça nenhum nome de função para desabilitar. Você deve estar em um canal de voz para executar este comando."
   args:
     - "SomeRole"
     - ""
 vcrolerm:
-  desc: "Removes vcrole associated with the specified voice channel ID. This is useful if your vcrole has been enabled on a VC which has been deleted."
+  desc: "Remove o vcrole associado ao ID do canal de voz especificado. Isso é útil se seu vcrole foi habilitado em um VC que foi excluído."
   args:
     - "123123123123123"
 asar:
-  desc: "Adds a role to the list of self-assignable roles. You can also specify a group. If 'Exclusive self-assignable roles' feature is enabled, users will be able to pick one role per group."
+  desc: "Adiciona uma função à lista de funções auto-atribuíveis. Você também pode especificar um grupo. Se o recurso 'Funções auto-atribuíveis exclusivas' estiver ativado, os usuários poderão escolher uma função por grupo."
   args:
     - "Gamer"
     - "1 Alliance"
     - "1 Horde"
 rsar:
-  desc: "Removes a specified role from the list of self-assignable roles."
+  desc: "Remove uma função especificada da lista de funções auto-atribuíveis."
   args:
     - "Gamer"
     - "Alliance"
     - "Horde"
 lsar:
-  desc: "Lists self-assignable roles. Shows 20 roles per page."
+  desc: "Lista funções auto-atribuíveis. Mostra 20 funções por página."
   args:
     - ""
     - "2"
 sargn:
-  desc: "Sets a self assignable role group name. Provide no name to remove."
+  desc: "Define um nome de grupo de função auto-atribuível. Não forneça nenhum nome para remover."
   args:
     - "1 Faction"
     - "2"
 togglexclsar:
-  desc: "Toggles whether the self-assigned roles are exclusive. While enabled, users can only have one self-assignable role per group."
+  desc: "Alterna se as funções auto-atribuídas são exclusivas. Enquanto habilitado, os usuários podem ter apenas uma função auto-atribuível por grupo."
   args:
     - ""
 iam:
-  desc: "Adds a role to you that you choose. Role must be on a list of self-assignable roles."
+  desc: "Adiciona uma função a você que você escolher. A função deve estar em uma lista de funções auto-atribuíveis."
   args:
     - "Gamer"
 iamnot:
-  desc: "Removes a specified role from you. Role must be on a list of self-assignable roles."
+  desc: "Remove uma função especificada de você. A função deve estar em uma lista de funções autoatribuíveis."
   args:
     - "Gamer"
 expradd:
-  desc: "Add a custom reaction with a trigger and a response. Running this command in server requires the Administration permission. Running this command in DM is Bot Owner only and adds a new global custom reaction. Guide here: <http://nadekobot.readthedocs.io/en/latest/custom-reactions/>"
+  desc: "Adicione uma reação personalizada com um gatilho e uma resposta. A execução deste comando no servidor requer a permissão de administração. A execução deste comando no DM é apenas Proprietário do bot e adiciona uma nova reação personalizada global. Guia aqui: <http://nadekobot.readthedocs.io/en/latest/custom-reactions/>"
   args:
     - "\"hello\" Hi there %user.mention%"
 exprlist:
   desc: |-
-    Lists global or server custom reactions (20 commands per page).
-    Running the command in DM will list global custom reactions, while running it in a server will list server custom reactions.
-    Shows enabled settings, followed by id, followed by the trigger.
-    **Settings:** 
-    • 🗯️ Triggered if trigger matches any word (`{0}h {0}exca`)
-    • ✉️ Response will be DMed (`{0}h {0}exdm`)
-    • ❌ Trigger will be deleted (`{0}h {0}exad`)
+    Lista reações personalizadas globais ou do servidor (20 comandos por página).
+    A execução do comando no DM listará as reações personalizadas globais, enquanto executá-lo em um servidor listará as reações personalizadas do servidor.
+    Mostra as configurações habilitadas, seguidas de id, seguidas do acionador.
+    **Definições:**
+    • 🗯️ Acionado se o acionador corresponder a qualquer palavra (`{0}h {0}exca`)
+    • ✉️ A resposta será enviada por DM (`{0}h {0}exdm`)
+    • ❌ O gatilho será excluído (`{0}h {0}exad`)
   args:
     - "1"
     - "all"
 exprshow:
-  desc: "Shows a custom reaction's response on a given ID."
+  desc: "Mostra a resposta de uma reação personalizada em um determinado ID."
   args:
     - "1"
 exprdelete:
-  desc: "Deletes a custom reaction on a specific index. If ran in DM, it is bot owner only and deletes a global custom reaction. If ran in a server, it requires Administration privileges and removes server custom reaction."
+  desc: "Exclui uma reação personalizada em um índice específico. Se executado no DM, é apenas o proprietário do bot e exclui uma reação personalizada global. Se executado em um servidor, requer privilégios de administração e remove a reação personalizada do servidor."
   args:
     - "5"
 exprclear:
-  desc: "Deletes all custom reactions on this server."
+  desc: "Exclui todas as reações personalizadas neste servidor."
   args:
     - ""
 fwclear:
-  desc: "Deletes all filtered words on this server."
+  desc: "Exclui todas as palavras filtradas neste servidor."
   args:
     - ""
 aliasesclear:
-  desc: "Deletes all aliases on this server."
+  desc: "Exclui todos os aliases neste servidor."
   args:
     - ""
 autoassignrole:
   desc: |-
-    Toggles the role which will be assigned to every user who joins the server.
-    You can run this command multiple times to add multiple roles (up to 3).
-    Specifying the role that is already added will remove that role from the list.
-    Provide no parameters to list current roles.
+    Alterna a função que será atribuída a cada usuário que ingressar no servidor.
+    Você pode executar este comando várias vezes para adicionar várias funções (até 3).
+    Especificar a função que já foi adicionada removerá essa função da lista.
+    Não forneça parâmetros para listar as funções atuais.
   args:
     - ""
     - "RoleName"
 leave:
-  desc: "Makes Nadeko leave the server. Either server name or server ID is required."
+  desc: "Faz Tails sair do servidor. É necessário o nome do servidor ou o ID do servidor."
   args:
     - "123123123331"
 slowmode:
-  desc: "Toggles slowmode on the current channel with the specified amount of time. Provide no parameters to disable."
+  desc: "Alterna o modo lento no canal atual com a quantidade de tempo especificada. Não forneça parâmetros para desabilitar."
   args:
     - ""
     - "27s"
     - "3h15m5s"
 delmsgoncmd:
-  desc: "Toggles the automatic deletion of the user's successful command message to prevent chat flood. You can use it either as a server toggle, channel whitelist, or channel blacklist, as channel option has 3 settings: Enable (always do it on this channel), Disable (never do it on this channel), and Inherit (respect server setting). Use `list` parameter to see the current states."
+  desc: "Alterna a exclusão automática da mensagem de comando bem-sucedida do usuário para evitar a inundação do bate-papo. Você pode usá-lo como alternância de servidor, lista branca de canal ou lista negra de canal, pois a opção de canal tem 3 configurações: Ativar (sempre fazer isso neste canal), Desativar (nunca fazer isso neste canal) e Herdar (respeitar a configuração do servidor ). Use o parâmetro `list` para ver os estados atuais."
   args:
     - ""
     - "channel enable"
     - "ch inherit"
     - "list"
 restart:
-  desc: "Restarts the bot. Might not work."
+  desc: "Reinicia o bot. Pode não funcionar."
   args:
     - ""
 setrole:
-  desc: "Gives a role to a user. The role you specify has to be lower in the role hierarchy than your highest role."
+  desc: "Dá uma função a um usuário. A função que você especifica deve ser inferior na hierarquia de funções do que sua função mais alta."
   args:
     - "@User Guest"
 removerole:
-  desc: "Removes a role from a user. The role you specify has to be lower in the role hierarchy than your highest role."
+  desc: "Remove uma função de um usuário. A função que você especifica deve ser inferior na hierarquia de funções do que sua função mais alta."
   args:
     - "@User Admin"
 renamerole:
-  desc: "Renames a role. The role you specify has to be lower in the role hierarchy than your highest role."
+  desc: "Renomeia uma função. A função que você especifica deve ser inferior na hierarquia de funções do que sua função mais alta."
   args:
     - "\"First role\" SecondRole"
 removeallroles:
-  desc: "Removes all roles which are lower than your highest role in the role hierarchy from the user you specify."
+  desc: "Remove todas as funções que são inferiores à sua função mais alta na hierarquia de funções do usuário especificado."
   args:
     - "@User"
 rolehoist:
-  desc: "Toggles whether this role is displayed in the sidebar or not. The role you specify has to be lower in the role hierarchy than your highest role."
+  desc: "Alterna se esta função é exibida na barra lateral ou não. A função que você especifica deve ser inferior na hierarquia de funções do que sua função mais alta."
   args:
     - "Guests"
     - "\"Space Wizards\""
 createrole:
-  desc: "Creates a role with a given name."
+  desc: "Cria uma função com um determinado nome."
   args:
     - "Awesome Role"
 deleterole:
-  desc: "Deletes a role with a given name."
+  desc: "Exclui uma função com um determinado nome."
   args:
     - "Awesome Role"
 rolecolor:
-  desc: "Set a role's color using its hex value. Provide no color in order to see the hex value of the color of the specified role. The role you specify has to be lower in the role hierarchy than your highest role."
+  desc: "Defina a cor de uma função usando seu valor hexadecimal. Não forneça nenhuma cor para ver o valor hexadecimal da cor da função especificada. A função que você especifica deve ser inferior na hierarquia de funções do que sua função mais alta."
   args:
     - "Admin"
     - "ffba55 Admin"
 ban:
-  desc: "Bans a user by ID or name with an optional message. You can specify a time string before the user name to ban the user temporarily."
+  desc: "Bane um usuário por ID ou nome com uma mensagem opcional. Você pode especificar uma string de tempo antes do nome do usuário para banir o usuário temporariamente."
   args:
-    - "@Someone Get out!"
-    - "\"Some Guy#1234\" Your behaviour is toxic."
-    - "1d12h @Someone Come back when u chill"
+    - "@Someone Sai fora!"
+    - "\"Some Guy#1234\" Seu comportamento é tóxico."
+    - "1d12h @Someone Volte quando você relaxar"
 softban:
-  desc: "Bans and then unbans a user by ID or name with an optional message."
+  desc: "Bane e desbane um usuário por ID ou nome com uma mensagem opcional."
   args:
-    - "@Someone Get out!"
-    - "\"Some Guy#1234\" Your behaviour is toxic."
+    - "@Someone Sai fora!"
+    - "\"Some Guy#1234\" Seu comportamento é tóxico."
 kick:
-  desc: "Kicks a mentioned user."
+  desc: "Chuta um usuário mencionado."
   args:
-    - "@Someone Get out!"
-    - "\"Some Guy#1234\" Your behaviour is toxic."
+    - "@Someone Sai fora!"
+    - "\"Some Guy#1234\" Seu comportamento é tóxico."
 mute:
-  desc: "Mutes a mentioned user both from speaking and chatting. You can also specify time string for how long the user should be muted. You can optionally specify a reason."
+  desc: "Silencia um usuário mencionado tanto de falar quanto de bater papo. Você também pode especificar a string de tempo por quanto tempo o usuário deve ser silenciado. Opcionalmente, você pode especificar um motivo."
   args:
     - "@Someone"
-    - "@Someone too noisy"
+    - "@Someone muito barulhento"
     - "1h30m @Someone"
-    - "1h30m @Someone too noisy"
+    - "1h30m @Someone muito barulhento"
 voiceunmute:
-  desc: "Gives a previously voice-muted user a permission to speak."
+  desc: "Concede permissão para falar a um usuário com voz silenciada anteriormente."
   args:
     - "@Someguy"
 deafen:
-  desc: "Deafens mentioned user or users."
+  desc: "Os surdos mencionaram o usuário ou usuários."
   args:
     - "\"@Someguy\""
     - "\"@Someguy\" \"@Someguy\""
 undeafen:
-  desc: "Undeafens mentioned user or users."
+  desc: "Não surdos mencionado usuário ou usuários."
   args:
     - "\"@Someguy\""
     - "\"@Someguy\" \"@Someguy\""
 delvoichanl:
-  desc: "Deletes a voice channel with a given name."
+  desc: "Exclui um canal de voz com um determinado nome."
   args:
-    - "VoiceChannelName"
+    - "NomeDoCanalDeVoz"
 creatvoichanl:
-  desc: "Creates a new voice channel with a given name."
+  desc: "Cria um novo canal de voz com um determinado nome."
   args:
-    - "VoiceChannelName"
+    - "NomeDoCanalDeVoz"
 deltxtchanl:
-  desc: "Deletes a text channel with a given name."
+  desc: "Exclui um canal de texto com um determinado nome."
   args:
-    - "TextChannelName"
+    - "NomeDoCanalDeTexto"
 creatxtchanl:
-  desc: "Creates a new text channel with a given name."
+  desc: "Cria um novo canal de texto com um determinado nome."
   args:
-    - "TextChannelName"
+    - "NomeDoCanalDeTexto"
 settopic:
-  desc: "Sets a topic on the current channel."
+  desc: "Define um tópico no canal atual."
   args:
-    - "My new topic"
+    - "Meu novo tópico"
 setchanlname:
-  desc: "Changes the name of the current channel."
+  desc: "Altera o nome do canal atual."
   args:
-    - "NewName"
+    - "NovoNome"
 prune:
-  desc: "`{0}prune` removes all Nadeko's messages in the last 100 messages. `{0}prune X` removes last `X` number of messages from the channel (up to 100). `{0}prune @Someone` removes all Someone's messages in the last 100 messages. `{0}prune @Someone X` removes last `X` number of 'Someone's' messages in the channel. You can use the `-s` / `--safe` parameter at the end to only prune messages that are not pinned."
+  desc: "`{0}prune` remove todas as mensagens de Nadeko nas últimas 100 mensagens. `{0}prune X` remove o último número `X` de mensagens do canal (até 100). `{0}prune @Someone` remove todas as mensagens de Alguém nas últimas 100 mensagens. `{0}prune @Someone X` remove o último número `X` de mensagens de 'Alguém' no canal. Você pode usar o parâmetro `-s` / `--safe` no final para remover apenas mensagens que não foram fixadas."
   args:
     - ""
     - "-s"
@@ -365,204 +365,204 @@ prune:
     - "@Someone X"
     - "@Someone X -s"
 die:
-  desc: "Shuts the bot down."
+  desc: "Desliga o bot."
   args:
     - ""
 setname:
-  desc: "Gives the bot a new name."
+  desc: "Dá ao bot um novo nome."
   args:
-    - "BotName"
+    - "NomeDoBot"
 setnick:
-  desc: "Changes the nickname of the bot on this server. You can also target other users to change their nickname."
+  desc: "Altera o apelido do bot neste servidor. Você também pode segmentar outros usuários para alterar seus apelidos."
   args:
     - "BotNickname"
     - "@SomeUser New Nickname"
 setavatar:
-  desc: "Sets a new avatar image for the NadekoBot. Parameter is a direct link to an image."
+  desc: "Define uma nova imagem de avatar para o NadekoBot. Parâmetro é um link direto para uma imagem."
   args:
     - "http://i.imgur.com/xTG3a1I.jpg"
 setgame:
-  desc: "Sets the bots game status to either Playing, Listening, or Watching."
+  desc: "Define o status do jogo dos bots para Playing, Listening ou Watching."
   args:
-    - "Playing with snakes."
+    - "Playing com cobras."
     - "Watching anime."
     - "Listening music."
 send:
-  desc: "Sends a message to someone on a different server through the bot.  Separate server and channel/user ids with `|` and prefix the channel id with `c:` and the user id with `u:`."
+  desc: "Envia uma mensagem para alguém em um servidor diferente por meio do bot. Separe os ids de servidor e canal/usuário com `|` e prefixe o id do canal com `c:` e o id do usuário com `u:`."
   args:
-    - "serverid|c:channelid message"
-    - "serverid|u:userid message"
+    - "serverid|c:Canalid mensagem"
+    - "serverid|u:userid mensagem"
 savechat:
-  desc: "Saves a number of messages to a text file and sends it to you."
+  desc: "Salva várias mensagens em um arquivo de texto e o envia para você."
   args:
     - "150"
 remind:
-  desc: "Sends a message to you or a channel after certain amount of time (max 2 months). First parameter is `me`/`here`/'channelname'. Second parameter is time in a descending order (mo>w>d>h>m) example: 1w5d3h10m. Third parameter is a (multiword) message."
+  desc: "Envia uma mensagem para você ou um canal após um determinado período de tempo (máximo de 2 meses). O primeiro parâmetro é `me`/`here`/'channelname'. O segundo parâmetro é o tempo em ordem decrescente (mo>w>d>h>m) exemplo: 1w5d3h10m. O terceiro parâmetro é uma mensagem (multiword)."
   args:
-    - "me 1d5h Do something"
-    - "#general 1m Start now!"
+    - "me 1d5h Faça alguma coisa"
+    - "#general 1m Comece agora!"
 reminddelete:
-  desc: "Deletes a reminder on the specified index. You can specify 'server' option if you're an Administrator, and you want to delete a reminder on this server created by someone else. "
+  desc: "Exclui um lembrete no índice especificado. Você pode especificar a opção 'servidor' se for um Administrador e quiser excluir um lembrete neste servidor criado por outra pessoa."
   args:
     - "3"
     - "server 2"
 remindlist:
-  desc: "Lists all reminders you created. You can specify 'server' option if you're an Administrator to list all reminders created on this server. Paginated."
+  desc: "Lista todos os lembretes que você criou. Você pode especificar a opção 'servidor' se for um Administrador para listar todos os lembretes criados neste servidor. Paginado."
   args:
     - "1"
     - "server 2"
 serverinfo:
-  desc: "Shows info about the server the bot is on. If no server is supplied, it defaults to current one."
+  desc: "Mostra informações sobre o servidor em que o bot está. Se nenhum servidor for fornecido, o padrão será o atual."
   args:
-    - "Some Server"
+    - "Algum servidor"
 channelinfo:
-  desc: "Shows info about the channel. If no channel is supplied, it defaults to current one."
+  desc: "Mostra informações sobre o canal. Se nenhum canal for fornecido, o padrão é o atual."
   args:
-    - "#some-channel"
+    - "#algum-canal"
 userinfo:
-  desc: "Shows info about the user. If no user is supplied, it defaults a user running the command."
+  desc: "Mostra informações sobre o usuário. Se nenhum usuário for fornecido, o padrão será um usuário executando o comando."
   args:
     - "@SomeUser"
 whosplaying:
-  desc: "Shows a list of users who are playing the specified game."
+  desc: "Mostra uma lista de usuários que estão jogando o jogo especificado."
   args:
     - "Overwatch"
 inrole:
-  desc: "Lists every person from the specified role on this server. You can specify a page before the role to jump to that page. Provide no role to list users who have no roles"
+  desc: "Lista todas as pessoas da função especificada neste servidor. Você pode especificar uma página antes da função para pular para essa página. Não forneça nenhuma função para listar usuários que não têm funções"
   args:
-    - "RoleName"
-    - "5 RoleName"
+    - "NomeDoCargo"
+    - "5 NomeDoCargo"
     - ""
 checkperms:
-  desc: "Checks yours or bot's user-specific permissions on this channel."
+  desc: "Verifica as suas permissões específicas do usuário ou do bot neste canal."
   args:
     - "me"
     - "bot"
 stats:
-  desc: "Shows some basic stats for Nadeko."
+  desc: "Mostra algumas estatísticas básicas para Tails."
   args:
     - ""
 userid:
-  desc: "Shows user ID."
+  desc: "Mostra o ID do usuário."
   args:
     - ""
     - "@Someone"
 channelid:
-  desc: "Shows current channel ID."
+  desc: "Mostra o ID do canal atual."
   args:
     - ""
 serverid:
-  desc: "Shows current server ID."
+  desc: "Mostra o ID do servidor atual."
   args:
     - ""
 roles:
-  desc: "List roles on this server or roles of a user if specified. Paginated, 20 roles per page."
+  desc: "Liste funções neste servidor ou funções de um usuário, se especificadas. Paginado, 20 papéis por página."
   args:
     - "2"
     - "@Someone"
 channeltopic:
-  desc: "Sends current channel's topic as a message."
+  desc: "Envia o tópico do canal atual como uma mensagem."
   args:
     - ""
 chnlfilterinv:
-  desc: "Toggles automatic deletion of invites posted in the channel. Does not negate the `{0}srvrfilterinv` enabled setting. Does not affect users with the Administrator permission."
+  desc: "Alterna a exclusão automática de convites postados no canal. Não nega a configuração habilitada de `{0}srvrfilterinv`. Não afeta usuários com permissão de Administrador."
   args:
     - ""
 srvrfilterinv:
-  desc: "Toggles automatic deletion of invites posted in the server. Does not affect users with the Administrator permission."
+  desc: "Alterna a exclusão automática de convites postados no servidor. Não afeta usuários com permissão de Administrador."
   args:
     - ""
 chnlfilterlin:
-  desc: "Toggles automatic deletion of links posted in the channel. Does not negate the `{0}srvrfilterlin` enabled setting. Does not affect users with the Administrator permission."
+  desc: "Alterna a exclusão automática de links postados no canal. Não nega a configuração habilitada de `{0}srvrfilterlin`. Não afeta usuários com permissão de Administrador."
   args:
     - ""
 srvrfilterlin:
-  desc: "Toggles automatic deletion of links posted in the server. Does not affect users with the Administrator permission."
+  desc: "Alterna a exclusão automática de links postados no servidor. Não afeta usuários com permissão de administrador."
   args:
     - ""
 chnlfilterwords:
-  desc: "Toggles automatic deletion of messages containing filtered words on the channel. Does not negate the `{0}srvrfilterwords` enabled setting. Does not affect users with the Administrator permission."
+  desc: "Alterna a exclusão automática de mensagens contendo palavras filtradas no canal. Não nega a configuração habilitada de `{0}srvrfilterwords`. Não afeta usuários com permissão de Administrador."
   args:
     - ""
 filterword:
-  desc: "Adds or removes (if it exists) a word from the list of filtered words. Use`{0}sfw` or `{0}cfw` to toggle filtering."
+  desc: "Adiciona ou remove (se existir) uma palavra da lista de palavras filtradas. Use`{0}sfw` ou `{0}cfw` para alternar a filtragem."
   args:
     - "poop"
 srvrfilterwords:
-  desc: "Toggles automatic deletion of messages containing filtered words on the server. Does not affect users with the Administrator permission."
+  desc: "Alterna a exclusão automática de mensagens contendo palavras filtradas no servidor. Não afeta usuários com permissão de Administrador."
   args:
     - ""
 lstfilterwords:
-  desc: "Shows a list of filtered words."
+  desc: "Mostra uma lista de palavras filtradas."
   args:
     - ""
 permrole:
-  desc: "Sets a role which can change permissions. Supply no parameters to see the current one. Type 'reset' instead of the role name to reset the currently set permission role. Users with the Administrator server permissions can use permission commands regardless of whether they have the specified role. There is no default permission role."
+  desc: "Define uma função que pode alterar as permissões. Não forneça parâmetros para ver o atual. Digite 'reset' em vez do nome da função para redefinir a função de permissão definida no momento. Os usuários com permissões de servidor Administrador podem usar comandos de permissão independentemente de terem a função especificada. Não há função de permissão padrão."
   args:
-    - "Some Role"
+    - "Algum Cargo"
     - "reset"
 verbose:
-  desc: "Toggles or sets whether to show when a command/module is blocked."
+  desc: "Alterna ou define se deve ser exibido quando um comando/módulo é bloqueado."
   args:
     - ""
     - "true"
 srvrmdl:
-  desc: "Sets a module's permission at the server level."
+  desc: "Define a permissão de um módulo no nível do servidor."
   args:
-    - "ModuleName enable"
+    - "NomeDoMódulo enable"
 srvrcmd:
-  desc: "Sets a command's permission at the server level."
+  desc: "Define a permissão de um comando no nível do servidor."
   args:
-    - "\"command name\" disable"
+    - "\"Nome do comando\" disable"
 rolemdl:
-  desc: "Sets a module's permission at the role level."
+  desc: "Define a permissão de um módulo no nível da função."
   args:
-    - "ModuleName enable MyRole"
+    - "NomeDoMódulo enable MyRole"
 rolecmd:
-  desc: "Sets a command's permission at the role level."
+  desc: "Define a permissão de um comando no nível da função."
   args:
-    - "\"command name\" disable MyRole"
+    - "\"Nome do comando\" disable MyRole"
 chnlmdl:
-  desc: "Sets a module's permission at the channel level."
+  desc: "Define a permissão de um módulo no nível do canal."
   args:
-    - "ModuleName enable SomeChannel"
+    - "NomeDoMódulo enable AlgumCanal"
 chnlcmd:
-  desc: "Sets a command's permission at the channel level."
+  desc: "Define a permissão de um comando no nível do canal."
   args:
-    - "\"command name\" enable SomeChannel"
+    - "\"Nome do comando\" enable AlgumCanal"
 usrmdl:
-  desc: "Sets a module's permission at the user level."
+  desc: "Define a permissão de um módulo no nível do usuário."
   args:
-    - "ModuleName enable SomeUsername"
+    - "NomeDoMódulo enable AlgumUsuário"
 usrcmd:
-  desc: "Sets a command's permission at the user level."
+  desc: "Define a permissão de um comando no nível do usuário."
   args:
-    - "\"command name\" enable SomeUsername"
+    - "\"Nome do comando\" enable AlgumUsuário"
 allsrvrmdls:
-  desc: "Enable or disable all modules for your server."
+  desc: "Habilite ou desabilite todos os módulos do seu servidor."
   args:
     - "[enable/disable]"
 allchnlmdls:
-  desc: "Enable or disable all modules in a specified channel."
+  desc: "Habilite ou desabilite todos os módulos em um canal especificado."
   args:
-    - "enable #SomeChannel"
+    - "enable #AlgumCanal"
 allrolemdls:
-  desc: "Enable or disable all modules for a specific role."
+  desc: "Habilite ou desabilite todos os módulos para uma função específica."
   args:
-    - "[enable/disable] MyRole"
+    - "[enable/disable] MeuCargo"
 userblacklist:
   desc: |-
-    Either [add]s or [rem]oves a user or users specified by a Mention or an ID from a blacklist.
-    Specify no argument or a page number to list blacklisted users.
+    Ou [adiciona] ou [remove] um usuário ou usuários especificados por uma menção ou um ID de uma lista negra.
+    Especifique nenhum argumento ou um número de página para listar usuários na lista negra.
   args:
-    - "add @SomeUser @SomeUser2 @SomeUser3"
+    - "add @AlgumUsuario @AlgumUsuario2 @AlgumUsuario3"
     - "rem 12312312313"
     - ""
     - "4"
 channelblacklist:
   desc: |-
-    Either [add]s or [rem]oves a channel or channels specified an ID from a blacklist.
-    Specify no argument or a page number to list blacklisted channels.
+    Ou [adiciona] ou [remove] um canal ou canais especificados um ID de uma lista negra.
+    Especifique nenhum argumento ou um número de página para listar os canais na lista negra.
   args:
     - "add 12312312312 66666666666"
     - "rem 12312312312"
@@ -570,58 +570,63 @@ channelblacklist:
     - "3"
 serverblacklist:
   desc: |-
-    Either [add]s or [rem]oves a server, or servers specified by an ID from a blacklist.
-    Specify no argument or a page number to list blacklisted servers.
+    Ou [adiciona] ou [remove] um servidor, ou servidores especificados por um ID de uma lista negra.
+    Especifique nenhum argumento ou um número de página para listar os servidores na lista negra.
   args:
     - "add 12312321312"
     - "rem 12312321312"
     - ""
     - "2"
 cmdcooldown:
-  desc: "Sets a cooldown per user for a command or a custom reaction. Set it to 0 to remove the cooldown."
+  desc: "Define um cooldown, em segundos, para um comando ou uma expressão que será aplicada por usuário.
+    Defina-o para 0 para remover o cooldown.
+    Suporta um comando especial `cleverbot:response` que pode ser usado para limitar a frequência com que os usuários podem conversar com o intelligentbot"
   args:
     - ".h 5"
     - ".pat 30"
 allcmdcooldowns:
-  desc: "Shows a list of all commands and their respective cooldowns."
+  desc: "Mostra uma lista de todos os comandos e seus respectivos cooldowns."
   args:
     - ""
 quoteadd:
-  desc: "Adds a new quote with the specified name and message."
+  desc: "Adiciona uma nova cotação com o nome e a mensagem especificados."
   args:
-    - "sayhi Hi"
+    - "sayOi Oi"
 quoteprint:
-  desc: "Prints a random quote with a specified name."
+  desc: "Imprime uma cotação aleatória com um nome especificado."
   args:
     - "abc"
 quoteshow:
-  desc: "Shows information about a quote with the specified ID."
+  desc: "Mostra informações sobre uma cotação com o ID especificado."
   args:
     - "123"
 quotesearch:
-  desc: "Shows a random quote for a keyword that contains any text specified in the search."
+  desc: "Mostra uma cotação aleatória dada uma consulta de pesquisa. Corresponde parcialmente de várias maneiras: 1) Apenas conteúdo de qualquer citação, 2) apenas por autor, 3) palavra-chave e conteúdo, 3) ou palavra-chave e autor"
   args:
-    - "keyword text"
+    - "\"encontre este longo texto\""
+    - "Nomedoautor" 
+    - "palavra-chave algum texto"
+    - "palavra-chave Nomedoautor"
 quoteid:
-  desc: "Displays the quote with the specified ID number. Quote ID numbers can be found by typing `{0}liqu [num]` where `[num]` is a number of a page which contains 15 quotes."
+  desc: "Exibe a cotação com o número de ID especificado. Os números de ID de cotação podem ser encontrados digitando `{0}liqu [num]` onde `[num]` é um número de uma página que contém 15 citações."
   args:
     - "123456"
 quotedelete:
-  desc: "Deletes a quote with the specified ID. You have to either have the Manage Messages permission or be the creator of the quote to delete it."
+  desc: "Exclui uma cotação com o ID especificado. Você precisa ter a permissão Gerenciar mensagens ou ser o criador da cotação para excluí-la."
   args:
     - "123456"
 draw:
-  desc: "Draws a card from this server's deck. You can draw up to 10 cards by supplying a number of cards to draw."
+  desc: "Compra uma carta do baralho deste servidor. Você pode comprar até 10 cartas, fornecendo um número de cartas para comprar."
   args:
     - ""
     - "5"
 drawnew:
-  desc: "Draws a card from the NEW deck of cards. You can draw up to 10 cards by supplying a number of cards to draw."
+  desc: "Compra uma carta do NOVO baralho de cartas. Você pode comprar até 10 cartas, fornecendo um número de cartas para comprar."
   args:
     - ""
     - "5"
 playlistshuffle:
-  desc: "Shuffles the current playlist."
+  desc: "Embaralha a lista de reprodução atual."
   args:
     - ""
 flip:
@@ -630,1582 +635,1600 @@ flip:
     - ""
     - "3"
 betflip:
-  desc: "Bet to guess will the result be heads or tails. Guessing awards you 1.95x the currency you've bet (rounded up). Multiplier can be changed by the bot owner."
+  desc: "Aposte para adivinhar se o resultado será cara ou coroa. Adivinhando lhe dá 1,95x a moeda que você apostou (arredondado para cima). O multiplicador pode ser alterado pelo proprietário do bot."
   args:
     - "5 heads"
     - "3 t"
 roll:
-  desc: "Rolls 0-100. If you supply a number `X` it rolls up to 30 normal dice. If you split 2 numbers with letter `d` (`xdy`) it will roll `X` dice from 1 to `y`. `Y` can be a letter 'F' if you want to roll fate dice instead of dnd."
+  desc: "Rola 0-100. Se você fornecer um número 'X', ele rola até 30 dados normais. Se você dividir 2 números com a letra `d` (`xdy`), ele rolará dados `X` de 1 a `y`. 'Y' pode ser uma letra 'F' se você quiser rolar dados de destino em vez de dnd."
   args:
     - ""
     - "7"
     - "3d5"
     - "5dF"
 rolluo:
-  desc: "Rolls `X` normal dice (up to 30) unordered. If you split 2 numbers with letter `d` (`xdy`) it will roll `X` dice from 1 to `y`."
+  desc: "Rola `X` dados normais (Até 30) não ordenados. Se você dividir2 números com a letra `d` (`xdy`), ele rolará dados `X` de 1 a `y`."
   args:
     - ""
     - "7"
     - "3d5"
 nroll:
-  desc: "Rolls in a given range. If you specify just one number instead of the range, it will role from 0 to that number."
+  desc: "Rola em um determinado intervalo. Se você especificar apenas um número em vez do intervalo, o papel será de 0 a esse número."
   args:
     - "5"
     - "5-15"
 race:
-  desc: "Starts a new animal race."
+  desc: "Inicia uma nova raça animal."
   args:
     - ""
 joinrace:
-  desc: "Joins a new race. You can specify an amount of currency for betting (optional). You will get YourBet*(participants-1) back if you win."
+  desc: "Junta-se a uma nova raça. Você pode especificar uma quantidade de moeda para apostar (opcional). Você receberá a YourBet*(participantes-1) de volta se ganhar."
   args:
     - ""
     - "5"
 nunchi:
-  desc: "Creates or joins an existing nunchi game. Users have to count up by 1 from the starting number shown by the bot. If someone makes a mistake (types an incorrect number, or repeats the same number) they are out of the game and a new round starts without them.  Minimum 3 users required."
+  desc: "Cria ou junta-se a um jogo nunchi existente. Os usuários precisam contar até 1 a partir do número inicial mostrado pelo bot. Se alguém cometer um erro (digitar um número incorreto ou repetir o mesmo número), estará fora do jogo e uma nova rodada começará sem ele. Mínimo de 3 usuários necessários."
   args:
     - ""
 connect4:
-  desc: "Creates or joins an existing connect4 game. 2 players are required for the game. Objective of the game is to get 4 of your pieces next to each other in a vertical, horizontal or diagonal line. You can specify a bet when you create a game and only users who bet the same amount will be able to join your game."
+  desc: "Cria ou junta-se a um jogo connect4 existente. 2 jogadores são necessários para o jogo. O objetivo do jogo é colocar 4 de suas peças lado a lado em uma linha vertical, horizontal ou diagonal. Você pode especificar uma aposta ao criar um jogo e apenas os usuários que apostarem o mesmo valor poderão participar do seu jogo."
   args:
     - ""
 raffle:
-  desc: "Prints a name and ID of a random online user from the server, or from the online user in the specified role."
+  desc: "Imprime um nome e uma ID de um usuário online aleatório do servidor ou do usuário online na função especificada."
   args:
     - ""
-    - "RoleName"
+    - "NomeDoCargo"
 raffleany:
-  desc: "Prints a name and ID of a random user from the server, or from the specified role."
+  desc: "Imprime um nome e uma ID de um usuário aleatório do servidor ou da função especificada."
   args:
     - ""
-    - " RoleName"
+    - " NomeDoCargo"
 give:
-  desc: "Give someone a certain amount of currency. You can specify the reason after the mention."
+  desc: "Dê a alguém uma certa quantia de dinheiro. Você pode especificar o motivo após a menção."
   args:
     - "1 @Someone"
-    - "5 @CootGurl Ur so pwetty"
+    - "5 @CootGurl vc é tão fofo"
 award:
-  desc: "Awards someone a certain amount of currency. You can specify the reason after the Username. You can also specify a role name to award currency to all users in a role."
+  desc: "Concede a alguém uma certa quantia em moeda. Você pode especificar o motivo após o nome de usuário. Você também pode especificar um nome de função para atribuir moeda a todos os usuários em uma função."
   args:
     - "100 @person"
-    - "5 Role Of Gamblers"
+    - "5 CargoDosUsuarios"
 take:
-  desc: "Takes the specified amount of currency from someone. You can specify a role instead to take the specified amount of currency from all users in the role."
+  desc: "Recebe a quantia especificada de moeda de alguém. Você pode especificar uma função para obter a quantia especificada de moeda de todos os usuários na função."
   args:
     - "1 @Someone"
-    - "50 SomeRole"
+    - "50 AlgumCargo"
 betroll:
-  desc: "Bets a certain amount of currency and rolls a dice. Rolling over 66 yields x2 of your currency, over 90 - x4 and 100 x10."
+  desc: "Aposta uma certa quantia de moeda e rola um dado. Rolar acima de 66 rende x2 da sua moeda, acima de 90 - x4 e 100 x10."
   args:
     - "5"
 wheeloffortune:
-  desc: "Bets a certain amount of currency on the wheel of fortune. Wheel can stop on one of many different multipliers. Won amount is rounded down to the nearest whole number."
+  desc: "Aposta uma certa quantia de dinheiro na roda da fortuna. A roda pode parar em um dos muitos multiplicadores diferentes. O valor ganho é arredondado para o número inteiro mais próximo."
   args:
     - "10"
 leaderboard:
-  desc: "Displays the bot's currency leaderboard."
+  desc: "Exibe o placar de moedas do bot."
   args:
     - ""
 trivia:
-  desc: "Starts a game of trivia. You can add `nohint` to prevent hints. First player to get to 10 points wins by default. You can specify a different number. 30 seconds per question."
+  desc: "Inicia um jogo de curiosidades. Você pode adicionar `nohint` para evitar dicas. O primeiro jogador a chegar a 10 pontos vence por padrão. Você pode especificar um número diferente. 30 segundos por pergunta."
   args:
     - ""
     - "--timeout 5 -p -w 3 -q 10"
 tl:
-  desc: "Shows a current trivia leaderboard."
+  desc: "Mostra um placar de trivia atual."
   args:
     - ""
 tq:
-  desc: "Quits current trivia after current question."
+  desc: "Sai da trivialidade atual após a pergunta atual."
   args:
     - ""
 typestart:
-  desc: "Starts a typing contest."
+  desc: "Inicia um concurso de digitação."
   args:
     - ""
 typestop:
-  desc: "Stops a typing contest on the current channel."
+  desc: "Interrompe um concurso de digitação no canal atual."
   args:
     - ""
 typeadd:
-  desc: "Adds a new article to the typing contest."
+  desc: "Adiciona um novo artigo ao concurso de digitação."
   args:
-    - "wordswords"
+    - "palavraspalavras"
 pollend:
-  desc: "Stops active poll on this server and prints the results in this channel."
+  desc: "Interrompe a pesquisa ativa neste servidor e imprime os resultados neste canal."
   args:
     - ""
 pick:
-  desc: "Picks the currency planted in this channel. If the plant has a password, you need to specify it."
+  desc: "Escolhe a moeda plantada neste canal. Se a planta tiver uma senha, você precisa especificá-la."
   args:
     - ""
-    - "passwd"
+    - "Senha"
 plant:
-  desc: "Spend an amount of currency to plant it in this channel. Default is 1. You can specify the password after the amount. Password has to be alphanumeric and it will be trimmed down to 10 characters if it's longer."
+  desc: "Gaste uma quantia em moeda para plantá-la neste canal. O padrão é 1. Você pode especificar a senha após o valor. A senha deve ser alfanumérica e será reduzida para 10 caracteres se for maior."
   args:
     - "5"
     - "10 meow"
 gencurrency:
-  desc: "Toggles currency generation on this channel. Every posted message will have chance to spawn currency. Chance is specified by the Bot Owner. (default is 2%)"
+  desc: "Alterna a geração de moeda neste canal. Cada mensagem postada terá chance de gerar moeda. A chance é especificada pelo proprietário do bot. (o padrão é 2%)"
   args:
     - ""
 gencurlist:
-  desc: "Shows the list of server and channel ids where gc is enabled. Paginated with 9 per page."
+  desc: "Mostra a lista de IDs de servidor e canal onde o gc está ativado. Paginado com 9 por página."
   args:
     - ""
 choose:
-  desc: "Chooses a thing from a list of things"
+  desc: "Escolhe uma coisa de uma lista de coisas"
   args:
     - "Get up;Sleep;Sleep more"
 rps:
-  desc: "Play a game of Rocket-Paperclip-Scissors with Nadeko. You can bet on it. Multiplier is the same as on betflip."
+  desc: "Jogue um jogo de Rocket-Paperclip-Scissors com Tails. Você pode apostar nisso. O multiplicador é o mesmo da betflip."
   args:
     - "r 100"
     - "scissors"
 linux:
-  desc: "Prints a customizable Linux interjection"
+  desc: "Imprime uma interjeição Linux personalizável"
   args:
     - "Spyware Windows"
 next:
-  desc: "Goes to the next song in the queue. You have to be in the same voice channel as the bot. You can skip multiple songs, but in that case songs will not be requeued if {0}rcs or {0}rpl is enabled."
+  desc: "Vai para a próxima música na fila. Você precisa estar no mesmo canal de voz que o bot. Você pode pular várias músicas, mas nesse caso as músicas não serão reenfileiradas se {0}rcs ou {0}rpl estiverem ativados."
   args:
     - ""
     - "5"
 play:
-  desc: "If no parameters are specified, acts as `{0}next 1` command. If you specify a song number, it will jump to that song. If you specify a search query, acts as a `{0}q` command"
+  desc: "Se nenhum parâmetro for especificado, atua como comando `{0}next 1`. Se você especificar um número de música, ele pulará para essa música. Se você especificar uma consulta de pesquisa, atua como um comando `{0}q`"
   args:
     - ""
     - "5"
     - "Dream Of Venice"
 stop:
-  desc: "Stops the music and preserves the current song index. Stays in the channel."
+  desc: "Interrompe a música e preserva o índice de música atual. Fica no canal."
   args:
     - ""
 destroy:
-  desc: "Completely stops the music and unbinds the bot from the channel. (may cause weird behaviour)"
+  desc: "Para completamente a música e desvincula o bot do canal. (pode causar um comportamento estranho)"
   args:
     - ""
 pause:
-  desc: "Pauses or Unpauses the song."
+  desc: "Pausa ou retoma a música."
   args:
     - ""
 queue:
-  desc: "Queue a song using keywords or a link. Bot will join your voice channel. **You must be in a voice channel**."
+  desc: "Coloque uma música na fila usando palavras-chave ou um link. O bot se juntará ao seu canal de voz. **Você deve estar em um canal de voz**."
   args:
     - "Dream Of Venice"
 queuenext:
-  desc: "Works the same as `{0}queue` command, except it enqueues the new song after the current one. **You must be in a voice channel**."
+  desc: "Funciona da mesma forma que o comando `{0}queue`, exceto que enfileira a nova música após a atual. **Você deve estar em um canal de voz**."
   args:
     - "Dream Of Venice"
 queuesearch:
-  desc: "Search for top 5 youtube song result using keywords, and type the index of the song to play that song. Bot will join your voice channel. **You must be in a voice channel**."
+  desc: "Pesquise os 5 melhores resultados de músicas do youtube usando palavras-chave e digite o índice da música para reproduzi-la. O bot se juntará ao seu canal de voz. **Você deve estar em um canal de voz**."
   args:
     - "Dream Of Venice"
 soundcloudqueue:
-  desc: "Queue a soundcloud song using keywords. Bot will join your voice channel. **You must be in a voice channel**."
+  desc: "Enfileirar uma música do soundcloud usando palavras-chave. O bot se juntará ao seu canal de voz. **Você deve estar em um canal de voz**."
   args:
     - "Dream Of Venice"
 listqueue:
-  desc: "Lists 10 currently queued songs per page. Default page is 1."
+  desc: "Lista 10 músicas atualmente na fila por página. A página padrão é 1."
   args:
     - ""
     - "2"
 nowplaying:
-  desc: "Shows the song that the bot is currently playing."
+  desc: "Mostra a música que o bot está tocando no momento."
   args:
     - ""
 volume:
-  desc: "Sets the music playback volume (0-100%). Persistent server setting. Default 100"
+  desc: "Define o volume de reprodução de música (0-100%). Configuração de servidor persistente. Padrão 100"
   args:
     - "50"
 playlist:
-  desc: "Queues up to 500 songs from a youtube playlist specified by a link, or keywords."
+  desc: "Enfileira até 500 músicas de uma lista de reprodução do youtube especificada por um link ou palavras-chave."
   args:
     - "<youtube_playlist_link>"
 soundcloudpl:
-  desc: "Queue a Soundcloud playlist using a link."
+  desc: "Enfileirar uma lista de reprodução do Soundcloud usando um link."
   args:
     - "https://soundcloud.com/classical-music-playlist/sets/classical-music-essential-collection"
     - "<soundcloud_set_link>"
 localplaylist:
-  desc: "Queues all songs from a directory."
+  desc: "Enfileira todas as músicas de um diretório."
   args:
     - "C:/music/classical"
 radio:
-  desc: "Queues a radio stream from a link. It can be a direct mp3 radio stream, .m3u, .pls .asx or .xspf (Usage Video: <https://streamable.com/al54>)"
+  desc: "Enfileira um fluxo de rádio de um link. Pode ser um fluxo de rádio mp3 direto, .m3u, .pls .asx ou .xspf (Vídeo de uso: <https://streamable.com/al54>)"
   args:
     - "radio link here"
 local:
-  desc: "Queues a local file by specifying a full path."
+  desc: "Enfileira um arquivo local especificando um caminho completo."
   args:
     - "C:/music/mysong.mp3"
 join:
-  desc: "Makes the bot join your voice channel."
+  desc: "Faz com que o bot se junte ao seu canal de voz."
   args:
     - ""
 trackremove:
-  desc: "Remove a song by its # in the queue, or 'all' (or provide no parameter) to remove all songs from the queue."
+  desc: "Remova uma música por seu # na fila, ou 'all' (ou não forneça nenhum parâmetro) para remover todas as músicas da fila."
   args:
     - "5"
     - "all"
     - ""
 trackmove:
-  desc: "Moves a song from one position to another."
+  desc: "Move uma música de uma posição para outra."
   args:
     - "5 3"
 setmaxqueue:
-  desc: "Sets a maximum queue size. Specify no parameters to have no limit."
+  desc: "Define um tamanho máximo de fila. Especifique sem parâmetros para não ter limite."
   args:
     - "50"
     - ""
 queuerepeat:
-  desc: "Sets music player repeat strategy for this server.\n- `n` / `no` - player will stop once it reaches the end of the queue\n- `s` / `song` - player will repeat current song\n- `q` / `queue` or empty - player will repeat entire music queue"
+  desc: "Define a estratégia de repetição do player de música para este servidor.\n- `n` / `no` - o player parará quando chegar ao final da fila\n- `s` / `song` - o player repetirá a música atual\n- `q` / `queue` ou vazio - o player repetirá toda a fila de música"
   args:
     - ""
     - "n"
     - "song"
 save:
-  desc: "Saves a playlist under a certain name. Playlist name must be no longer than 20 characters and must not contain dashes."
+  desc: "Salva uma lista de reprodução com um determinado nome. O nome da lista de reprodução não deve ter mais de 20 caracteres e não deve conter traços."
   args:
     - "classical1"
 streamrole:
-  desc: "Sets a role which is monitored for streamers (FromRole), and a role to add if a user from 'FromRole' is streaming (AddRole). When a user from 'FromRole' starts streaming, they will receive an 'AddRole'. You can only have 1 Stream Role per server. Provide no parameters to disable"
+  desc: "Define uma função que é monitorada para streamers (FromRole) e uma função a ser adicionada se um usuário de 'FromRole' estiver transmitindo (AddRole). Quando um usuário de 'FromRole' começa a transmitir, ele receberá um 'AddRole'. Você só pode ter 1 função de fluxo por servidor. Não forneça parâmetros para desabilitar"
   args:
-    - "\"Eligible Streamers\" \"Featured Streams\""
+    - "\"Streamers qualificados\" \"Streams em destaque\""
 load:
-  desc: "Loads a saved playlist using its ID. Use `{0}pls` to list all saved playlists and `{0}save` to save new ones."
+  desc: "Carrega uma lista de reprodução salva usando seu ID. Use `{0}pls` para listar todas as playlists salvas e `{0}save` para salvar as novas."
   args:
     - "5"
 playlists:
-  desc: "Lists all playlists. Paginated, 20 per page."
+  desc: "Lista todas as listas de reprodução. Paginado, 20 por página."
   args:
     - "1"
 playlistshow:
-  desc: "Lists all songs in a playlist spepcified by its id. Paginated, 20 per page."
+  desc: "Lista todas as músicas em uma lista de reprodução especificada por seu id. Paginado, 20 por página."
   args:
     - "1"
 deleteplaylist:
-  desc: "Deletes a saved playlist using its id. Works only if you made it or if you are the bot owner."
+  desc: "Exclui uma lista de reprodução salva usando seu id. Funciona apenas se você o fez ou se você for o proprietário do bot."
   args:
     - "5"
 queueautoplay:
-  desc: "Toggles autoplay - When the song is finished, automatically queue a related Youtube song. (Works only for Youtube songs)"
+  desc: "Alterna a reprodução automática - Quando a música terminar, enfileira automaticamente uma música relacionada do Youtube. (Funciona apenas para músicas do Youtube)"
   args:
     - ""
 streamadd:
-  desc: "Notifies this channel when the stream on the specified URL goes online or offline. Offline notifications will only show if you enable `{0}streamoff`. Maximum 10 per server."
+  desc: "Notifica este canal quando o fluxo no URL especificado fica online ou offline. As notificações off-line só serão exibidas se você ativar `{0}streamoff`. Máximo de 10 por servidor."
   args:
-    - "twitch.tv/someguy"
+    - "twitch.tv/AlgumCara"
 streamsclear:
-  desc: "Removes all followed streams on this server."
+  desc: "Remove todos os fluxos seguidos neste servidor."
   args:
     - ""
 streamremove:
-  desc: "Stops following the stream on the specified index. (use `{0}stl` to see indexes)"
+  desc: "Para de seguir o fluxo no índice especificado. (use `{0}stl` para ver índices)"
   args:
     - "2"
 streamlist:
-  desc: "Lists all streams you are following on this server and their respective indexes."
+  desc: "Lista todos os fluxos que você está seguindo neste servidor e seus respectivos índices."
   args:
     - ""
 streamoffline:
-  desc: "Toggles whether the bot will also notify when added streams go offline."
+  desc: "Alterna se o bot também notificará quando os fluxos adicionados ficarem offline."
   args:
     - ""
 streamonlinedelete:
-  desc: "Toggles whether the bot will delete stream online message when the stream goes offline."
+  desc: "Alterna se o bot excluirá a mensagem online do stream quando o stream ficar offline."
   args:
     - ""
 streammessage:
-  desc: "Sets the message which will show when the stream on the specified index comes online. You can use %user% and %platform% placeholders."
+  desc: "Define a mensagem que será exibida quando o fluxo no índice especificado ficar online. Você pode usar espaços reservados %user% e %platform%."
   args:
-    - "1 Hey @erryone %user% is back online on %platform%!1!!"
+    - "1 Ei @erryone %user% está online novamente em %platform%!1!!"
 streammessageall:
-  desc: "Sets the message which will show when any of the currently followed streams comes online. This does not apply to the streams which get added afterwards. You can use %user% and %platform% placeholders."
+  desc: "Define a mensagem que será exibida quando qualquer um dos fluxos seguidos no momento ficar online. Isso não se aplica aos fluxos que são adicionados posteriormente. Você pode usar espaços reservados %user% e %platform%."
   args:
-    - "Hey @erryone %user% is back online!1!!"
+    - "Ei @erryone %user% está online novamente!1!!"
 streamcheck:
-  desc: "Retrieves information about a stream."
+  desc: "Recupera informações sobre um fluxo."
   args:
-    - "https://twitch.tv/somedude"
+    - "https://twitch.tv/AlgumCara"
 convert:
-  desc: "Convert quantities. Use `{0}convertlist` to see supported dimensions and currencies."
+  desc: "Converter quantidades. Use `{0}convertlist` para ver as dimensões e moedas compatíveis."
   args:
     - "m km 1000"
 convertlist:
-  desc: "List of the convertible dimensions and currencies."
+  desc: "Lista das dimensões e moedas conversíveis."
   args:
     - ""
 wowjoke:
-  desc: "Get one of Kwoth's penultimate WoW jokes."
+  desc: "Obtenha uma das penúltimas piadas de WoW de Kwoth."
   args:
     - ""
 calculate:
-  desc: "Evaluate a mathematical expression."
+  desc: "Calcule uma expressão matemática."
   args:
     - "1+1"
 osu:
-  desc: "Shows osu! stats for a player."
+  desc: "Mostra osu! estatísticas de um jogador."
   args:
     - "Name"
     - "Name taiko"
 gatari:
-  desc: "Shows osu!gatari stats for a player."
+  desc: "Mostra as estatísticas do osu!gatari de um jogador."
   args:
     - "Name"
     - "Name ctb"
 osu5:
-  desc: "Displays a user's top 5 plays."
+  desc: "Exibe as 5 melhores jogadas de um usuário."
   args:
     - "Name"
 pokemon:
-  desc: "Searches for a pokemon."
+  desc: "Procura um pokémon."
   args:
     - "Sylveon"
 pokemonability:
-  desc: "Searches for a pokemon ability."
+  desc: "Procura por uma habilidade de pokemon."
   args:
     - "overgrow"
 memelist:
-  desc: "Shows a list of template keys (and their repspective names) used for `{0}memegen`."
+  desc: "Mostra uma lista de chaves de modelo (e seus respectivos nomes) usadas para `{0}memegen`."
   args:
     - ""
 memegen:
-  desc: "Generates a meme from memelist with specified text. Separate multiple text values with semicolons. Provide no meme text to see an example meme with that template."
+  desc: "Gera um meme da memelist com o texto especificado. Separe vários valores de texto com ponto e vírgula. Não forneça nenhum texto de meme para ver um meme de exemplo com esse modelo."
   args:
     - "biw gets iced coffee;in the winter"
     - "ntot"
 weather:
-  desc: "Shows weather data for a specified city. You can also specify a country after a comma."
+  desc: "Mostra dados meteorológicos para uma cidade especificada. Você também pode especificar um país após uma vírgula."
   args:
     - "Moscow, RU"
 youtube:
-  desc: "Searches youtubes and shows the first result"
+  desc: "Pesquisa youtubes e mostra o primeiro resultado"
   args:
     - "query"
 anime:
-  desc: "Queries anilist for an anime and shows the first result."
+  desc: "Consulta anilist para um anime e mostra o primeiro resultado."
   args:
     - "aquarion evol"
 steam:
-  desc: "Returns a store link for a steam game with the specified name. It doesn't work very well because bundles."
+  desc: "Retorna um link de loja para um jogo Steam com o nome especificado. Não funciona muito bem porque os pacotes."
   args:
     - "Sakura Agent"
 movie:
-  desc: "Queries omdb for movies or series, show first result."
+  desc: "Consultas omdb para filmes ou séries, mostram o primeiro resultado."
   args:
     - "Batman vs Superman"
 manga:
-  desc: "Queries anilist for a manga and shows the first result."
+  desc: "Consulta anilist para um mangá e mostra o primeiro resultado."
   args:
     - "Shingeki no kyojin"
 randomcat:
-  desc: "Shows a random cat image."
+  desc: "Mostra uma imagem de gato aleatória."
   args:
     - ""
 randomdog:
-  desc: "Shows a random dog image."
+  desc: "Mostra uma imagem de cachorro aleatória."
   args:
     - ""
 randomfood:
-  desc: "Shows a random food image."
+  desc: "Mostra uma imagem de comida aleatória."
   args:
     - ""
 randombird:
-  desc: "Shows a random bird image."
+  desc: "Mostra uma imagem de pássaro aleatório."
   args:
     - ""
 image:
-  desc: "Pulls a random image using a search parameter."
+  desc: "Puxa uma imagem aleatória usando um parâmetro de pesquisa."
   args:
-    - "cute kitten"
+    - "gatinho fofo"
 lmgtfy:
-  desc: "Google something for an idiot."
+  desc: "Google algo para um idiota."
   args:
     - "query"
 google:
-  desc: "Get a Google search link for some terms."
+  desc: "Obtenha um link de pesquisa do Google para alguns termos."
   args:
     - "query"
 duckduckgo:
-  desc: "Get duckduckgo search results."
+  desc: "Obtenha resultados de pesquisa do duckduckgo."
   args:
-    - "cat pictures"
+    - "fotos de gatos"
 hearthstone:
-  desc: "Searches for a Hearthstone card and shows its image. Takes a while to complete."
+  desc: "Procura um card de Hearthstone e mostra sua imagem. Demora um pouco para ser concluído."
   args:
     - "Ysera"
 urbandict:
-  desc: "Searches Urban Dictionary for a word."
+  desc: "Pesquisa no Dicionário Urbano por uma palavra."
   args:
-    - "Pineapple"
+    - "Abacaxi"
 catfact:
-  desc: "Shows a random catfact from <http://catfacts-api.appspot.com/api/facts>"
+  desc: "Mostra um catfact aleatório de <http://catfacts-api.appspot.com/api/facts>"
   args:
     - ""
 yomama:
-  desc: "Shows a random joke from <http://api.yomomma.info/>"
+  desc: "Mostra uma piada aleatória de <http://api.yomomma.info/>"
   args:
     - ""
 randjoke:
-  desc: "Shows a random joke."
+  desc: "Mostra uma piada aleatória."
   args:
     - ""
 chucknorris:
-  desc: "Shows a random Chuck Norris joke."
+  desc: "Mostra uma piada aleatória de Chuck Norris."
   args:
     - ""
 magicitem:
-  desc: "Shows a random magic item from <https://1d4chan.org/wiki/List_of_/tg/%27s_magic_items>"
+  desc: "Mostra um item mágico aleatório de <https://1d4chan.org/wiki/List_of_/tg/%27s_magic_items>"
   args:
     - ""
 revav:
-  desc: "Returns a Google reverse image search for someone's avatar."
+  desc: "Retorna uma pesquisa de imagem reversa do Google para o avatar de alguém."
   args:
     - "@Someone"
 revimg:
-  desc: "Returns a Google reverse image search for an image from a link."
+  desc: "Retorna uma pesquisa de imagem reversa do Google para uma imagem de um link."
   args:
     - "Image link"
 wiki:
-  desc: "Gives you back a wikipedia link"
+  desc: "Devolve um link da wikipedia"
   args:
     - "query"
 color:
-  desc: "Shows you pictures of colors which correspond to the inputed hex values. Max 10."
+  desc: "Mostra imagens de cores que correspondem aos valores hexadecimais de entrada. Máximo 10."
   args:
     - "00ff00"
     - "f00 0f0 00f"
 avatar:
-  desc: "Shows a mentioned person's avatar."
+  desc: "Mostra o avatar de uma pessoa mencionada."
   args:
-    - "@Someone"
+    - "@Alguém"
 hentai:
-  desc: "Shows a hentai image from a random website (gelbooru, danbooru, konachan or yandere) with a given tag. Tag(s) are optional but preferred. Maximum is usually 2 tags. Only 1 tag allowed."
+  desc: "Mostra uma imagem hentai de um site aleatório (gelbooru, danbooru, konachan ou yandere) com uma determinada tag. Tag(s) são opcionais, mas preferenciais. O máximo é geralmente 2 tags. Apenas 1 etiqueta permitida."
   args:
     - "yuri"
 nhentai:
-  desc: "Shows basic information about a hentai with the specified id, or a valid nhentai search query."
+  desc: "Mostra informações básicas sobre um hentai com o id especificado ou uma consulta de pesquisa nhentai válida."
   args:
     - "273426"
     - "cute girl"
 autohentai:
-  desc: "Posts a hentai every X seconds with a random tag from the provided tags. Use `|` to separate tag groups. Random group will be chosen every time the image is sent. Max 2 tags per group. 20 seconds minimum. Provide no parameters to disable."
+  desc: "Posta um hentai a cada X segundos com uma tag aleatória das tags fornecidas. Use `|` para separar grupos de tags. O grupo aleatório será escolhido toda vez que a imagem for enviada. Máximo de 2 tags por grupo. 20 segundos no mínimo. Não forneça parâmetros para desabilitar."
   args:
     - "30 yuri kissing|tail long_hair"
     - ""
 hentaibomb:
-  desc: "Shows a total 5 images (from gelbooru, danbooru, konachan and yandere). Tag(s) are optional but preferred. Maximum is usually 2 tags."
+  desc: "Mostra um total de 5 imagens (de gelbooru, danbooru, konachan e yandere). Tag(s) são opcionais, mas preferenciais. O máximo é geralmente 2 tags."
   args:
     - "yuri"
 yandere:
-  desc: "Shows a random image from yandere with a given tag. Tag(s) are optional but preferred. Maximum is usually 2 tags."
+  desc: "Mostra uma imagem aleatória de yandere com uma determinada tag. Tag(s) são opcionais, mas preferenciais. O máximo é geralmente 2 tags."
   args:
     - "yuri kissing"
 danbooru:
-  desc: "Shows a random hentai image from danbooru with a given tag. Tag(s) are optional but preferred. Maximum is usually 2 tags."
+  desc: "Mostra uma imagem hentai aleatória de danbooru com uma determinada tag. Tag(s) são opcionais, mas preferenciais. O máximo é geralmente 2 tags."
   args:
     - "yuri kissing"
 derpibooru:
-  desc: "Shows a random image from derpibooru with a given tag. Tag(s) are optional but preferred. Maximum is usually 2 tags."
+  desc: "Mostra uma imagem aleatória de derpibooru com uma determinada tag. Tag(s) são opcionais, mas preferenciais. O máximo é geralmente 2 tags."
   args:
     - "yuri kissing"
 gelbooru:
-  desc: "Shows a random hentai image from gelbooru with a given tag. Tag(s) are optional but preferred. Maximum is usually 2 tags."
+  desc: "Mostra uma imagem hentai aleatória de gelbooru com uma determinada tag. Tag(s) são opcionais, mas preferenciais. O máximo é geralmente 2 tags."
   args:
     - "yuri kissing"
 sankaku:
-  desc: "Shows a random hentai image from chan.sankakucomplex.com with a given tag. Tag(s) are optional but preferred. Maximum is usually 2 tags."
+  desc: "Mostra uma imagem hentai aleatória de chan.sankakucomplex.com com uma determinada tag. Tag(s) são opcionais, mas preferenciais. O máximo é geralmente 2 tags."
   args:
     - "yuri kiss"
 rule34:
-  desc: "Shows a random image from rule34.xx with a given tag. Tag(s) are optional but preferred. Maximum is usually 2 tags."
+  desc: "Mostra uma imagem aleatória de rule34.xx com uma determinada tag. Tag(s) são opcionais, mas preferenciais. O máximo é geralmente 2 tags."
   args:
     - "yuri kissing"
 e621:
-  desc: "Shows a random hentai image from e621.net with a given tag. Tag(s) are optional but preferred. Maximum is usually 2 tags."
+  desc: "Mostra uma imagem hentai aleatória do e621.net com uma determinada tag. Tag(s) são opcionais, mas preferenciais. O máximo é geralmente 2 tags."
   args:
     - "yuri kissing"
 safebooru:
-  desc: "Shows a random image from safebooru with a given tag. Tag(s) are optional but preferred. Maximum is usually 2 tags."
+  desc: "Mostra uma imagem aleatória de safebooru com uma determinada tag. Tag(s) são opcionais, mas preferenciais. O máximo é geralmente 2 tags."
   args:
     - "yuri kissing"
 boobs:
-  desc: "Real adult content."
+  desc: "Conteúdo adulto real."
   args:
     - ""
 butts:
-  desc: "Real adult content."
+  desc: "Conteúdo adulto real."
   args:
     - ""
 translate:
-  desc: "Translates text from the given language to the destination language."
+  desc: "Traduz o texto do idioma fornecido para o idioma de destino."
   args:
     - "en fr Hello"
 translangs:
-  desc: "Lists the valid languages for translation."
+  desc: "Lista os idiomas válidos para tradução."
   args:
     - ""
 guide:
-  desc: "Sends a readme and a guide links to the channel."
+  desc: "Envia um leia-me e um guia de links para o canal."
   args:
     - ""
 calcops:
-  desc: "Shows all available operations in the `{0}calc` command"
+  desc: "Mostra todas as operações disponíveis no comando `{0}calc`"
   args:
     - ""
 delallquotes:
-  desc: "Deletes all quotes on a specified keyword."
+  desc: "Exclui todas as aspas em uma palavra-chave especificada."
   args:
     - "kek"
 greetdmmsg:
-  desc: "Sets a new join announcement message which will be sent to the user who joined. Type `%user.mention%` if you want to mention the new member. Using it with no message will show the current DM greet message. You can use embed json from <https://eb.nadeko.bot> instead of a regular text, if you want the message to be embedded."
+  desc: "Define uma nova mensagem de anúncio de ingresso que será enviada ao usuário que ingressou. Digite `%user.mention%` se quiser mencionar o novo membro. Usá-lo sem mensagem mostrará a mensagem de saudação DM atual. Você pode usar o json incorporado de <https://eb.nadeko.bot> em vez de um texto normal, se quiser que a mensagem seja incorporada."
   args:
-    - "Welcome to the server, %user.mention%"
+    - "Bem-vindo ao servidor, %user.mention%"
 cash:
-  desc: "Check how much currency a person has. (Defaults to yourself)"
+  desc: "Verifique quanta moeda uma pessoa tem. (Padrão para você mesmo)"
   args:
     - ""
-    - "@Someone"
+    - "@Alguém"
 currencytransactions:
-  desc: "Shows your currency transactions on the specified page. Bot owner can see other people's transactions too."
+  desc: "Mostra suas transações de moeda na página especificada. O proprietário do bot também pode ver as transações de outras pessoas."
   args:
     - "2"
-    - "@SomeUser 2"
+    - "@AlgumUsuario 2"
 currencytransaction:
-  desc: "Shows full details about a currency transaction with the specified ID. You can only check your own transactions."
+  desc: "Mostra detalhes completos sobre uma transação de moeda com o ID especificado. Você só pode verificar suas próprias transações."
   args:
     - "3yvd"
 listperms:
-  desc: "Lists whole permission chain with their indexes. You can specify an optional page number if there are a lot of permissions."
+  desc: "Lista toda a cadeia de permissões com seus índices. Você pode especificar um número de página opcional se houver muitas permissões."
   args:
     - ""
     - "3"
 allusrmdls:
-  desc: "Enable or disable all modules for a specific user."
+  desc: "Habilite ou desabilite todos os módulos para um usuário específico."
   args:
     - "enable @Someone"
 moveperm:
-  desc: "Moves permission from one position to another in the Permissions list."
+  desc: "Move a permissão de uma posição para outra na lista de Permissões."
   args:
     - "2 4"
 removeperm:
-  desc: "Removes a permission from a given position in the Permissions list."
+  desc: "Remove uma permissão de uma determinada posição na lista de Permissões."
   args:
     - "1"
 showemojis:
-  desc: "Shows a name and a link to every SPECIAL emoji in the message."
+  desc: "Mostra um nome e um link para cada emoji ESPECIAL na mensagem."
   args:
-    - "A message full of SPECIAL emojis"
+    - "Uma mensagem cheia de emojis ESPECIAIS"
 emojiadd:
   desc: |-
-    Adds the specified emoji to this server.
-    You can specify a name before the emoji to add it under a different name.
-    You can specify a name followed by an image link to add a new emoji from an image.
-    You can omit imageUrl and instead upload the image as an attachment. 
-    Image size has to be below 256KB.
+    Adiciona o emoji especificado a este servidor.
+    Você pode especificar um nome antes do emoji para adicioná-lo com um nome diferente.
+    Você pode especificar um nome seguido por um link de imagem para adicionar um novo emoji de uma imagem.
+    Você pode omitir imageUrl e, em vez disso, fazer upload da imagem como um anexo.
+    O tamanho da imagem deve ser inferior a 256 KB.
   args:
-    - ":someonesCustomEmoji:"
+    - ":algumEmojiPersonalizado:"
     - "MyEmojiName :someonesCustomEmoji:"
     - "owoNice https://cdn.discordapp.com/emojis/587930873811173386.png?size=128"
 deckshuffle:
-  desc: "Reshuffles all cards back into the deck."
+  desc: "Reembaralha todas as cartas de volta ao baralho."
   args:
     - ""
 forwardmessages:
-  desc: "Toggles forwarding of non-command messages sent to bot's DM to the bot owners"
+  desc: "Alterna o encaminhamento de mensagens sem comando enviadas ao DM do bot para os proprietários do bot"
   args:
     - ""
 forwardtoall:
-  desc: "Toggles whether messages will be forwarded to all bot owners or only to the first one specified in the creds.yml file"
+  desc: "Alterna se as mensagens serão encaminhadas para todos os proprietários de bots ou apenas para o primeiro especificado no arquivo creds.yml"
   args:
     - ""
 resetperms:
-  desc: "Resets the bot's permissions module on this server to the default value."
+  desc: "Redefine o módulo de permissões do bot neste servidor para o valor padrão."
   args:
     - ""
 antiraid:
-  desc: "Sets an anti-raid protection on the server. Provide no parameters to disable. First parameter is number of people which will trigger the protection. Second parameter is a time interval in which that number of people needs to join in order to trigger the protection, and third parameter is punishment for those people. You can specify an additional time argument to do a timed punishment for actions which support it (Ban, Mute, etc) up to 24h. Available punishments: Ban, Kick, Softban, Mute, VoiceMute, ChatMute, RemoveRoles"
+  desc: "Define uma proteção anti-raid no servidor. Não forneça parâmetros para desabilitar. O primeiro parâmetro é o número de pessoas que irão acionar a proteção. O segundo parâmetro é um intervalo de tempo em que esse número de pessoas precisa se juntar para acionar a proteção, e o terceiro parâmetro é a punição para essas pessoas. Você pode especificar um argumento de tempo adicional para fazer uma punição cronometrada para ações que o suportam (Ban, Mute, etc) até 24h. Punições disponíveis: Ban, Kick, Softban, Mute, VoiceMute, ChatMute, RemoveRoles"
   args:
     - "5 20 Kick"
     - "7 9 Ban"
     - "10 10 Ban 6h30m"
     - ""
 antispam:
-  desc: "Stops people from repeating same message X times in a row. Provide no parameters to disable. You can specify to either mute, kick or ban the offenders. You can specify an additional time argument to do a timed punishment for actions which support it (Ban, Mute, etc) up to 24h. Max message count is 10. Available punishments: Ban, Kick, Softban, Mute, VoiceMute, ChatMute, AddRole, RemoveRoles"
+  desc: "Impede que as pessoas repitam a mesma mensagem X vezes seguidas. Não forneça parâmetros para desabilitar. Você pode especificar para silenciar, chutar ou banir os infratores. Você pode especificar um argumento de tempo adicional para fazer uma punição cronometrada para ações que o suportam (Ban, Mute, etc) até 24h. A contagem máxima de mensagens é 10. Punições disponíveis: Ban, Kick, Softban, Mute, VoiceMute, ChatMute, AddRole, RemoveRoles"
   args:
     - "3 Mute"
     - "5 Ban"
     - "5 Ban 3h30m"
     - ""
 antialt:
-  desc: "Applies a punishment action to any user whose account is younger than the specified threshold. Specify time after the punishment to have a timed punishment (not all punishments support timers)."
+  desc: "Aplica uma ação de punição a qualquer usuário cuja conta seja mais jovem que o limite especificado. Especifique o tempo após a punição para ter uma punição cronometrada (nem todas as punições suportam temporizadores)."
   args:
     - "1h Ban"
     - "3d Mute 1h"
 chatmute:
-  desc: "Prevents a mentioned user from chatting in text channels. You can also specify time string for how long the user should be muted. You can optionally specify a reason."
+  desc: "Impede que um usuário mencionado converse em canais de texto. Você também pode especificar a string de tempo por quanto tempo o usuário deve ser silenciado. Opcionalmente, você pode especificar um motivo."
   args:
-    - "@Someone"
-    - "@Someone stop writing"
-    - "15m @Someone"
-    - "1h30m @Someone"
-    - "1h @Someone chill"
+    - "@alguém"
+    - "@alguém pare de escrever"
+    - "15m @alguém"
+    - "1h30m @alguém"
+    - "1h @alguém frio"
 voicemute:
-  desc: "Prevents a mentioned user from speaking in voice channels. User has to be in a voice channel in order for the command to have an effect. You can also specify time string for how long the user should be muted. You can optionally specify a reason."
+  desc: "Impede que um usuário mencionado fale em canais de voz. O usuário deve estar em um canal de voz para que o comando tenha efeito. Você também pode especificar a string de tempo por quanto tempo o usuário deve ser silenciado. Opcionalmente, você pode especificar um motivo."
   args:
-    - "@Someone"
-    - "@Someone stop talking"
-    - "15m @Someone"
-    - "1h30m @Someone"
-    - "1h @Someone silence"
+    - "@alguém"
+    - "@alguém pare de falar"
+    - "15m @alguém"
+    - "1h30m @alguém"
+    - "1h @alguém silêncio"
 konachan:
-  desc: "Shows a random hentai image from konachan with a given tag. Tag(s) are optional but preferred. Maximum is usually 2 tags."
+  desc: "Mostra uma imagem hentai aleatória do konachan com uma determinada tag. Tag(s) são opcionais, mas preferenciais. O máximo é geralmente 2 tags."
   args:
     - "yuri"
 muterole:
-  desc: "Sets a name of the role which will be assigned to people who should be muted. Provide no arguments to see currently set mute role. Default is nadeko-mute."
+  desc: "Define um nome da função que será atribuída às pessoas que devem ser silenciadas. Não forneça argumentos para ver a função de mudo definida no momento. O padrão é nadeko-mute."
   args:
     - ""
-    - "Silenced"
+    - "Silenciada"
 adsarm:
-  desc: "Toggles the automatic deletion of the user's message and Nadeko's confirmations for `{0}iam` and `{0}iamn` commands."
+  desc: "Alterna a exclusão automática da mensagem do usuário e as confirmações de Tails para os comandos `{0}iam` e `{0}iamn`."
   args:
     - ""
 setstream:
-  desc: "Sets the bots stream. First parameter is the twitch link, second parameter is stream name."
+  desc: "Define o fluxo de bots. O primeiro parâmetro é o link do twitch, o segundo parâmetro é o nome do stream."
   args:
-    - "TWITCHLINK Hello"
+    - "TWITCHLINK Olá"
 chatunmute:
-  desc: "Removes a mute role previously set on a mentioned user with `{0}chatmute` which prevented him from chatting in text channels."
+  desc: "Remove uma função de mudo definida anteriormente em um usuário mencionado com `{0}chatmute` que o impedia de conversar em canais de texto."
   args:
-    - "@Someone"
+    - "@Alguém"
 unmute:
-  desc: "Unmutes a mentioned user previously muted with `{0}mute` command."
+  desc: "Tira o mudo de um usuário mencionado anteriormente com o comando `{0}mute`."
   args:
-    - "@Someone"
+    - "@Alguém"
 xkcd:
-  desc: "Shows a XKCD comic. Specify no parameters to retrieve a random one. Number parameter will retrieve a specific comic, and \"latest\" will get the latest one."
+  desc: "Mostra um quadrinho XKCD. Especifique nenhum parâmetro para recuperar um aleatório. O parâmetro Number recuperará um quadrinho específico e \"latest\" obterá o mais recente."
   args:
     - ""
     - "1400"
     - "latest"
 placelist:
-  desc: "Shows the list of available tags for the `{0}place` command."
+  desc: "Mostra a lista de tags disponíveis para o comando `{0}place`."
   args:
     - ""
 place:
-  desc: "Shows a placeholder image of a given tag. Use `{0}placelist` to see all available tags. You can specify the width and height of the image as the last two optional parameters."
+  desc: "Mostra uma imagem de espaço reservado de uma determinada tag. Use `{0}placelist` para ver todas as tags disponíveis. Você pode especificar a largura e a altura da imagem como os dois últimos parâmetros opcionais."
   args:
     - "Cage"
     - "steven 500 400"
 poll:
-  desc: "Creates a public poll which requires users to type a number of the voting option in the channel command is ran in."
+  desc: "Cria uma enquete pública que exige que os usuários digitem um número da opção de votação no comando do canal em que é executado."
   args:
-    - "Question?;Answer1;Answ 2;A_3"
+    - "Pergunta?;Responda1;Resposta 2;R_3"
 autotranslang:
-  desc: "Sets your source and target language to be used with `{0}at`. Specify no parameters to remove previously set value."
+  desc: "Define seu idioma de origem e destino a ser usado com `{0}at`. Especifique nenhum parâmetro para remover o valor definido anteriormente."
   args:
     - "en fr"
 autotranslate:
-  desc: "Starts automatic translation of all messages by users who set their `{0}atl` in this channel. You can set \"del\" parameter to automatically delete all translated user messages."
+  desc: "Inicia a tradução automática de todas as mensagens por usuários que definiram seu `{0}atl` neste canal. Você pode definir o parâmetro \"del\" para excluir automaticamente todas as mensagens traduzidas do usuário."
   args:
     - ""
     - "del"
 listquotes:
-  desc: "Lists all quotes on the server ordered alphabetically or by ID. 15 Per page."
+  desc: "Lista todas as cotações no servidor ordenadas alfabeticamente ou por ID. 15 Por página."
   args:
     - "3"
     - "3 id"
 typedel:
-  desc: "Deletes a typing article given the ID."
+  desc: "Exclui um artigo de digitação dado o ID."
   args:
     - "3"
 typelist:
-  desc: "Lists added typing articles with their IDs. 15 per page."
+  desc: "Lista artigos de digitação adicionados com seus IDs. 15 por página."
   args:
     - ""
     - "3"
 listservers:
-  desc: "Lists servers the bot is on with some basic info. 15 per page."
+  desc: "Lista os servidores em que o bot está com algumas informações básicas. 15 por página."
   args:
     - "3"
 cleverbot:
-  desc: "Toggles cleverbot session. When enabled, the bot will reply to messages starting with bot mention in the server. Custom reactions starting with %bot.mention% won't work if cleverbot is enabled."
+  desc: "Alterna a sessão do smartbot. Quando ativado, o bot responderá às mensagens que começam com a menção do bot no servidor. Reações personalizadas começando com %bot.mention% não funcionarão se o smartbot estiver ativado."
   args:
     - ""
 shorten:
-  desc: "Attempts to shorten an URL, if it fails, returns the input URL."
+  desc: "Tenta encurtar um URL, se falhar, retorna o URL de entrada."
   args:
     - "https://google.com"
 wikia:
-  desc: "Gives you back a fandom link"
+  desc: "Devolve um link de fandom"
   args:
     - "mtg Vigilance"
     - "mlp Dashy"
 magicthegathering:
-  desc: "Searches for a Magic The Gathering card."
+  desc: "Procura uma carta de Magic The Gathering."
   args:
     - "about face"
 hangmanlist:
-  desc: "Shows a list of hangman question categories."
+  desc: "Mostra uma lista de categorias de perguntas da forca."
   args:
     - ""
 hangman:
-  desc: "Starts a game of hangman in the channel. You can optionally select a category `{0}hangmanlist` to see a list of available categories."
+  desc: "Inicia um jogo de forca no canal. Opcionalmente, você pode selecionar uma categoria `{0}hangmanlist` para ver uma lista de categorias disponíveis."
   args:
     - ""
     - "movies"
 hangmanstop:
-  desc: "Stops the active hangman game on this channel if it exists."
+  desc: "Interrompe o jogo da forca ativo neste canal, se existir."
   args:
     - ""
 acrophobia:
-  desc: "Starts an Acrophobia game."
+  desc: "Inicia um jogo de Acrofobia."
   args:
     - ""
     - "-s 30"
 logevents:
-  desc: "Shows a list of all events you can subscribe to with `{0}log`"
+  desc: "Mostra uma lista de todos os eventos nos quais você pode se inscrever com `{0}log`"
   args:
     - ""
 log:
-  desc: "Toggles logging event. Disables it if it is active anywhere on the server. Enables if it isn't active. Use `{0}logevents` to see a list of all events you can subscribe to."
+  desc: "Alterna o evento de registro. Desativa-o se estiver ativo em qualquer lugar do servidor. Ativa se não estiver ativo. Use `{0}logevents` para ver uma lista de todos os eventos nos quais você pode se inscrever."
   args:
     - "userpresence"
     - "userbanned"
 fairplay:
-  desc: "Toggles fairplay. While enabled, the bot will prioritize songs from users who didn't have their song recently played instead of the song's position in the queue."
+  desc: "Alterna o jogo justo. Enquanto estiver ativado, o bot priorizará músicas de usuários que não tiveram sua música tocada recentemente em vez da posição da música na fila."
   args:
     - ""
 define:
-  desc: "Finds a definition of a word."
+  desc: "Encontra uma definição de uma palavra."
   args:
     - "heresy"
 setmaxplaytime:
-  desc: "Sets a maximum number of seconds (>14) a song can run before being skipped automatically. Set 0 to have no limit."
+  desc: "Define um número máximo de segundos (>14) que uma música pode ser executada antes de ser ignorada automaticamente. Defina 0 para não ter limite."
   args:
     - "0"
     - "270"
 activity:
-  desc: "Checks for spammers."
+  desc: "Verifica se há spammers."
   args:
     - ""
 setstatus:
-  desc: "Sets the bot's status. (Online/Idle/Dnd/Invisible)"
+  desc: "Define o status do bot. (Online/Idle/Dnd/Invisible)"
   args:
     - "Idle"
 invitecreate:
-  desc: "Creates a new invite which has infinite max uses and never expires."
+  desc: "Cria um novo convite que tem usos máximos infinitos e nunca expira."
   args:
     - ""
 invitelist:
-  desc: "Lists all invites for this channel. Paginated with 9 per page."
+  desc: "Lista todos os convites para este canal. Paginado com 9 por página."
   args:
     - ""
     - "3"
 invitedelete:
-  desc: "Deletes an invite on the specified index. Use `{0}invitelist` to see the list of invites."
+  desc: "Exclui um convite no índice especificado. Use `{0}invitelist` para ver a lista de convites."
   args:
     - "2"
 pollstats:
-  desc: "Shows the poll results without stopping the poll on this server."
+  desc: "Mostra os resultados da sondagem sem interromper a sondagem neste servidor."
   args:
     - ""
 antilist:
-  desc: "Shows currently enabled protection features."
+  desc: "Mostra os recursos de proteção atualmente ativados."
   args:
     - ""
 antispamignore:
-  desc: "Toggles whether antispam ignores current channel. Antispam must be enabled."
+  desc: "Alterna se o antispam ignora o canal atual. O antispam deve estar ativado."
   args:
     - ""
 eventstart:
-  desc: "Starts one of the events seen on public nadeko. Events: `reaction`, `gamestatus`"
+  desc: "Inicia um dos eventos vistos no nadeko público. Eventos: `reaction`, `gamestatus`"
   args:
     - "reaction"
     - "reaction -d 1 -a 50 --pot-size 1500"
 slotstats:
-  desc: "Shows the total stats of the slot command for this bot's session."
+  desc: "Mostra as estatísticas totais do comando slot para a sessão deste bot."
   args:
     - ""
 slottest:
-  desc: "Tests to see how much slots payout for X number of plays."
+  desc: "Testes para ver quantos slots são pagos por X número de jogadas."
   args:
     - "1000"
 slot:
-  desc: "Play Nadeko slots. 1 second cooldown per user."
+  desc: "Jogue slots Nadeko. 1 segundo de recarga por usuário."
   args:
     - "5"
 affinity:
-  desc: "Sets your affinity towards someone you want to be claimed by. Setting affinity will reduce their `{0}claim` on you by 20%. Provide no parameters to clear your affinity. 30 minutes cooldown."
+  desc: "Define sua afinidade com alguém por quem você deseja ser reivindicado. Definir afinidade reduzirá a `{0}reivindicação` em 20%. Não forneça parâmetros para limpar sua afinidade. 30 minutos de resfriamento."
   args:
     - "@MyHusband"
     - ""
 waifuclaim:
-  desc: "Claim a waifu for yourself by spending currency.  You must spend at least 10% more than her current value unless she set `{0}affinity` towards you."
+  desc: "Reivindique um waifu para si mesmo gastando moeda. Você deve gastar pelo menos 10% a mais do que o valor atual dela, a menos que ela defina `{0}affinity` para você."
   args:
     - "50 @Himesama"
 waifureset:
-  desc: "Resets your waifu stats, except current waifus."
+  desc: "Redefine suas estatísticas do waifu, exceto o waifus atual."
   args:
     - ""
 waifutransfer:
-  desc: "Transfer the ownership of one of your waifus to another user. You must pay 10%  of your waifu's value unless that waifu has affinity towards you, in which case you must pay 60% fee. Transferred waifu's price will be reduced by the fee amount."
+  desc: "Transfira a propriedade de um de seus waifus para outro usuário. Você deve pagar 10% do valor do seu waifu, a menos que o waifu tenha afinidade com você, nesse caso você deve pagar 60% de taxa. O preço do waifu transferido será reduzido pelo valor da taxa."
   args:
-    - "@ExWaifu @NewOwner"
+    - "@ExWaifu @NewDono"
 waifugift:
   desc: -|
-    Gift an item to someone. This will increase their waifu value by a percentage of the gift's value.
-    Negative gifts will not show up in waifuinfo.
-    Provide no parameters to see a list of items that you can gift.
+    Presenteie um item para alguém. Isso aumentará o valor do waifu em uma porcentagem do valor do presente.
+    Presentes negativos não aparecerão no waifuinfo.
+    Não forneça parâmetros para ver uma lista de itens que você pode presentear.
   args:
     - ""
     - "Rose @Himesama"
 waifulb:
-  desc: "Shows top 9 waifus. You can specify another page to show other waifus."
+  desc: "Mostra os 9 melhores waifus. Você pode especificar outra página para mostrar outros waifus."
   args:
     - ""
     - "3"
 divorce:
-  desc: "Releases your claim on a specific waifu. You will get 50% of that waifu's value back, unless that waifu has an affinity towards you, in which case they will be reimbursed instead. 6 hours cooldown."
+  desc: "Libera sua reivindicação em um waifu específico. Você receberá 50% do valor desse waifu de volta, a menos que esse waifu tenha afinidade com você, caso em que será reembolsado. 6 horas de resfriamento."
   args:
     - "@CheatingSloot"
 waifuinfo:
-  desc: "Shows waifu stats for a target person. Defaults to you if no user is provided."
+  desc: "Mostra estatísticas de waifu para uma pessoa alvo. Padrões para você se nenhum usuário for fornecido."
   args:
-    - "@MyCrush"
+    - "@MeuCrush"
     - ""
 mal:
-  desc: "Shows basic info from a MyAnimeList profile."
+  desc: "Mostra informações básicas de um perfil MyAnimeList."
   args:
     - "straysocks"
 setmusicchannel:
-  desc: "Sets the current channel as the default music output channel. This will output playing, finished, paused and removed songs to that channel instead of the channel where the first song was queued in. Persistent server setting."
+  desc: "Define o canal atual como o canal de saída de música padrão. Isso produzirá músicas em reprodução, finalizadas, pausadas e removidas para esse canal em vez do canal em que a primeira música foi enfileirada. Configuração do servidor persistente."
   args:
     - ""
 unsetmusicchannel:
-  desc: "Bot will output playing, finished, paused and removed songs to the channel where the first song was queued in. Persistent server setting."
+  desc: "O bot enviará músicas em reprodução, finalizadas, pausadas e removidas para o canal onde a primeira música foi enfileirada. Configuração do servidor persistente."
   args:
     - ""
 musicquality:
-  desc: "Gets or sets the default music player quality. Available settings: Highest, High, Medium, Low. Default is **Highest**. Provide no argument to see current setting."
+  desc: "Obtém ou define a qualidade padrão do player de música. Configurações disponíveis: Highest, High, Medium, Low. O padrão é **Highest**. Não forneça nenhum argumento para ver a configuração atual."
   args:
     - ""
     - "High"
     - "Low"
-imagesreload:
-  desc: "Reloads images bot is using. Safe to use even when bot is being used heavily."
-  args:
-    - ""
 stringsreload:
-  desc: "Reloads localized bot strings."
+  desc: "Recarrega as strings de bot localizadas."
   args:
     - ""
 shardstats:
   desc: |-
-    Stats for shards. Paginated with 25 shards per page.
-    Format: `[status] | # [shard_id] | [last_heartbeat] | [server_count]`
+    Estatísticas para fragmentos. Paginado com 25 fragmentos por página.
+    Formato: `[status] | # [shard_id] | [last_heartbeat] | [server_count]`
   args:
     - ""
     - "2"
 restartshard:
-  desc: "Try (re)connecting a shard with a certain shardid when it dies. No one knows will it work. Keep an eye on the console for errors."
+  desc: "Tente (re)conectar um shard com um certo shardid quando ele morrer. Ninguém sabe se vai funcionar. Fique de olho no console em busca de erros."
   args:
     - "2"
 tictactoe:
-  desc: "Starts a game of tic tac toe. Another user must run the command in the same channel in order to accept the challenge. Use numbers 1-9 to play."
+  desc: "Inicia um jogo de tic tac toe. Outro usuário deve executar o comando no mesmo canal para aceitar o desafio. Use os números de 1 a 9 para jogar."
   args:
     - ""
 timezones:
-  desc: "Lists all timezones available on the system to be used with `{0}timezone`."
+  desc: "Lista todos os fusos horários disponíveis no sistema para serem usados com `{0}timezone`."
   args:
     - ""
 timezone:
-  desc: "Sets this guilds timezone. This affects bot's time output in this server (logs, etc..)"
+  desc: "Define o fuso horário desta guilda. Isso afeta a saída de tempo do bot neste servidor (logs, etc.)"
   args:
     - ""
     - "GMT Standard Time"
 languagesetdefault:
-  desc: "Sets the bot's default response language. All servers which use a default locale will use this one. Setting to `default` will use the host's current culture. Provide no parameters to see currently set language."
+  desc: "Define o idioma de resposta padrão do bot. Todos os servidores que usam uma localidade padrão usarão esta. Definir como `default` usará a cultura atual do host. Não forneça parâmetros para ver o idioma definido no momento."
   args:
     - "en-US"
     - "default"
 languageset:
-  desc: "Sets this server's response language. If bot's response strings have been translated to that language, bot will use that language in this server. Reset by using `default` as the locale name. Provide no parameters to see currently set language."
+  desc: "Define o idioma de resposta deste servidor. Se as strings de resposta do bot tiverem sido traduzidas para esse idioma, o bot usará esse idioma neste servidor. Redefina usando `default` como o nome da localidade. Não forneça parâmetros para ver o idioma definido no momento."
   args:
     - "de-DE "
     - "default"
 languageslist:
-  desc: "List of languages for which translation (or part of it) exist atm."
+  desc: "Lista de idiomas para os quais existe tradução (ou parte dela)."
   args:
     - ""
 rategirl:
-  desc: "Use the universal hot-crazy wife zone matrix to determine the girl's worth. It is everything young men need to know about women. At any moment in time, any woman you have previously located on this chart can vanish from that location and appear anywhere else on the chart."
+  desc: "Use a matriz universal da zona da mulher louca e quente para determinar o valor da garota. É tudo o que os jovens precisam saber sobre as mulheres. A qualquer momento, qualquer mulher que você localizou anteriormente neste mapa pode desaparecer desse local e aparecer em qualquer outro lugar do mapa."
   args:
-    - "@SomeGurl"
+    - "@AlgumaGarota"
 exprreact:
-  desc: "Sets or resets reactions (up to 3) which will be added to the response message of the CustomReaction with the specified ID. Provide no emojis to reset."
+  desc: "Define ou redefine as reações (até 3) que serão adicionadas à mensagem de resposta do CustomReaction com o ID especificado. Não forneça emojis para redefinir."
   args:
     - "59 \U0001F44D \U0001F44E "
     - "59 <a:nFlower:408963839191941120>"
     - "59"
 exprad:
-  desc: "Toggles whether the message triggering the custom reaction will be automatically deleted."
+  desc: "Alterna se a mensagem que aciona a reação personalizada será excluída automaticamente."
   args:
     - "59"
 exprat:
-  desc: "Toggles whether the custom reaction will allow extra input after the trigger. For example, with this feature enabled, custom reaction with trigger 'hi' will also be invoked when a user types 'hi there'. This feature is automatically enabled on custom reactions which have '%target%' in their response."
+  desc: "Alterna se a reação personalizada permitirá entrada extra após o acionador. Por exemplo, com esse recurso ativado, a reação personalizada com o gatilho 'hi' também será invocada quando um usuário digitar 'hi there'. Esse recurso é ativado automaticamente em reações personalizadas que têm '%target%' em sua resposta."
   args:
     - "59"
 exprdm:
-  desc: "Toggles whether the response message of the custom reaction will be sent as a direct message."
+  desc: "Alterna se a mensagem de resposta da reação personalizada será enviada como uma mensagem direta."
   args:
     - "44"
 exprca:
-  desc: "Toggles whether the custom reaction will trigger if the triggering message contains the keyword (instead of only starting with it)."
+  desc: "Alterna se a reação personalizada será acionada se a mensagem de acionamento contiver a palavra-chave (em vez de apenas começar com ela)."
   args:
     - "44"
 exprsreload:
-  desc: "Reloads all custom reactions on all shards. Use this if you've made changes to the database while the bot is running, or used `{0}deleteunusedcrnq`"
+  desc: "Recarrega todas as reações personalizadas em todos os fragmentos. Use isso se você fez alterações no banco de dados enquanto o bot está em execução ou usou `{0}deleteunusedcrnq`"
   args:
     - ""
 exprsimport:
-  desc: "Upload the file or send the raw .yml data with this command to import all custom reactions from the specified string or file into the current server (or as global custom reactions in dm)"
+  desc: "Carregue o arquivo ou envie os dados .yml brutos com este comando para importar todas as reações personalizadas da string ou arquivo especificado para o servidor atual (ou como reações personalizadas globais em dm)"
   args:
     - "<upload .yml file>"
 exprsexport:
-  desc: "Exports custom reactions from the current server (or global custom reactions in DMs) into a .yml file"
+  desc: "Exporta reações personalizadas do servidor atual (ou reações personalizadas globais em DMs) para um arquivo .yml"
   args:
     - ""
 quotesimport:
-  desc: "Upload the file or send the raw .yml data with this command to import all quotes from the specified string or file into the current server."
+  desc: "Carregue o arquivo ou envie os dados .yml brutos com este comando para importar todas as cotações da string ou arquivo especificado para o servidor atual."
   args:
     - "<upload .yml file>"
 quotesexport:
-  desc: "Exports quotes from the current server into a .yml file"
+  desc: "Exporta cotações do servidor atual para um arquivo .yml"
   args:
     - ""
 aliaslist:
-  desc: "Shows the list of currently set aliases. Paginated."
+  desc: "Mostra a lista de aliases atualmente definidos. Paginado."
   args:
     - ""
     - "3"
 alias:
-  desc: "Create a custom alias for a certain Nadeko command. Provide no alias to remove the existing one."
+  desc: "Crie um alias personalizado para um determinado comando Nadeko. Não forneça nenhum alias para remover o existente."
   args:
     - "allin {0}bf all h"
     - "\"linux thingy\" >loonix Spyware Windows"
 warnlog:
-  desc: "See a list of warnings of a certain user."
+  desc: "Veja uma lista de avisos de um determinado usuário."
   args:
-    - "@Someone"
+    - "@Alguém"
 warnlogall:
-  desc: "See a list of all warnings on the server. 15 users per page."
+  desc: "Veja uma lista de todos os avisos no servidor. 15 usuários por página."
   args:
     - ""
     - "2"
 warn:
   desc: |-
-    Warns a user with an optional reason.
-    You can specify a warning weight integer before the user. For example, 3 would mean that this warning counts as 3 warnings.
+    Avisa um usuário com um motivo opcional.
+    Você pode especificar um inteiro de peso de aviso antes do usuário. Por exemplo, 3 significaria que este aviso conta como 3 avisos.
   args:
-    - "@Someone Very rude person"
-    - "3 @Someone Very rude person"
+    - "@Alguém Pessoa muito rude"
+    - "3 @Alguém Pessoa muito rude"
 startupcommandadd:
-  desc: "Adds a command to the list of commands which will be executed automatically in the current channel, in the order they were added in, by the bot when it startups up."
+  desc: "Adiciona um comando à lista de comandos que serão executados automaticamente no canal atual, na ordem em que foram adicionados, pelo bot quando ele for inicializado."
   args:
     - "{0}stats"
 autocommandadd:
-  desc: "Adds a command to the list of commands which will be executed automatically every X seconds."
+  desc: "Adiciona um comando à lista de comandos que serão executados automaticamente a cada X segundos."
   args:
     - "60 {0}prune 1000"
 startupcommandremove:
-  desc: "Removes a startup command on the specified index."
+  desc: "Remove um comando de inicialização no índice especificado."
   args:
     - "3"
 autocommandremove:
-  desc: "Removes an auto command on the specified index."
+  desc: "Remove um comando automático no índice especificado."
   args:
     - "3"
 startupcommandsclear:
-  desc: "Removes all startup commands."
+  desc: "Remove todos os comandos de inicialização."
   args:
     - ""
 startupcommandslist:
-  desc: "Lists all startup commands in the order they will be executed in."
+  desc: "Lista todos os comandos de inicialização na ordem em que serão executados."
   args:
     - ""
 autocommandslist:
-  desc: "Lists all auto commands and the intervals in which they execute."
+  desc: "Lista todos os comandos automáticos e os intervalos em que eles são executados."
   args:
     - ""
 unban:
-  desc: "Unbans a user with the provided user#discrim or id."
+  desc: "Desbane um usuário com o user#discrim ou id fornecido."
   args:
     - "kwoth#1234"
     - "123123123"
 banmessage:
-  desc: "Sets a ban message template which will be used when a user is banned from this server. You can use embed strings and ban-specific placeholders: %ban.mod%, %ban.user%, %ban.duration% and %ban.reason%. You can disable ban message with `{0}banmsg -`"
+  desc: "Define um modelo de mensagem de banimento que será usado quando um usuário for banido deste servidor. Você pode usar strings de incorporação e marcadores de posição específicos de banimento: %ban.mod%, %ban.user%, %ban.duration% e %ban.reason%. Você pode desativar a mensagem de banimento com `{0}banmsg -`"
   args:
-    - "%ban.user%, you've been banned from %server.name%. Reason: %ban.reason%"
-    - "{{ \"description\": \"%ban.user% you have been banned from %server.name% by %ban.mod%\" }}"
+    - "%ban.user%, você foi banido de %server.name%. Motivo: %ban.reason%"
+    - "{{ \"description\": \"%ban.user% você foi banido de %server.name% por %ban.mod%\" }}"
 banmessagetest:
-  desc: "If ban message is not disabled, bot will send you the message as if you were banned by yourself. Used for testing the ban message."
+  desc: "Se a mensagem de banimento não estiver desativada, o bot enviará a mensagem como se você tivesse sido banido por você mesmo. Usado para testar a mensagem de banimento."
   args:
     - "No reason"
-    - "1h Test 1 hour ban message"
+    - "1h Teste de 1 hora de ban"
 banmsgreset:
-  desc: "Resets ban message to default. If you want to completely disable ban messages, use `{0}banmsg -`"
+  desc: "Redefine a mensagem de banimento para o padrão. Se você deseja desativar completamente as mensagens de banimento, use `{0}banmsg -`"
   args:
     - ""
 wait:
-  desc: "Used only as a startup command. Waits a certain number of miliseconds before continuing the execution of the following startup commands."
+  desc: "Usado apenas como um comando de inicialização. Aguarda um certo número de milissegundos antes de continuar a execução dos seguintes comandos de inicialização."
   args:
     - "3000"
 warnexpire:
-  desc: "Gets or sets the number of days after which the warnings will be cleared automatically. This setting works retroactively. If you want to delete the warnings instead of clearing them, you can set the `--delete` optional parameter. Provide no parameter to see currently set expiry"
+  desc: "Obtém ou define o número de dias após o qual os avisos serão apagados automaticamente. Essa configuração funciona retroativamente. Se você quiser excluir os avisos em vez de limpá-los, você pode definir o parâmetro opcional `--delete`. Não forneça nenhum parâmetro para ver a expiração definida no momento"
   args:
     - ""
     - "3"
     - "6 --delete"
 warnclear:
-  desc: "Clears all warnings from a certain user. You can specify a number to clear a specific one."
+  desc: "Limpa todos os avisos de um determinado usuário. Você pode especificar um número para limpar um específico."
   args:
-    - "@PoorDude 3"
-    - "@PoorDude"
+    - "@PobreCara 3"
+    - "@PobreCara"
 warnpunishlist:
-  desc: "Lists punishments for warnings."
+  desc: "Lista punições para avisos."
   args:
     - ""
 warnpunish:
-  desc: "Sets a punishment for a certain number of warnings. You can specify a time string after 'Ban' or *'Mute' punishments to make it a temporary mute/ban. Provide no punishment to remove. Available punishments: Ban, Kick, Softban, Mute, VoiceMute, ChatMute, AddRole, RemoveRoles"
+  desc: "Define uma punição para um certo número de avisos. Você pode especificar uma sequência de tempo após as punições 'Ban' ou *'Mute' para torná-la um mute/ban temporário. Não forneça nenhuma punição para remover. Punições disponíveis: Ban, Kick, Softban, Mute, VoiceMute, ChatMute, AddRole, RemoveRoles"
   args:
     - "3"
     - "5 Ban"
     - "5 Mute 2d12h"
     - "4 AddRole toxic 1h"
 ping:
-  desc: "Ping the bot to see if there are latency issues."
+  desc: "Faça ping no bot para ver se há problemas de latência."
   args:
     - ""
 time:
-  desc: "Shows the current time and timezone in the specified location."
+  desc: "Mostra a hora atual e o fuso horário no local especificado."
   args:
     - "London, UK"
 shop:
-  desc: "Lists this server's administrators' shop. Paginated."
+  desc: "Lista a loja dos administradores deste servidor. Paginado."
   args:
     - ""
     - "2"
 shopadd:
-  desc: "Adds an item to the shop by specifying type price and name. Available types are role and list. 90% of currency from each purchase will be received by the user who added the item to the shop."
+  desc: "Adiciona um item à loja especificando o tipo preço e nome. Os tipos disponíveis são role e list. 90% da moeda de cada compra será recebida pelo usuário que adicionou o item à loja."
   args:
     - "role 1000 Rich"
 shopremove:
-  desc: "Removes an item from the shop by its ID."
+  desc: "Remove um item da loja pelo seu ID."
   args:
     - "1"
 shopchangename:
-  desc: "Change the name of a shop entry at the specified index. Only works for non-role items"
+  desc: "Altere o nome de uma entrada de loja no índice especificado. Funciona apenas para itens que não são de cargos"
   args:
     - "3 Cool stuff"
 shopchangeprice:
-  desc: "Change the price of a shop entry at the specified index. Specify the index of the entry, followed by the price"
+  desc: "Altere o preço de uma entrada de loja no índice especificado. Especifique o índice da entrada, seguido do preço"
   args:
     - "1 500"
 shopswap:
-  desc: "Swap the index of two shop entries"
+  desc: "Troque o índice de duas entradas de loja"
   args:
     - "1 5"
 shopmove:
-  desc: "Moves the shop entry from the current index to a new one"
+  desc: "Move a entrada da loja do índice atual para um novo"
   args:
     - "2 4"
 buy:
-  desc: "Buys an item from the shop on a given index. If buying items, make sure that the bot can DM you."
+  desc: "Compra um item da loja em um determinado índice. Se comprar itens, certifique-se de que o bot possa enviar uma DM para você."
   args:
     - "2"
 gamevoicechannel:
-  desc: "Toggles game voice channel feature in the voice channel you're currently in. Users who join the game voice channel will get automatically redirected to the voice channel with the name of their current game, if it exists. Can't move users to channels that the bot has no connect permission for. One per server."
+  desc: "Alterna o recurso de canal de voz do jogo no canal de voz em que você está atualmente. Os usuários que ingressarem no canal de voz do jogo serão redirecionados automaticamente para o canal de voz com o nome do jogo atual, se existir. Não é possível mover usuários para canais para os quais o bot não tem permissão de conexão. Um por servidor."
   args:
     - ""
 shoplistadd:
-  desc: "Adds an item to the list of items for sale in the shop entry given the index. You usually want to run this command in the secret channel, so that the unique items are not leaked."
+  desc: "Adiciona um item à lista de itens à venda na entrada da loja de acordo com o índice. Normalmente, você deseja executar esse comando no canal secreto, para que os itens exclusivos não vazem."
   args:
     - "1 Uni-que-Steam-Key"
 globalcommand:
-  desc: "Toggles whether a command can be used on any server."
+  desc: "Alterna se um comando pode ser usado em qualquer servidor."
   args:
     - "{0}stats"
 globalmodule:
-  desc: "Toggles whether a module can be used on any server."
+  desc: "Alterna se um módulo pode ser usado em qualquer servidor."
   args:
     - "nsfw"
 globalpermlist:
-  desc: "Lists global permissions set by the bot owner."
+  desc: "Lista as permissões globais definidas pelo proprietário do bot."
   args:
     - ""
 resetglobalperms:
-  desc: "Resets global permissions set by bot owner."
+  desc: "Redefine as permissões globais definidas pelo proprietário do bot."
   args:
     - ""
 prefix:
-  desc: "Sets this server's prefix for all bot commands. Provide no parameters to see the current server prefix. **Setting prefix requires Administrator server permission.**"
+  desc: "Define o prefixo deste servidor para todos os comandos de bot. Não forneça parâmetros para ver o prefixo do servidor atual. **A configuração do prefixo requer permissão do servidor Administrador.**"
   args:
     - "+"
 defprefix:
-  desc: "Sets bot's default prefix for all bot commands. Provide no parameters to see the current default prefix. This will not change this server's current prefix."
+  desc: "Define o prefixo padrão do bot para todos os comandos do bot. Não forneça parâmetros para ver o prefixo padrão atual. Isso não alterará o prefixo atual deste servidor."
   args:
     - "+"
 verboseerror:
-  desc: "Toggles or sets whether the bot should print command errors when a command is incorrectly used."
+  desc: "Alterna ou define se o bot deve imprimir erros de comando quando um comando é usado incorretamente."
   args:
     - ""
     - "false"
 streamrolekeyword:
-  desc: "Sets keyword which is required in the stream's title in order for the streamrole to apply. Provide no keyword in order to reset."
+  desc: "Define a palavra-chave necessária no título do stream para que o streamrole seja aplicado. Não forneça nenhuma palavra-chave para redefinir."
   args:
     - ""
     - "PUBG"
 streamroleblacklist:
-  desc: "Adds or removes a blacklisted user. Blacklisted users will never receive the stream role."
+  desc: "Adiciona ou remove um usuário na lista negra. Os usuários na lista negra nunca receberão a função de stream."
   args:
-    - "add @Someone#1234"
-    - "rem @Someone#1234"
+    - "add @Alguém#1234"
+    - "rem @Alguém#1234"
 streamrolewhitelist:
-  desc: "Adds or removes a whitelisted user. Whitelisted users will receive the stream role even if they don't have the specified keyword in their stream title."
+  desc: "Adiciona ou remove um usuário na lista de permissões. Os usuários na lista de permissões receberão a função do stream mesmo que não tenham a palavra-chave especificada no título do stream."
   args:
-    - "add @Someone#1234"
-    - "rem @Someone#1234"
+    - "add @Alguém#1234"
+    - "rem @Alguém#1234"
 config:
   desc: |-
-    Gets or sets configuration values.
-    Provide no arguments to see the list of configs you can edit/view.
-    Provide config name to see all properties in that configuration and their values.
-    Provide config name and property name to see that property's description and value.
-    Provide config name, property name and value to set that property to the new value.
+    Obtém ou define valores de configuração.
+    Não forneça argumentos para ver a lista de configurações que você pode editar/visualizar.
+    Forneça o nome da configuração para ver todas as propriedades nessa configuração e seus valores.
+    Forneça o nome da configuração e o nome da propriedade para ver a descrição e o valor dessa propriedade.
+    Forneça o nome da configuração, o nome da propriedade e o valor para definir essa propriedade para o novo valor.
   args:
     - ""
     - "bot"
     - "bot color.ok"
     - "bot color.ok ff0000"
 configreload:
-  desc: "Reloads specified configuration"
+  desc: "Recarrega a configuração especificada"
   args:
     - "bot"
     - "gambling"
 nsfwtagblacklist:
-  desc: "Toggles whether the tag is blacklisted or not in nsfw searches. Provide no parameters to see the list of blacklisted tags."
+  desc: "Alterna se a tag está na lista negra ou não nas pesquisas do nsfw. Não forneça parâmetros para ver a lista de tags na lista negra."
   args:
     - "poop"
 experience:
-  desc: "Shows your xp stats. Specify the user to show that user's stats instead."
+  desc: "Mostra suas estatísticas de XP. Especifique o usuário para mostrar as estatísticas desse usuário."
   args:
     - ""
-    - "@someguy"
+    - "@AlgumCara"
 xptemplatereload:
-  desc: "Reloads the xp template file. Xp template file allows you to customize the position and color of elements on the `{0}xp` card."
+  desc: "Recarrega o arquivo de modelo xp. O arquivo de modelo Xp permite personalizar a posição e a cor dos elementos no cartão `{0}xp`."
   args:
     - ""
 xpexclusionlist:
-  desc: "Shows the roles and channels excluded from the XP system on this server, as well as whether the whole server is excluded."
+  desc: "Mostra as funções e canais excluídos do sistema XP neste servidor, bem como se todo o servidor foi excluído."
   args:
     - ""
 xpexclude:
-  desc: "Exclude a channel, role or current server from the xp system."
+  desc: "Exclua um canal, função ou servidor atual do sistema xp."
   args:
     - "Role Excluded-Role"
     - "Server"
 xpnotify:
-  desc: "Sets how the bot should notify you when you get a `server` or `global` level. This is a personal setting and affects only how you receive Global or Server level-up notifications. You can set `dm` (for the bot to send you a direct message), `channel` (to get notified in the channel you sent the last message in) or `none` to disable."
+  desc: "Define como o bot deve notificá-lo quando você obtém um nível de `servidor` ou `global`. Esta é uma configuração pessoal e afeta apenas como você recebe notificações de nível global ou de servidor. Você pode definir `dm` (para o bot enviar uma mensagem direta), `channel` (para ser notificado no canal em que você enviou a última mensagem) ou `none` para desabilitar."
   args:
     - "global dm"
     - "server channel"
 xpleveluprewards:
-  desc: "Shows currently set level up rewards."
+  desc: "Mostra as recompensas de aumento de nível atualmente definidas."
   args:
     - ""
 xprewsreset:
-  desc: "Resets all currently set xp level up rewards."
+  desc: "Redefine todas as recompensas de aumento de nível de xp atualmente definidas."
   args:
     - ""
 xprolereward:
   desc: |-
-    Add or remove a role from the user who reaches the specified level.
-    Provide no action and role name in order to remove the role reward.
+    Adicione ou remova uma função do usuário que atinge o nível especificado.
+    Não forneça nenhuma ação e nome de função para remover a recompensa de função.
   args:
     - "1 rm Newbie"
     - "3 add Social"
     - "5 add Member"
     - "5"
 xpcurrencyreward:
-  desc: "Sets a currency reward on a specified level. Provide no amount in order to remove the reward."
+  desc: "Define uma recompensa em moeda em um nível especificado. Não forneça nenhum valor para remover a recompensa."
   args:
     - "3 50"
 xpleaderboard:
-  desc: "Shows current server's xp leaderboard."
+  desc: "Mostra a tabela de classificação de xp do servidor atual."
   args:
     - ""
 xpgloballeaderboard:
-  desc: "Shows the global xp leaderboard."
+  desc: "Mostra a tabela de classificação global de xp."
   args:
     - ""
 xpadd:
-  desc: "Adds xp to a user on the server. This does not affect their global ranking. You can use negative values."
+  desc: "Adiciona xp a um usuário no servidor. Isso não afeta sua classificação global. Você pode usar valores negativos."
   args:
-    - "100 @Someone"
+    - "100 @Alguém"
 clubcreate:
-  desc: "Creates a club. You must be at least level 5 and not be in the club already."
+  desc: "Cria um clube. Você deve ser pelo menos nível 5 e não estar no clube já."
   args:
-    - "My Brand New Club"
+    - "Meu novo clube"
 clubtransfer:
-  desc: "Transfers the ownership of the club to another member of the club."
+  desc: "Transfere a propriedade do clube para outro sócio do clube."
   args:
-    - "@Someone"
+    - "@Alguém"
 clubinformation:
-  desc: "Shows information about the club."
+  desc: "Mostra informações sobre o clube."
   args:
-    - "My Brand New Club#23"
+    - "Meu novo clube#23"
 clubapply:
-  desc: "Apply to join a club. You must meet that club's minimum level requirement, and not be on its ban list."
+  desc: "Inscreva-se para participar de um clube. Você deve atender ao requisito de nível mínimo desse clube e não estar na lista de banimentos."
   args:
-    - "My Brand New Club#23"
+    - "Meu novo clube#23"
 clubaccept:
-  desc: "Accept a user who applied to your club."
+  desc: "Aceite um usuário que se inscreveu no seu clube."
   args:
     - "user#1337"
 clubleave:
-  desc: "Leaves the club you're currently in."
+  desc: "Sai do clube em que está atualmente."
   args:
     - ""
 clubdisband:
-  desc: "Disbands the club you're the owner of. This action is irreversible."
+  desc: "Dissolve o clube do qual você é o dono. Esta ação é irreversível."
   args:
     - ""
 clubkick:
-  desc: "Kicks the user from the club. You must be the club owner. They will be able to apply again."
+  desc: "Expulsa o usuário do clube. Você deve ser o dono do clube. Eles poderão se inscrever novamente."
   args:
     - "user#1337"
 clubban:
-  desc: "Bans the user from the club. You must be the club owner. They will not be able to apply again."
+  desc: "Bane o usuário do clube. Você deve ser o dono do clube. Eles não poderão se inscrever novamente."
   args:
     - "user#1337"
 clubunban:
-  desc: "Unbans the previously banned user from the club. You must be the club owner."
+  desc: "Desbane o usuário anteriormente banido do clube. Você deve ser o dono do clube."
   args:
     - "user#1337"
 clubdescription:
-  desc: "Sets the club description. Maximum 150 characters. Club owner only."
+  desc: "Define a descrição do clube. Máximo de 150 caracteres. Só dono do clube."
   args:
-    - "This is the best club please join."
+    - "Este é o melhor clube, por favor, junte-se."
 clubicon:
-  desc: "Sets the club icon."
+  desc: "Define o ícone do clube."
   args:
     - "https://i.imgur.com/htfDMfU.png"
 clubapps:
-  desc: "Shows the list of users who have applied to your club. Paginated. You must be club owner to use this command."
+  desc: "Mostra a lista de usuários que se inscreveram no seu clube. Paginado. Você deve ser proprietário do clube para usar este comando."
   args:
     - "2"
 clubbans:
-  desc: "Shows the list of users who have banned from your club. Paginated. You must be club owner to use this command."
+  desc: "Mostra a lista de usuários que foram banidos do seu clube. Paginado. Você deve ser proprietário do clube para usar este comando."
   args:
     - "2"
 clubleaderboard:
-  desc: "Shows club rankings on the specified page."
+  desc: "Mostra as classificações do clube na página especificada."
   args:
     - "2"
 clubadmin:
-  desc: "Assigns (or unassigns) staff role to the member of the club. Admins can ban, kick and accept applications."
+  desc: "Atribui (ou cancela) a função de funcionário ao sócio do clube. Os administradores podem banir, chutar e aceitar inscrições."
   args:
-    - "@Someone"
+    - "@Alguém"
 autoboobs:
-  desc: "Posts a boobs every X seconds. 20 seconds minimum. Provide no parameters to disable."
+  desc: "Posta um peito a cada X segundos. 20 segundos no mínimo. Não forneça parâmetros para desabilitar."
   args:
     - "30"
     - ""
 autobutts:
-  desc: "Posts a butt every X seconds. 20 seconds minimum. Provide no parameters to disable."
+  desc: "Posta uma bunda a cada X segundos. 20 segundos no mínimo. Não forneça parâmetros para desabilitar."
   args:
     - "30"
     - ""
 eightball:
-  desc: "Ask the 8ball a yes/no question."
+  desc: "Faça uma pergunta sim/não ao 8ball."
   args:
-    - "Is b1nzy a nice guy?"
+    - "O Braixen é um cara legal?"
 ytuploadnotif:
   desc: |-
-    Subscribe to a youtube channel's upload rss feed.
-    Shortcut for `.feed https://www.youtube.com/feeds/videos.xml?channel_id=%3Cyoutube_channel_id`
+    Assine o feed rss de upload de um canal do youtube.
+    Atalho para `.feed https://www.youtube.com/feeds/videos.xml?channel_id=%3Cyoutube_channel_id`
   args:
     - "https://www.youtube.com/channel/UCSJ4gkVC6NrvII8umztf0Ow"
 feed:
-  desc: "Subscribes to a feed. Bot will post an update up to once every 10 seconds. You can have up to 10 feeds on one server. All feeds must have unique URLs. Set a channel as a second optional parameter to specify where to send the updates."
+  desc: "Assina um feed. O bot postará uma atualização até uma vez a cada 10 segundos. Você pode ter até 10 feeds em um servidor. Todos os feeds devem ter URLs exclusivos. Defina um canal como um segundo parâmetro opcional para especificar para onde enviar as atualizações."
   args:
     - "https://blog.playstation.com/feed/"
     - "https://blog.playstation.com/feed/ #updates"
 feedremove:
-  desc: "Stops tracking a feed on the given index. Use `{0}feeds` command to see a list of feeds and their indexes."
+  desc: "Interrompe o rastreamento de um feed no índice fornecido. Use o comando `{0}feeds` para ver uma lista de feeds e seus índices."
   args:
     - "3"
 feedlist:
-  desc: "Shows the list of feeds you've subscribed to on this server."
+  desc: "Mostra a lista de feeds em que você se inscreveu neste servidor."
   args:
     - ""
 expredit:
-  desc: "Edits the custom reaction's response given its ID."
+  desc: "Edita a resposta da reação personalizada de acordo com seu ID."
   args:
-    - "123 I'm a magical girl"
+    - "123 Eu sou uma Raposa mágica"
 say:
-  desc: "Bot will send the message you typed in the specified channel. If you omit the channel name, it will send the message in the current channel. Supports embeds."
+  desc: "O bot enviará a mensagem que você digitou no canal especificado. Se você omitir o nome do canal, ele enviará a mensagem no canal atual. Suporta incorporações."
   args:
-    - "hi"
-    - "#chat hi"
+    - "Oi"
+    - "#chat Oi"
 sqlexec:
-  desc: "Executes provided sql command and returns the number of affected rows. Dangerous."
+  desc: "Executa o comando sql fornecido e retorna o número de linhas afetadas. Perigoso."
   args:
     - "UPDATE DiscordUser SET CurrencyAmount=CurrencyAmount+1234"
 sqlselect:
-  desc: "Executes provided sql query and returns the results. Dangerous."
+  desc: "Executa a consulta sql fornecida e retorna os resultados. Perigoso."
   args:
     - "SELECT * FROM DiscordUser LIMIT 5"
 deletewaifus:
-  desc: "Deletes everything from WaifuUpdates, WaifuItem and WaifuInfo tables."
+  desc: "Exclui tudo das tabelas WaifuUpdates, WaifuItem e WaifuInfo."
   args:
     - ""
 deletewaifu:
-  desc: "Deletes everything from WaifuUpdates, WaifuItem and WaifuInfo tables for the specified user. Also makes specified user's waifus free."
+  desc: "Exclui tudo das tabelas WaifuUpdates, WaifuItem e WaifuInfo para o usuário especificado. Também torna o waifus do usuário especificado gratuito."
   args:
     - ""
 deletecurrency:
-  desc: "Deletes everything from Currency and CurrencyTransactions."
+  desc: "Exclui tudo de Moeda e Transações de Moeda."
   args:
     - ""
 deleteplaylists:
-  desc: "Deletes everything from MusicPlaylists."
+  desc: "Exclui tudo de MusicPlaylists."
   args:
     - ""
 deletexp:
-  desc: "Deletes everything from UserXpStats, Clubs and sets users' TotalXP to 0."
+  desc: "Exclui tudo de UserXpStats, Clubs e define o TotalXP dos usuários como 0."
   args:
     - ""
 discordpermoverride:
-  desc: "Overrides required user permissions that the command has with the specified ones. You can only use server-level permissions. This action will make the bot ignore user permission requirements which command has by default. Provide no permissions to reset to default."
+  desc: "Substitui as permissões de usuário necessárias que o comando possui pelas especificadas. Você só pode usar permissões de nível de servidor. Essa ação fará com que o bot ignore os requisitos de permissão do usuário que o comando possui por padrão. Não forneça permissões para redefinir para o padrão."
   args:
     - "{0}prune ManageMessages BanMembers"
     - "{0}prune"
 discordpermoverridelist:
-  desc: "Lists all discord permission overrides on this server."
+  desc: "Lista todas as substituições de permissão de discórdia neste servidor."
   args:
     - ""
 discordpermoverridereset:
-  desc: "Resets ALL currently set discord permission overrides on this server. This will make all commands have default discord permission requirements."
+  desc: "Redefine TODAS as substituições de permissão de discórdia atualmente definidas neste servidor. Isso fará com que todos os comandos tenham requisitos de permissão de discórdia padrão."
   args:
     - ""
 rafflecur:
-  desc: "Starts or joins a currency raffle with a specified amount. Users who join the raffle will lose the amount of currency specified and add it to the pot. After 30 seconds, random winner will be selected who will receive the whole pot. There is also a `mixed` mode in which the users will be able to join the game with any amount of currency, and have their chances be proportional to the amount they've bet."
+  desc: "Inicia ou participa de um sorteio de moeda com um valor especificado. Os usuários que participarem do sorteio perderão a quantidade de moeda especificada e a adicionarão ao pote. Após 30 segundos, será selecionado um vencedor aleatório que receberá o pote inteiro. Há também um modo 'misto' no qual os usuários poderão entrar no jogo com qualquer quantia em moeda, e ter suas chances proporcionais ao valor que apostaram."
   args:
     - "20"
     - "mixed 15"
 rip:
-  desc: "Shows the inevitable fate of someone."
+  desc: "Mostra o destino inevitável de alguém."
   args:
-    - "@Someone"
+    - "@Alguém"
 autodisconnect:
-  desc: "Toggles whether the bot should disconnect from the voice channel once it's done playing all of the songs and queue repeat option is set to `none`."
+  desc: "Alterna se o bot deve se desconectar do canal de voz quando terminar de reproduzir todas as músicas e a opção de repetição da fila estiver definida como 'nenhuma'."
   args:
     - ""
 timelyset:
-  desc: "Sets the 'timely' currency allowance amount for users. Second parameter is period in hours, default is 24 hours."
+  desc: "Define o valor da franquia de moeda 'timely' para os usuários. O segundo parâmetro é o período em horas, o padrão é 24 horas."
   args:
     - "100"
     - "50 12"
 timely:
-  desc: "Use to claim your 'timely' currency. Bot owner has to specify the amount and the period on how often you can claim your currency."
+  desc: "Use para reivindicar sua moeda 'oportuna'. O proprietário do bot deve especificar o valor e o período de frequência com que você pode reivindicar sua moeda."
   args:
     - ""
 timelyreset:
-  desc: "Resets all user timeouts on `{0}timely` command."
+  desc: "Redefine todos os tempos limite do usuário no comando `{0}timely`."
   args:
     - ""
 crypto:
-  desc: "Shows basic stats about a cryptocurrency from coinmarketcap.com. You can use either a name or an abbreviation of the currency."
+  desc: "Mostra estatísticas básicas sobre uma criptomoeda do coinmarketcap.com. Você pode usar um nome ou uma abreviação da moeda."
   args:
     - "btc"
     - "bitcoin"
 stock:
-  desc: "Shows basic information about a stock. You can use a symbol or company name"
+  desc: "Mostra informações básicas sobre uma ação. Você pode usar um símbolo ou nome da empresa"
   args:
     - "tsla"
     - "advanced micro devices"
     - "amd"
 rolelevelreq:
-  desc: "Set a level requirement on a self-assignable role."
+  desc: "Defina um requisito de nível em uma função autoatribuível."
   args:
-    - "5 SomeRole"
+    - "5 AlgumCargo"
 massban:
-  desc: "Bans multiple users at once. Specify a space separated list of IDs of users who you wish to ban."
+  desc: "Bane vários usuários ao mesmo tempo. Especifique uma lista separada por espaços de IDs de usuários que você deseja banir."
   args:
     - "123123123 3333333333 444444444"
 masskill:
-  desc: "Specify a new-line separated list of `userid reason`. You can use Username#discrim instead of UserId. Specified users will be banned from the current server, blacklisted from the bot, and have all of their flowers taken away."
+  desc: "Especifique uma lista separada por nova linha de `razão do ID do usuário`. Você pode usar Username#discrim em vez de UserId. Os usuários especificados serão banidos do servidor atual, colocados na lista negra do bot e terão todas as suas flores retiradas."
   args:
-    - "BadPerson#1234 Toxic person"
+    - "BadPerson#1234 Pessoa tóxica"
 pathofexile:
-  desc: "Searches characters for a given Path of Exile account. May specify league name to filter results."
+  desc: "Pesquisa personagens para uma determinada conta do Path of Exile. Pode especificar o nome da liga para filtrar os resultados."
   args:
     - "\"Zizaran\""
 pathofexileleagues:
-  desc: "Returns a list of the main Path of Exile leagues."
+  desc: "Retorna uma lista das principais ligas do Path of Exile."
   args:
     - ""
 pathofexilecurrency:
-  desc: "Returns the chaos equivalent of a given currency or exchange rate between two currencies."
+  desc: "Retorna o caos equivalente de uma determinada moeda ou taxa de câmbio entre duas moedas."
   args:
     - "Standard \"Mirror of Kalandra\""
 rollduel:
-  desc: "Challenge someone to a roll duel by specifying the amount and the user you wish to challenge as the parameters. To accept the challenge, just specify the name of the user who challenged you, without the amount."
+  desc: "Desafie alguém para um duelo de rolo especificando a quantidade e o usuário que você deseja desafiar como parâmetros. Para aceitar o desafio, basta especificar o nome do usuário que o desafiou, sem o valor."
   args:
-    - "50 @Someone"
-    - "@Challenger"
+    - "50 @Alguém"
+    - "@Desafiador"
 reactionroleadd:
   desc: |-
-    Specify a message id, emote and a role name to have the bot assign the specified role to the user who reacts to the specified message (in this channel) with the specified emoji.
-    You can optionally specify an exclusivity group. Default is group 0 which is non-exclusive. Other groups are exclusive. Exclusive groups will let the user only have one of the roles specified in that group.
-    You can optionally specify a level requirement after a group. Users who don't meet the level requirement will not receive the role.
-    You can have up to 50 reaction roles per server in total.
+    Especifique um ID de mensagem, um emote e um nome de função para que o bot atribua a função especificada ao usuário que reage à mensagem especificada (neste canal) com o emoji especificado.
+    Você pode especificar opcionalmente um grupo de exclusividade. O padrão é o grupo 0 que não é exclusivo. Outros grupos são exclusivos. Grupos exclusivos permitirão que o usuário tenha apenas uma das funções especificadas nesse grupo.
+    Opcionalmente, você pode especificar um requisito de nível após um grupo. Os usuários que não atenderem ao requisito de nível não receberão a função.
+    Você pode ter até 50 funções de reação por servidor no total.
   args:
     - 971276352684691466 😊 gamer
     - 971276352684691466 😢 emo 1
     - 971276352684691466 🤔 philosopher 5 20
     - 971276352684691466 👨 normie 5 20
 reactionroleslist:
-  desc: "Lists all ReactionRole messages on this server with their message ids. Clicking/Tapping message ids will send you to that message."
+  desc: "Lista todas as mensagens ReactionRole neste servidor com seus IDs de mensagem. Clicar/tocar nos IDs das mensagens o enviará para essa mensagem."
   args:
     - ""
 reactionrolesremove:
-  desc: "Remove all reaction roles from message specified by the id"
+  desc: "Remova todos os papéis de reação da mensagem especificada pelo id"
   args:
     - "971276352684691466"
 reactionrolesdeleteall:
-  desc: "Deletes all reaction roles on the server. This action is irreversible."
+  desc: "Exclui todas as funções de reação no servidor. Esta ação é irreversível."
   args:
     - ""
 reactionrolestransfer:
-  desc: "Transfers reaction roles from one message to another by specifying their ids. If the target message has reaction roles specified already, the reaction roles will be MERGED, not overwritten."
+  desc: "Transfere funções de reação de uma mensagem para outra especificando seus ids. Se a mensagem de destino já tiver funções de reação especificadas, as funções de reação serão MERGED, não substituídas."
   args:
     - "971276352684691466 971427748448964628"
 blackjack:
-  desc: "Start or join a blackjack game. You must specify the amount you're betting. Use `{0}hit`, `{0}stand` and `{0}double` commands to play. Game is played with 4 decks. Dealer hits on soft 17 and wins draws."
+  desc: "Comece ou participe de um jogo de blackjack. Você deve especificar o valor que está apostando. Use os comandos `{0}hit`, `{0}stand` e `{0}double` para jogar. O jogo é jogado com 4 baralhos. O dealer acerta no soft 17 e ganha empates."
   args:
     - "50"
 hit:
-  desc: "In the blackjack game, ask the dealer for an extra card."
+  desc: "No jogo de blackjack, peça ao dealer uma carta extra."
   args:
     - ""
 stand:
-  desc: "Finish your turn in the blackjack game."
+  desc: "Termine a sua vez no jogo de blackjack."
   args:
     - ""
 double:
-  desc: "In the blackjack game, double your bet in order to receive exactly one more card, and your turn ends."
+  desc: "No jogo de blackjack, dobre sua aposta para receber exatamente mais uma carta e seu turno termina."
   args:
     - ""
 xpreset:
-  desc: "Resets specified user's XP, or the XP of all users in the server. You can't reverse this action."
+  desc: "Redefine o XP do usuário especificado ou o XP de todos os usuários no servidor. Você não pode reverter esta ação."
   args:
-    - "@Someone"
+    - "@Alguém"
     - ""
 bible:
-  desc: "Shows bible verse. You need to supply book name and chapter:verse"
+  desc: "Mostra versículo da Bíblia. Você precisa fornecer o nome do livro e o capítulo: verso"
   args:
     - "genesis 3:19"
 edit:
-  desc: "Edits bot's message, you have to specify message ID and new text. You can optionally specify target channel. Supports embeds."
+  desc: "Edita a mensagem do bot, você deve especificar o ID da mensagem e o novo texto. Opcionalmente, você pode especificar o canal de destino. Suporta incorporações."
   args:
     - "7479498384 Hi :^)"
-    - "#other-channel 771562360594628608 New message!"
-    - "#other-channel 771562360594628608 {{\"description\":\"hello\"}}"
+    - "#other-channel 771562360594628608 Nova mensagem!"
+    - "#other-channel 771562360594628608 {{\"description\":\"olá\"}}"
 delete:
-  desc: "Deletes a single message given the channel and message ID. If channel is ommited, message will be searched for in the current channel. You can also specify time parameter after which the message will be deleted (up to 7 days). This timer won't persist through bot restarts."
+  desc: "Exclui uma única mensagem com base no canal e no ID da mensagem. Se o canal for omitido, a mensagem será pesquisada no canal atual. Você também pode especificar o parâmetro de tempo após o qual a mensagem será excluída (até 7 dias). Este temporizador não persistirá durante as reinicializações do bot."
   args:
     - "#chat 771562360594628608"
     - "771562360594628608"
     - "771562360594628608 5m"
 roleid:
-  desc: "Shows the id of the specified role."
+  desc: "Mostra o id da função especificada."
   args:
-    - "Some Role"
+    - "Algum Cargo"
 nsfwtoggle:
-  desc: "Toggles the NSFW parameter of the current text channel."
+  desc: "Alterna o parâmetro NSFW do canal de texto atual."
   args:
     - ""
 economy:
-  desc: "Breakdown of the current state of the bot's economy. Updates every 3 minutes."
+  desc: "Detalhamento do estado atual da economia do bot. Atualizações a cada 3 minutos."
   args:
     - ""
 purgeuser:
-  desc: "Purge user from the database completely. This includes currency, xp, clubs that user owns, waifu info"
+  desc: "Limpe o usuário do banco de dados completamente. Isso inclui moeda, xp, clubes que o usuário possui, informações de waifu"
   args:
-    - "@Oblivion"
+    - "@Esquecimento"
 imageonlychannel:
   desc: |-
-    Toggles whether the channel only allows images.
-    Users who send more than a few non-image messages will be banned from using the channel. 
+    Alterna se o canal permite apenas imagens.
+    Os usuários que enviarem mais do que algumas mensagens sem imagem serão banidos de usar o canal.
   args:
     - ""
 coordreload:
-  desc: "Reloads coordinator config"
+  desc: "Recarrega a configuração do coordenador"
   args:
     - ""
 showembed:
-  desc: "Prints the json equivalent of the embed of the message specified by its Id."
+  desc: "Imprime o equivalente json da incorporação da mensagem especificada por seu Id."
   args:
     - "820022733172121600"
-    - "#some-channel 820022733172121600"
+    - "#algum-canal 820022733172121600"
 deleteemptyservers:
-  desc: "Deletes all servers in which the bot is the only member."
+  desc: "Exclui todos os servidores nos quais o bot é o único membro."
   args:
     - ""
 medusaload:
   desc: |- 
-    Loads a medusa with the specified name from the data/medusae/ folder.
-    Provide no name to see the list of loadable medusae.
-    Read about the medusa system [here](https://nadekobot.readthedocs.io/en/latest/medusa/creating-a-medusa/)
+    Carrega uma medusa com o nome especificado da pasta data/medusae/.
+    Não forneça nenhum nome para ver a lista de medusas carregáveis.
+    Leia sobre o sistema medusa [aqui](https://nadekobot.readthedocs.io/en/latest/medusa/creating-a-medusa/)
   args:
-    - "mycoolmedusa"
+    - "MinhaMedusaLegal"
     - ""
 medusaunload:
   desc: |-
-    Unloads the previously loaded medusa.
-    Provide no name to see the list of unloadable medusae. 
-    Read about the medusa system [here](https://nadekobot.readthedocs.io/en/latest/medusa/creating-a-medusa/)
+    Descarrega a medusa carregada anteriormente.
+    Não forneça nenhum nome para ver a lista de medusas descarregáveis.
+    Leia sobre o sistema medusa [aqui](https://nadekobot.readthedocs.io/en/latest/medusa/creating-a-medusa/)
   args:
-    - "mycoolmedusa"
+    - "MinhaMedusaLegal"
     - ""
 medusainfo:
   desc: |-
-    Shows information about the specified medusa such as the author, name, description, list of sneks, number of commands etc.
-    Provide no name to see the basic information about all loaded medusae. 
-    Read about the medusa system [here](https://nadekobot.readthedocs.io/en/latest/medusa/creating-a-medusa/)
+    Mostra informações sobre a medusa especificada, como autor, nome, descrição, lista de sneks, número de comandos etc.
+    Não forneça nenhum nome para ver as informações básicas sobre todas as medusas carregadas.
+    Leia sobre o sistema medusa [aqui](https://nadekobot.readthedocs.io/en/latest/medusa/creating-a-medusa/)
   args:
-    - "mycoolmedusa"
+    - "MinhaMedusaLegal"
     - ""
 medusalist: 
   desc: |-
-    Lists all loaded and unloaded medusae.
-    Read about the medusa system [here](https://nadekobot.readthedocs.io/en/latest/medusa/creating-a-medusa/)
+    Lista todas as medusas carregadas e descarregadas.
+    Leia sobre o sistema medusa [aqui](https://nadekobot.readthedocs.io/en/latest/medusa/creating-a-medusa/)
   args:
     - ""
 bankdeposit:
-  desc: "Deposits the specified amount of currency into the bank for later use."
+  desc: "Deposita a quantia especificada de moeda no banco para uso posterior."
   args:
     - "50"
 bankwithdraw:
-  desc: "Withdraws the specified amount of currency from the bank if available."
+  desc: "Retira a quantia especificada de moeda do banco, se disponível."
   args:
     - "49"
 bankbalance:
-  desc: "Shows your current bank balance available for withdrawal."
+  desc: "Mostra seu saldo bancário atual disponível para saque."
   args:
     - ""
+patron:
+  desc: "Verifique seu status de patrocínio e cota de uso de comando. Os proprietários de bots podem verificar o status de patrocínio do usuário alvo."
+  args:
+    - ""
+patronmessage:
+  desc: "Envia uma mensagem para todos os usuários do nível especificado e superior. Suporta incorporações."
+  args:
+    - "x Olá"
+eval:
+  desc: |- 
+    Execute código C# arbitrário e (opcionalmente) retorne um resultado. Vários namespaces são incluídos por padrão.
+    Variáveis especiais disponíveis:
+    `self` - Instância do grupo de comandos executando o comando (this)
+    `guild` - Servidor no qual o comando é executado
+    `channel` - Canal no qual o comando é executado
+    `user` - Usuário executando o comando
+    `ctx` - contexto de comando Discord.Net
+    `services` - IServiceProvider da Nadeko
+  args:
+    - "123 / 4,5f"
+    - "aguardar ctx.OkAsync();"
+    - 'aguarda ctx.SendConfirmAsync("uwu");'

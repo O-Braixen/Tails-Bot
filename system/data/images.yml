@@ -1,15 +1,15 @@
 # DO NOT CHANGE
-version: 3
+version: 4
 coins:
   heads:
     - https://i.imgur.com/wSF7cxU.png
   tails:
     - https://i.imgur.com/e24qkus.png
 currency:
-  - https://cdn.nadeko.bot/other/currency/0.png
-  - https://cdn.nadeko.bot/other/currency/1.png
-  - https://cdn.nadeko.bot/other/currency/2.png
-  - https://cdn.nadeko.bot/other/currency/3.png
+  - https://i.imgur.com/wSF7cxU.png
+  - https://i.imgur.com/S1OPVB6.jpeg
+  - https://i.imgur.com/e24qkus.png
+  - https://i.imgur.com/tDCIVCj.jpeg
 dice:
   - https://cdn.nadeko.bot/other/dice/0.png
   - https://cdn.nadeko.bot/other/dice/1.png
@@ -25,7 +25,7 @@ rategirl:
   matrix: https://cdn.nadeko.bot/other/rategirl/matrix.png
   dot: https://cdn.nadeko.bot/other/rategirl/dot.png
 xp:
-  bg: https://i.imgur.com/rSNUT1P.png
+  bg: https://i.imgur.com/HB15I4H.png
 rip:
   bg: https://cdn.nadeko.bot/other/rip/rip.png
   overlay: https://cdn.nadeko.bot/other/rip/overlay.png
